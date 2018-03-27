@@ -4,5 +4,7 @@
 * [Network](neetwork.md)
   * [TCP](neetwork/tcp.md)
 * Python Basic
-  * Python Questions
+  * Python tricks
+* Leetcode
+  * [Array](array.md)
 
