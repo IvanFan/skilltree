@@ -10,8 +10,6 @@ For example,
 Given`[5, 7, 7, 8, 8, 10]`and target value 8,  
 return`[3, 4]`.
 
-
-
 **The idea is first use binary search to find the left side of the target and then use the same method to find the right side.**
 
 To find the left side:
@@ -33,39 +31,21 @@ Therefore target start &lt;= mid, so target start is within \[l, mid\], we shoul
 
 l                   r
 
-
-
 1 2 3 3 3 4 5    mid = 3 nums\[3\] == 3
 
 l                   r
-
-
 
 1 2 3 3 3 4 5    mid = 1 nums\[1\] == 2 &lt;3
 
 l         r
 
-
-
 1 2 3 3 3 4 5    mid = 1 nums\[1\] == 2 &lt;3
 
-       l  r
-
-
+   l  r
 
 1 2 3 3 3 4 5    mid = 2 nums\[2\] == 3
 
-     \(lr\)
+    \(lr\)
 
-l=r and nums\[l\] is the target left side 
-
-
-
-
-
-
-
-
-
-
+l=r and nums\[l\] is the target left side
 
