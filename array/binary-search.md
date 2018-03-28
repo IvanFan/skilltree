@@ -77,17 +77,39 @@ l             r
 
 3 3 3 4 5  mid = 3 nums\[3\] &gt; 3
 
-```
    l      r
-```
 
 3 3 3 4 5 mid = 2  nums\[2\] = 3 l=
 
 ```
-   l  r    
+   l  r
 ```
 
-Then we have the problem that at some stage we alway have l = min 
+Then we have the problem that at some stage we alway have l = min
 
-So l pointer stops moving 
+So l pointer stops moving. 
+
+To avoid this we can let mid = l+r+1/2, So everytime we get the highest integer as mid
+
+
+
+3 3 3 4 5  mid = 2 nums\[2\] = 3
+
+l             r
+
+3 3 3 4 5  mid = 3 nums\[3\] &gt; 3
+
+       l      r  
+
+3 3 3 4 5 mid = 3  nums\[3\] =4 &gt; 3 
+
+       l  r
+
+3 3 3 4 5 
+
+       l=r=2
+
+
+
+
 
