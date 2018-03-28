@@ -45,7 +45,7 @@ l  r
 
 1 2 3 3 3 4 5    mid = 2 nums\[2\] == 3
 
-    \(lr\)
+      lr
 
 l=r and nums\[l\] is the target left side
 
