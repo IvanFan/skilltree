@@ -7,4 +7,5 @@
   * Python tricks
 * Leetcode
   * [Array](array.md)
+    * [Binary Search](array/binary-search.md)
 
