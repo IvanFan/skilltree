@@ -67,7 +67,11 @@ if nums\[mid\] == target, then 2 situation
 
 1. target end is on the right side of mid, then l = mid +1
 
-    2. target end is mid, l =mid
+2. target end is mid, l = mid
 
- 
+Therefore target end &gt;= mid, target end is within \[mid r\], then l = mid
+
+
+
+
 
