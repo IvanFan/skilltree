@@ -53,7 +53,21 @@ l=r and nums\[l\] is the target left side
 
 Now we have target left side == l. The next step is to find the right side
 
-the right side is within \[l, len\(nums\)-1\]
+The right side is within \[l, len\(nums\)-1\]
 
+l = l
 
+r = len\(nums\)-1
+
+mid = int\(l+r\)/2
+
+if nums\[mid\] &gt; target, then the target end should within the \[l, mid\] therefore r = mid -1
+
+if nums\[mid\] == target, then 2 situation
+
+1. target end is on the right side of mid, then l = mid +1
+
+    2. target end is mid, l =mid
+
+ 
 
