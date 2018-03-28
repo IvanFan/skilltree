@@ -71,7 +71,17 @@ if nums\[mid\] == target, then 2 situation
 
 Therefore target end &gt;= mid, target end is within \[mid r\], then l = mid
 
+3 3 3 4 5  mid = 2 nums\[2\] = 3 
+
+l             r
 
 
 
+3 3 3 4 5  mid = 3 nums\[3\] &gt; 3 
+
+       l      r
+
+3 3 3 4 5 mid = 2  nums\[2\] = 3 l=
+
+       l  r    
 
