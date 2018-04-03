@@ -98,7 +98,7 @@ l             r
 3 3 3 4 5  mid = 3 nums\[3\] &gt; 3
 
 ```
-   l      r  
+   l      r
 ```
 
 3 3 3 4 5 mid = 3  nums\[3\] =4 &gt; 3
@@ -113,5 +113,63 @@ l             r
    l=r=2
 ```
 
+
+
+#### Search in Rotated Sorted Array II  
+
+Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+
+\(i.e.,`0 1 2 4 5 6 7`might become`4 5 6 7 0 1 2`\).
+
+Write a function to determine if a given target is in the array.
+
+The array may contain duplicates.
+
+
+
+```
+class Solution:
+    def search(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: bool
+        """
+        nl = len(nums)
+        if nl == 0:
+            return False
+        if nl == 1:
+            return nums[0] == target
+        l = 0
+        r = nl - 1
+        while l <= r:
+            print('l:',l,'r:',r)
+            mid = int((l+r)/2)
+            if nums[mid]==target:
+                return True
+            while nums[l] == nums[mid] and l < mid:
+                l += 1
+            print('sec l:',l,'r:',r)
+            if nums[l] <= nums[mid]:
+                if nums[l] <= target < nums[mid]:
+                    r = mid -1
+                else:
+                    l = mid +1
+            else:
+                if nums[mid] < target <= nums[r]:
+                    l = mid + 1
+                else:
+                    r = mid -1
+       
+        return False
+        
+                    
+            
+            
+            
+        
+```
+
+  
 
 
