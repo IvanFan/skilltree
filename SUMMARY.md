@@ -5,6 +5,8 @@
   * [TCP](neetwork/tcp.md)
 * Python Basic
   * Python tricks
+* [Machine Learning](machine-learning.md)
+  * Feature engineering
 * Leetcode
   * [Array](array.md)
     * [Binary Search](array/binary-search.md)
