@@ -28,12 +28,47 @@ But classes are more than that in Python. Classes are objects too.
 
 Yes, objects.
 
-As soon as you use the keyword **class**, Python executes it and creates an OBJECT. The instruction
+As soon as you use the keyword **class**, Python executes it and creates an OBJECT. The instruction
 
 ```
 >>> class ObjectCreator(object):
 ...       pass
 ...
+```
+
+creates in memory an object with the name "ObjectCreator".
+
+**This object \(the class\) is itself capable of creating objects \(the instances\), and this is why it's a class**
+
+But still, it's an object, and therefore:
+
+* you can assign it to a variable
+* you can copy it
+* you can add attributes to it
+* you can pass it as a function parameter
+
+e.g.:
+
+```
+>>> print(ObjectCreator) # you can print a class because it's an object
+<class '__main__.ObjectCreator'>
+>>> def echo(o):
+...       print(o)
+...
+>>> echo(ObjectCreator) # you can pass a class as a parameter
+<class '__main__.ObjectCreator'>
+>>> print(hasattr(ObjectCreator, 'new_attribute'))
+False
+>>> ObjectCreator.new_attribute = 'foo' # you can add attributes to a class
+>>> print(hasattr(ObjectCreator, 'new_attribute'))
+True
+>>> print(ObjectCreator.new_attribute)
+foo
+>>> ObjectCreatorMirror = ObjectCreator # you can assign a class to a variable
+>>> print(ObjectCreatorMirror.new_attribute)
+foo
+>>> print(ObjectCreatorMirror())
+<__main__.ObjectCreator object at 0x8997b4c>
 ```
 
 
