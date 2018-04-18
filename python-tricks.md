@@ -71,5 +71,29 @@ foo
 <__main__.ObjectCreator object at 0x8997b4c>
 ```
 
+**Creating classes dynamically**
+
+Since classes are objects, you can create them on the fly, like any object.
+
+First, you can create a class in a function using **class**:
+
+```
+>>> def choose_class(name):
+...     if name == 'foo':
+...         class Foo(object):
+...             pass
+...         return Foo # return the class, not an instance
+...     else:
+...         class Bar(object):
+...             pass
+...         return Bar
+...
+>>> MyClass = choose_class('foo')
+>>> print(MyClass) # the function returns a class, not an instance
+<class '__main__.Foo'>
+>>> print(MyClass()) # you can create an object from this class
+<__main__.Foo object at 0x89c6d4c>
+```
+
 
 
