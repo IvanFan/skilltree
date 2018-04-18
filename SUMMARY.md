@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Network](neetwork.md)
   * [TCP](neetwork/tcp.md)
-* Python Basic
+* [Python Basic](python-basic.md)
   * [Python tricks](python-tricks.md)
 * [Machine Learning](machine-learning.md)
   * Feature engineering
