@@ -4,7 +4,7 @@
 * [Network](neetwork.md)
   * [TCP](neetwork/tcp.md)
 * Python Basic
-  * Python tricks
+  * [Python tricks](python-tricks.md)
 * [Machine Learning](machine-learning.md)
   * Feature engineering
 * Leetcode
