@@ -305,3 +305,11 @@ it will throw type error. In this case we have to use
 
 if you want to use py2.5 then you may have to use % instead of .format
 
+
+
+
+
+## Iterables & Generator
+
+
+
