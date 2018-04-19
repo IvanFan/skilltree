@@ -29,7 +29,7 @@ You've seen that  type lets you do something like this:
 MyClass = type('MyClass', (), {})
 ```
 
-It's because the function type is in fact a metaclass. type is the metaclass Python uses to create all classes behind the scenes.
+It's because the function type is in fact a metaclass. type is the metaclass Python uses to create all classes behind the scenes.
 
 Everything, and I mean everything, is an object in Python. That includes ints, strings, functions and classes. All of them are objects. And all of them have been created from a class:
 
@@ -47,6 +47,29 @@ Everything, and I mean everything, is an object in Python. That includes ints, s
 >>> b = Bar()
 >>> b.__class__
 <class '__main__.Bar'>
+```
+
+Now, what is the \_\_class\_\_ of any \_\_class\_\_ ?
+
+```
+>>> age.__class__.__class__
+<type 'type'>
+>>> name.__class__.__class__
+<type 'type'>
+>>> foo.__class__.__class__
+<type 'type'>
+>>> b.__class__.__class__
+<type 'type'>
+```
+
+type is the built-in metaclass Python uses, but of course, you can create your own metaclass.
+
+You can add a \_\_metaclass\_\_ attribute when you write a class:
+
+```
+class Foo(object):
+    __metaclass__ = something...
+    [...]
 ```
 
 
