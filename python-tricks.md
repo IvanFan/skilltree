@@ -186,3 +186,11 @@ It's similar to cls. However, if we use static method then we don't need to pass
 
 
 
+## Class variable & instance variable
+
+
+
+
+
+
+
