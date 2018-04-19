@@ -196,7 +196,7 @@ class Test(object):
     def __init__(self, name):  
         self.name = name  
         Test.num_of_instance += 1  
-  
+
 if __name__ == '__main__':  
     print Test.num_of_instance   # 0
     t1 = Test('jack')  
@@ -217,6 +217,8 @@ print p1.name  # bbb
 print p2.name  # aaa
 print Person.name  # aaa
 ```
+
+here p1.name= "bbb". At first, p1.name is refereced to Class variable name. But after assigning the value, p1.name is referenced to a new string
 
 
 
