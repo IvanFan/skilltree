@@ -257,7 +257,6 @@ print(d)
 ## \_ and \_\_ in Python
 
 ```py
-
 >>> class MyClass():
 ...     def __init__(self):
 ...             self.__superprivate = "Hello"
@@ -273,6 +272,22 @@ AttributeError: myClass instance has no attribute '__superprivate'
 >>> print mc.__dict__
 {'_MyClass__superprivate': 'Hello', '_semiprivate': ', world!'}
 ```
+
+\_\__init\_\__: to represent native functions
+
+ `__init__()`
+
+`__del__()`
+
+`__call__()`
+
+\_foo: it means the variable is private. The private variable cannot be imported.
+
+\_\_foo: complier will use **\_classname\_\_foo**_ to replace the original name. It cannot be used like public variables. We can call it via _instanceName.**\_classname\_\_foo**
+
+
+
+
 
 
 
