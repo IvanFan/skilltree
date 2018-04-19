@@ -167,5 +167,15 @@ class A(object):
 a=A()
 ```
 
+self & cls: 
+
+self and cls is a binding of instance and class. Normally, we can call foo\(x\) which has nothing to do with class or instance.
+
+if we use foo\(self,x\), we will pass the instance it self into the function
+
+It's similar to cls. However, if we use static method then we don't need to pass the self or cls
+
+
+
 
 
