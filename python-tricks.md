@@ -10,89 +10,23 @@ After than the change for this attribute within the function does not affect the
 
 ## Metaclass
 
-Before understanding metaclasses, you need to master classes in Python. And Python has a very peculiar idea of what classes are, borrowed from the Smalltalk language.
+Metaclasses are the 'stuff' that creates classes.
 
-In most languages, classes are just pieces of code that describe how to produce an object. That's kinda true in Python too:
+You define classes in order to create objects, right?
 
-```
->>> class ObjectCreator(object):
-...       pass
-...
+But we learned that Python classes are objects.
 
->>> my_object = ObjectCreator()
->>> print(my_object)
-<__main__.ObjectCreator object at 0x8974f2c>
-```
-
-But classes are more than that in Python. Classes are objects too.
-
-Yes, objects.
-
-As soon as you use the keyword **class**, Python executes it and creates an OBJECT. The instruction
+Well, metaclasses are what create these objects. They are the classes' classes, you can picture them this way:
 
 ```
->>> class ObjectCreator(object):
-...       pass
-...
+MyClass = MetaClass()
+my_object = MyClass()
 ```
 
-creates in memory an object with the name "ObjectCreator".
-
-**This object \(the class\) is itself capable of creating objects \(the instances\), and this is why it's a class**
-
-But still, it's an object, and therefore:
-
-* you can assign it to a variable
-* you can copy it
-* you can add attributes to it
-* you can pass it as a function parameter
-
-e.g.:
+You've seen that  type lets you do something like this:
 
 ```
->>> print(ObjectCreator) # you can print a class because it's an object
-<class '__main__.ObjectCreator'>
->>> def echo(o):
-...       print(o)
-...
->>> echo(ObjectCreator) # you can pass a class as a parameter
-<class '__main__.ObjectCreator'>
->>> print(hasattr(ObjectCreator, 'new_attribute'))
-False
->>> ObjectCreator.new_attribute = 'foo' # you can add attributes to a class
->>> print(hasattr(ObjectCreator, 'new_attribute'))
-True
->>> print(ObjectCreator.new_attribute)
-foo
->>> ObjectCreatorMirror = ObjectCreator # you can assign a class to a variable
->>> print(ObjectCreatorMirror.new_attribute)
-foo
->>> print(ObjectCreatorMirror())
-<__main__.ObjectCreator object at 0x8997b4c>
-```
-
-**Creating classes dynamically**
-
-Since classes are objects, you can create them on the fly, like any object.
-
-First, you can create a class in a function using **class**:
-
-```
->>> def choose_class(name):
-...     if name == 'foo':
-...         class Foo(object):
-...             pass
-...         return Foo # return the class, not an instance
-...     else:
-...         class Bar(object):
-...             pass
-...         return Bar
-...
->>> MyClass = choose_class('foo')
->>> print(MyClass) # the function returns a class, not an instance
-<class '__main__.Foo'>
->>> print(MyClass()) # you can create an object from this class
-<__main__.Foo object at 0x89c6d4c>
+MyClass = type('MyClass', (), {})
 ```
 
 
