@@ -234,3 +234,21 @@ print Person.name  # [1]
 
 
 
+## Python introspection
+
+It means getting the type of the object during the runtime
+
+e.g. type\(\) dir\(\) getattr\(\) hasattr\(\) isinstance\(\)
+
+
+
+```py
+a = [1,2,3]
+b = {'a':1,'b':2,'c':3}
+c = True
+print(type(a),type(b),type(c)) # <type 'list'> <type 'dict'> <type 'bool'>
+print(isinstance(a,list))  # True
+```
+
+
+
