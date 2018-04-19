@@ -246,8 +246,6 @@ print(type(a),type(b),type(c)) # <type 'list'> <type 'dict'> <type 'bool'>
 print(isinstance(a,list))  # True
 ```
 
-
-
 ## Dict items
 
 ```py
@@ -255,6 +253,12 @@ dict_item = { 'a':1, 'b':2, 'c':3  }
 d = {key: value for (key, value) in dict_item.items()}
 print(d)
 ```
+
+
+
+##  \_ and \_\_ in Python
+
+
 
 
 
