@@ -72,7 +72,39 @@ class Foo(object):
     [...]
 ```
 
-If you do so, Python will use the metaclass to create the class Foo
+If you do so, Python will use the metaclass to create the class Foo
+
+```markdown
+You write class Foo(object) first, but the class object Foo is not created in memory yet.
+Python will look for __metaclass__ in the class definition. 
+If it finds it, it will use it to create the object class Foo. 
+If it doesn't, it will use type to create the class.
+```
+
+When you do:
+
+```
+class Foo(Bar):
+    pass
+```
+
+Python does the following:
+
+Is there a \_\_metaclass\_\_ attribute in Foo?
+
+If yes, create in memory a class object \(I said a class object, stay with me here\), with the name Fooby using what is in \_\_metaclass\_\_.
+
+If Python can't find \_\_metaclass\_\_, it will look for a \_\_metaclass\_\_ at the MODULE level, and try to do the same \(but only for classes that don't inherit anything, basically old-style classes\).
+
+Then if it can't find any \_\_metaclass\_\_ at all, it will use the Bar's \(the first parent\) own metaclass \(which might be the default type\) to create the class object.
+
+Be careful here that the **\_\_metaclass\_\_ attribute will not be inherited**, the metaclass of the parent \(Bar.\_\_class\_\_\) will be. If Bar used a \_\_metaclass\_\_ attribute that created Bar with type\(\) \(and not type.\_\_new\_\_\(\)\), the subclasses will not inherit that behavior.
+
+Now the big question is, what can you put in \_\_metaclass\_\_ ?
+
+The answer is: something that can create a class.
+
+And what can create a class? type, or anything that subclasses or uses it.
 
 
 
