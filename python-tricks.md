@@ -254,11 +254,25 @@ d = {key: value for (key, value) in dict_item.items()}
 print(d)
 ```
 
+## \_ and \_\_ in Python
 
+```py
 
-##  \_ and \_\_ in Python
-
-
+>>> class MyClass():
+...     def __init__(self):
+...             self.__superprivate = "Hello"
+...             self._semiprivate = ", world!"
+...
+>>> mc = MyClass()
+>>> print mc.__superprivate
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: myClass instance has no attribute '__superprivate'
+>>> print mc._semiprivate
+, world!
+>>> print mc.__dict__
+{'_MyClass__superprivate': 'Hello', '_semiprivate': ', world!'}
+```
 
 
 
