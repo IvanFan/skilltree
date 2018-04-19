@@ -184,13 +184,39 @@ It's similar to cls. However, if we use static method then we don't need to pass
 | a = A\(\) | a.foo\(x\) | a.class\_foo\(x\) | a.static\_foo\(x\) |
 | A | 不可用 | A.class\_foo\(x\) | A.static\_foo\(x\) |
 
-
-
 ## Class variable & instance variable
 
+class variable can be used between different class instance
 
+instance variable can only be used for this instance
 
+```py
+class Test(object):  
+    num_of_instance = 0  
+    def __init__(self, name):  
+        self.name = name  
+        Test.num_of_instance += 1  
+  
+if __name__ == '__main__':  
+    print Test.num_of_instance   # 0
+    t1 = Test('jack')  
+    print Test.num_of_instance   # 1
+    t2 = Test('lucy')  
+    print t1.name , t1.num_of_instance  # jack 2
+    print t2.name , t2.num_of_instance  # lucy 2
+```
 
+```py
+class Person:
+    name="aaa"
+
+p1=Person()
+p2=Person()
+p1.name="bbb"
+print p1.name  # bbb
+print p2.name  # aaa
+print Person.name  # aaa
+```
 
 
 
