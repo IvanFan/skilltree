@@ -167,7 +167,7 @@ class A(object):
 a=A()
 ```
 
-self & cls: 
+self & cls:
 
 self and cls is a binding of instance and class. Normally, we can call foo\(x\) which has nothing to do with class or instance.
 
@@ -175,7 +175,14 @@ if we use foo\(self,x\), we will pass the instance it self into the function
 
 It's similar to cls. However, if we use static method then we don't need to pass the self or cls
 
+|  |
+| :--- |
 
+
+|  | instance method | class method | static method |
+| :--- | :--- | :--- | :--- |
+| a = A\(\) | a.foo\(x\) | a.class\_foo\(x\) | a.static\_foo\(x\) |
+| A | 不可用 | A.class\_foo\(x\) | A.static\_foo\(x\) |
 
 
 
