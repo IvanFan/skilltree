@@ -220,5 +220,17 @@ print Person.name  # aaa
 
 here p1.name= "bbb". At first, p1.name is refereced to Class variable name. But after assigning the value, p1.name is referenced to a new string
 
+```
+class Person:
+    name=[]
+
+p1=Person()
+p2=Person()
+p1.name.append(1)
+print p1.name  # [1]
+print p2.name  # [1]
+print Person.name  # [1]
+```
+
 
 
