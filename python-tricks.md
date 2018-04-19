@@ -108,3 +108,36 @@ And what can create a class? type, or anything that subclasses or uses it.
 
 
 
+Usually we don't use it. One example use case is Django ORM
+
+It allows you to define something like this:
+
+```py
+class Person(models.Model):
+    name = models.CharField(max_length=30)
+    age = models.IntegerField()
+```
+
+But if you do this:
+
+```
+guy = Person(name='bob', age='35')
+print(guy.age)
+```
+
+It won't return an IntegerField object. It will return an int, and can even take it directly from the database.
+
+This is possible because models.Model defines \_\_metaclass\_\_ and it uses some magic that will turn the Person you just defined with simple statements into a complex hook to a database field.
+
+Django makes something complex look simple by exposing a simple API and using metaclasses, recreating code from this API to do the real job behind the scenes.
+
+First, you know that classes are objects that can create instances.
+
+**Well in fact, classes are themselves instances. Of metaclasses.**
+
+Everything is an object in Python, and they are all either instances of classes or instances of metaclasses.
+
+Except for **type. Type ** is actually its own metaclass. This is not something you could reproduce in pure Python, and is done by cheating a little bit at the implementation level.
+
+
+
