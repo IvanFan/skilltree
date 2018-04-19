@@ -220,7 +220,7 @@ print Person.name  # aaa
 
 here p1.name= "bbb". At first, p1.name is refereced to Class variable name. But after assigning the value, p1.name is referenced to a new string
 
-```
+```py
 class Person:
     name=[]
 
