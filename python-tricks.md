@@ -49,7 +49,7 @@ Everything, and I mean everything, is an object in Python. That includes ints, s
 <class '__main__.Bar'>
 ```
 
-Now, what is the \_\_class\_\_ of any \_\_class\_\_ ?
+Now, what is the \_\_class\_\_ of any \_\_class\_\_ ?
 
 ```
 >>> age.__class__.__class__
@@ -64,13 +64,15 @@ Now, what is the \_\_class\_\_ of any \_\_class\_\_ ?
 
 type is the built-in metaclass Python uses, but of course, you can create your own metaclass.
 
-You can add a \_\_metaclass\_\_ attribute when you write a class:
+You can add a \_\_metaclass\_\_ attribute when you write a class:
 
 ```
 class Foo(object):
     __metaclass__ = something...
     [...]
 ```
+
+If you do so, Python will use the metaclass to create the class Foo
 
 
 
