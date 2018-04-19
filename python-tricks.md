@@ -144,5 +144,28 @@ Secondly, metaclasses are complicated. You may not want to use them for very sim
 * [monkey patching](http://en.wikipedia.org/wiki/Monkey_patch)
 * class decorators
 
+## @staticmethod和@classmethod
+
+There are 3 methods in python. staticmethod classmethod and instance method:
+
+```py
+def foo(x):
+    print "executing foo(%s)"%(x)
+
+class A(object):
+    def foo(self,x):
+        print "executing foo(%s,%s)"%(self,x)
+
+    @classmethod
+    def class_foo(cls,x):
+        print "executing class_foo(%s,%s)"%(cls,x)
+
+    @staticmethod
+    def static_foo(x):
+        print "executing static_foo(%s)"%x
+
+a=A()
+```
+
 
 
