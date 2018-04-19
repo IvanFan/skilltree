@@ -289,7 +289,19 @@ AttributeError: myClass instance has no attribute '__superprivate'
 
 ## String format: % and .format
 
+there is a trick about %
 
+```
+print("hi there %s" % name)
+```
 
+it looks all good. But if name=\(1,2,3\)
 
+it will throw type error. In this case we have to use
+
+```
+"hi there %s" % (name,)
+```
+
+if you want to use py2.5 then you may have to use % instead of .format
 
