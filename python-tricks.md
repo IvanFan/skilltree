@@ -273,9 +273,9 @@ AttributeError: myClass instance has no attribute '__superprivate'
 {'_MyClass__superprivate': 'Hello', '_semiprivate': ', world!'}
 ```
 
-\_\__init\_\__: to represent native functions
+\_\__init\_\_\_: to represent native functions
 
- `__init__()`
+`__init__()`
 
 `__del__()`
 
@@ -283,9 +283,11 @@ AttributeError: myClass instance has no attribute '__superprivate'
 
 \_foo: it means the variable is private. The private variable cannot be imported.
 
-\_\_foo: complier will use **\_classname\_\_foo**_ to replace the original name. It cannot be used like public variables. We can call it via _instanceName.**\_classname\_\_foo**
+\_\_foo: complier will use **\_classname\_\_foo**_ to replace the original name. It cannot be used like public variables. We can call it via \_instanceName.\*\*\_classname\_\_foo\*\*
 
+## 
 
+## String format: % and .format
 
 
 
