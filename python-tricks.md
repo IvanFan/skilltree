@@ -106,8 +106,6 @@ The answer is: something that can create a class.
 
 And what can create a class? type, or anything that subclasses or uses it.
 
-
-
 Usually we don't use it. One example use case is Django ORM
 
 It allows you to define something like this:
@@ -137,7 +135,12 @@ First, you know that classes are objects that can create instances.
 
 Everything is an object in Python, and they are all either instances of classes or instances of metaclasses.
 
-Except for **type. Type ** is actually its own metaclass. This is not something you could reproduce in pure Python, and is done by cheating a little bit at the implementation level.
+Except for **type. Type ** is actually its own metaclass. This is not something you could reproduce in pure Python, and is done by cheating a little bit at the implementation level.
+
+Secondly, metaclasses are complicated. You may not want to use them for very simple class alterations. You can change classes by using two different techniques:
+
+* [monkey patching](http://en.wikipedia.org/wiki/Monkey_patch)
+* class decorators
 
 
 
