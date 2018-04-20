@@ -7,7 +7,7 @@
   * [Python Basic](python-tricks.md)
   * [Python Singleton](python-advance.md)
   * [Python Scope](python-scope.md)
-  * [Python GIL](python-gil.md)
+  * [Python GIL & Coroutine](python-gil.md)
 * [Machine Learning](machine-learning.md)
   * Feature engineering
 * [Leetcode](leetcode.md)
