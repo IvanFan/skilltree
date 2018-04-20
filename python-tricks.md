@@ -516,5 +516,9 @@ Answer: yes i's changed from list to generator
 <generator object <genexpr> at 0x0000028F8B774200>
 ```
 
+## \*args and \*\*kwargs
+
+
+
 
 
