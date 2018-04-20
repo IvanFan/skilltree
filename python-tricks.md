@@ -856,3 +856,14 @@ for some functions, e.g. list.extend\(\) we don't care about the type as long as
 
 
 
+## Overload
+
+
+
+Python don't need overload
+
+1. if parameter type is different, python can accept different types
+2. if parameter number is undefined, we can use \*args
+
+
+
