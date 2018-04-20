@@ -124,7 +124,73 @@ output
 5
 ```
 
-However, we still have the multi-thread issue. If there are multi threads trying to init the object at the same time, they may get the result  \_\_instance is None at the same time. 
+However, we still have the multi-thread issue. If there are multi threads trying to init the object at the same time, they may get the result  \_\_instance is None at the same time.
+
+Then we need to introduce sycn lock to solve the problem
+
+```py
+import threading
+try:
+    from synchronize import make_synchronized
+except ImportError:
+    def make_synchronized(func):
+        import threading
+        func.__lock__ = threading.Lock()
+
+        def synced_func(*args, **kws):
+            with func.__lock__:
+                return func(*args, **kws)
+
+        return synced_func
+
+
+class Singleton(object):
+    instance = None
+
+    @make_synchronized
+    def __new__(cls, *args, **kwargs):
+        if cls.instance is None:
+            cls.instance = object.__new__(cls, *args, **kwargs)
+        return cls.instance
+
+    def __init__(self):
+        self.blog = "xiaorui.cc"
+
+    def go(self):
+        pass
+
+
+def worker():
+    e = Singleton()
+    print id(e)
+    e.go()
+
+
+def test():
+    e1 = Singleton()
+    e2 = Singleton()
+    e1.blog = 123
+    print e1.blog
+    print e2.blog
+    print id(e1)
+    print id(e2)
+
+
+if __name__ == "__main__":
+    test()
+    task = []
+    for one in range(30):
+        t = threading.Thread(target=worker)
+        task.append(t)
+
+    for one in task:
+        one.start()
+
+    for one in task:
+        one.join()
+
+
+```
 
 
 
