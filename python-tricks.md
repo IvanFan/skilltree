@@ -685,7 +685,6 @@ I want to get
 
 ```
 <b><i>Hello</i></b>
-
 ```
 
 ```py
@@ -705,6 +704,95 @@ def hello():
     return "hello world"
 
 print hello() ## returns <b><i>hello world</i></b>
+```
+
+how to create decator
+
+```
+# 装饰器就是把其他函数作为参数的函数
+def my_shiny_new_decorator(a_function_to_decorate):
+
+    # 在函数里面,装饰器在运行中定义函数: 包装.
+    # 这个函数将被包装在原始函数的外面,所以可以在原始函数之前和之后执行其他代码..
+    def the_wrapper_around_the_original_function():
+
+        # 把要在原始函数被调用前的代码放在这里
+        print "Before the function runs"
+
+        # 调用原始函数(用括号)
+        a_function_to_decorate()
+
+        # 把要在原始函数调用后的代码放在这里
+        print "After the function runs"
+
+    # 在这里"a_function_to_decorate" 函数永远不会被执行
+    # 在这里返回刚才包装过的函数
+    # 在包装函数里包含要在原始函数前后执行的代码.
+    return the_wrapper_around_the_original_function
+
+# 加入你建了个函数,不想修改了
+def a_stand_alone_function():
+    print "I am a stand alone function, don't you dare modify me"
+
+a_stand_alone_function()
+#输出: I am a stand alone function, don't you dare modify me
+
+# 现在,你可以装饰它来增加它的功能
+# 把它传递给装饰器,它就会返回一个被包装过的函数.
+
+a_stand_alone_function_decorated = my_shiny_new_decorator(a_stand_alone_function)
+a_stand_alone_function_decorated()
+#输出s:
+#Before the function runs
+#I am a stand alone function, don't you dare modify me
+#After the function runs
+```
+
+syntax
+
+```
+@my_shiny_new_decorator
+def another_stand_alone_function():
+    print "Leave me alone"
+
+another_stand_alone_function()
+#输出:
+#Before the function runs
+#Leave me alone
+#After the function runs
+```
+
+is equal to 
+
+```
+another_stand_alone_function = my_shiny_new_decorator(another_stand_alone_function)
+
+```
+
+**Advance decorator **
+
+we can pass parameters into the decorator
+
+```
+# 这不是什么黑魔法,你只需要让包装器传递参数:
+
+def a_decorator_passing_arguments(function_to_decorate):
+    def a_wrapper_accepting_arguments(arg1, arg2):
+        print "I got args! Look:", arg1, arg2
+        function_to_decorate(arg1, arg2)
+    return a_wrapper_accepting_arguments
+
+# 当你调用装饰器返回的函数时,也就调用了包装器,把参数传入包装器里,
+# 它将把参数传递给被装饰的函数里.
+
+@a_decorator_passing_arguments
+def print_full_name(first_name, last_name):
+    print "My name is", first_name, last_name
+
+print_full_name("Peter", "Venkman")
+# 输出:
+#I got args! Look: Peter Venkman
+#My name is Peter Venkman
 ```
 
 
