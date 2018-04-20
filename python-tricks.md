@@ -762,11 +762,10 @@ another_stand_alone_function()
 #After the function runs
 ```
 
-is equal to 
+is equal to
 
 ```
 another_stand_alone_function = my_shiny_new_decorator(another_stand_alone_function)
-
 ```
 
 **Advance decorator **
@@ -793,6 +792,56 @@ print_full_name("Peter", "Venkman")
 # 输出:
 #I got args! Look: Peter Venkman
 #My name is Peter Venkman
+```
+
+more complex
+
+```py
+def decorator_with_args(decorator_to_enhance):
+    """
+    这个函数将被用来作为装饰器.
+    它必须去装饰要成为装饰器的函数.
+    休息一下.
+    它将允许所有的装饰器可以接收任意数量的参数,所以以后你不必为每次都要做这个头疼了.
+    saving you the headache to remember how to do that every time.
+    """
+
+    # 我们用传递参数的同样技巧.
+    def decorator_maker(*args, **kwargs):
+
+        # 我们动态的建立一个只接收一个函数的装饰器,
+        # 但是他能接收来自maker的参数
+        def decorator_wrapper(func):
+
+            # 最后我们返回原始的装饰器,毕竟它只是'平常'的函数
+            # 唯一的陷阱:装饰器必须有这个特殊的,否则将不会奏效.
+            return decorator_to_enhance(func, *args, **kwargs)
+
+        return decorator_wrapper
+```
+
+```py
+# 下面的函数是你建来当装饰器用的,然后把装饰器加到上面:-)
+# 不要忘了这个 "decorator(func, *args, **kwargs)"
+@decorator_with_args
+def decorated_decorator(func, *args, **kwargs):
+    def wrapper(function_arg1, function_arg2):
+        print "Decorated with", args, kwargs
+        return func(function_arg1, function_arg2)
+    return wrapper
+
+# 现在你用你自己的装饰装饰器来装饰你的函数(汗~~~)
+
+@decorated_decorator(42, 404, 1024)
+def decorated_function(function_arg1, function_arg2):
+    print "Hello", function_arg1, function_arg2
+
+decorated_function("Universe and", "everything")
+#输出:
+#Decorated with (42, 404, 1024) {}
+#Hello Universe and everything
+
+# Whoooot!
 ```
 
 
