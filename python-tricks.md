@@ -307,5 +307,46 @@ if you want to use py2.5 then you may have to use % instead of .format
 
 ## Iterables & Generator
 
-iterables
+**iterables**
+
+if you create a list which can be read one by one, this is called iteration
+
+```
+>>> mylist = [1, 2, 3]
+>>> for i in mylist:
+...    print(i)
+1
+2
+3
+```
+
+```
+>>> mylist = [x*x for x in range(3)]
+>>> for i in mylist:
+...    print(i)
+0
+1
+4
+```
+
+it's easy to use and read. But you have to save the values into memory.
+
+**Generators**
+
+generator is a kind of iteration. However, generate can only be looped once. Because it's now all saved in memory. 
+
+```
+>>> mygenerator = (x*x for x in range(3))
+>>> for i in mygenerator:
+...    print(i)
+0
+1
+4
+```
+
+The difference compared with iteration is \(\). Besides you cannot use for i in mygenerator twice
+
+**Yield**
+
+
 
