@@ -333,7 +333,7 @@ it's easy to use and read. But you have to save the values into memory.
 
 **Generators**
 
-generator is a kind of iteration. However, generate can only be looped once. Because it's now all saved in memory. 
+generator is a kind of iteration. However, generate can only be looped once. Because it's now all saved in memory.
 
 ```
 >>> mygenerator = (x*x for x in range(3))
@@ -347,6 +347,28 @@ generator is a kind of iteration. However, generate can only be looped once. Bec
 The difference compared with iteration is \(\). Besides you cannot use for i in mygenerator twice
 
 **Yield**
+
+it's similar to return
+
+```
+>>> def createGenerator():
+...    mylist = range(3)
+...    for i in mylist:
+...        yield i*i
+...
+>>> mygenerator = createGenerator() # 创建生成器
+>>> print(mygenerator) # mygenerator is an object!
+<generator object createGenerator at 0xb7555c34>
+>>> for i in mygenerator:
+...     print(i)
+0
+1
+4
+```
+
+If you have a huge list and you only want to read it once, then yield is the best choice
+
+
 
 
 
