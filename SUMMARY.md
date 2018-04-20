@@ -6,6 +6,7 @@
 * [Python](python-basic.md)
   * [Python Basic](python-tricks.md)
   * [Python Singleton](python-advance.md)
+  * [Python Scope](python-scope.md)
 * [Machine Learning](machine-learning.md)
   * Feature engineering
 * [Leetcode](leetcode.md)
