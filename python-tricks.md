@@ -503,5 +503,18 @@ $100
  (4, 3, 2, 1)]
 ```
 
+Interview question: if we change the \[\]  into \(\) , will the data structure be changed
+
+Answer: yes i's changed from list to generator
+
+```py
+>>> L = [x*x for x in range(10)]
+>>> L
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+>>> g = (x*x for x in range(10))
+>>> g
+<generator object <genexpr> at 0x0000028F8B774200>
+```
+
 
 
