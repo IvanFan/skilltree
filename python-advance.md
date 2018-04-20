@@ -113,7 +113,6 @@ print s2
 
 print s1.status_number
 print s2.status_number
-
 ```
 
 output
@@ -124,6 +123,8 @@ output
 5
 5
 ```
+
+However, we still have the multi-thread issue. If there are multi threads trying to init the object at the same time, they may get the result  \_\_instance is None at the same time. 
 
 
 
