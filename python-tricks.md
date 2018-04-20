@@ -376,3 +376,58 @@ The difficult part is:
 
 When the for loop print the returned generator object for the first time, the code in the function begin to work until it reach the keyword yield. Then it returns the first response. Next loop will also run only once and return one response
 
+let see another example:
+
+We can create a generator first
+
+```
+# 这里你创建node方法的对象将会返回一个生成器
+def node._get_child_candidates(self, distance, min_dist, max_dist):
+
+  # 这里的代码你每次使用生成器对象的时候将会调用
+
+  if self._leftchild and distance - max_dist < self._median:
+      yield self._leftchild
+
+  if self._rightchild and distance + max_dist >= self._median:
+      yield self._rightchild
+
+  # 如果代码运行到这里,生成器就被认为变成了空的
+```
+
+Call the function:
+
+```
+# 创建空列表和一个当前对象索引的列表
+result, candidates = list(), [self]
+
+# 在candidates上进行循环(在开始只保含一个元素)
+while candidates:
+
+    # 获得最后一个condidate然后从列表里删除
+    node = candidates.pop()
+
+    # 获取obj和candidate的distance
+    distance = node._get_dist(obj)
+
+    # 如果distance何时将会填入result
+    if distance <= max_dist and distance >= min_dist:
+        result.extend(node._values)
+
+    candidates.extend(node._get_child_candidates(distance, min_dist, max_dist))
+
+return result
+```
+
+extend\(\) is a list object method
+
+```
+>>> a = [1, 2]
+>>> b = [3, 4]
+>>> a.extend(b)
+>>> print(a)
+[1, 2, 3, 4]
+```
+
+
+
