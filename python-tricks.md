@@ -368,7 +368,11 @@ it's similar to return
 
 If you have a huge list and you only want to read it once, then yield is the best choice
 
+When you calling the function, the code within the function is actually not running.** It just return the generator object**
 
+When we using for to go through the iteration, the code will work.
 
+The difficult part is:
 
+When the for loop print the returned generator object for the first time, the code in the function begin to work until it reach the keyword yield. Then it returns the first response. Next loop will also run only once and return one response
 
