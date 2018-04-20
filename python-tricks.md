@@ -601,5 +601,32 @@ print scream()
 # 输出: 'Yes!'
 ```
 
+Second, you can define another function in a function
+
+```
+def talk():
+
+    # 你可以在"talk"里定义另一个函数 ...
+    def whisper(word="yes"):
+        return word.lower()+"..."
+
+    # 让我们用用它!
+
+    print whisper()
+
+# 每次调用"talk"时都会定义一次"whisper",然后"talk"会调用"whisper"
+talk()
+# 输出:
+# "yes..."
+
+# 但是在"talk"意外"whisper"是不存在的:
+
+try:
+    print whisper()
+except NameError, e:
+    print e
+    #输出 : "name 'whisper' is not defined"*
+```
+
 
 
