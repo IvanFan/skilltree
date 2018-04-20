@@ -20,5 +20,21 @@ class MyClass(Singleton):
     a = 1
 ```
 
+### Share attributes
+
+when creating instances, we can direct \_\_dict\_\_ of all instances to the same dict. So that they will have the same attributes
+
+```py
+class Borg(object):
+    _state = {}
+    def __new__(cls, *args, **kw):
+        ob = super(Borg, cls).__new__(cls, *args, **kw)
+        ob.__dict__ = cls._state
+        return ob
+
+class MyClass2(Borg):
+    a = 1
+```
+
 
 
