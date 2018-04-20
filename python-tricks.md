@@ -628,5 +628,56 @@ except NameError, e:
     #输出 : "name 'whisper' is not defined"*
 ```
 
+Third, the function can return another function
+
+```
+def getTalk(kind="shout"):
+
+    # 在函数里定义一个函数
+    def shout(word="yes"):
+        return word.capitalize()+"!"
+
+    def whisper(word="yes") :
+        return word.lower()+"...";
+
+    # 返回一个函数
+    if kind == "shout":
+        # 这里不用"()",我们不是要调用函数
+        # 只是返回函数对象
+        return shout
+    else:
+        return whisper
+
+# 怎么用这个特性呢?
+
+# 把函数赋值给变量
+talk = getTalk()
+
+# 可以看到"talk"是一个函数对象
+print talk
+# 输出 : <function shout at 0xb7ea817c>
+
+# 函数返回的是对象:
+print talk()
+# 输出 : Yes!
+
+# 不嫌麻烦你也可以这么用
+print getTalk("whisper")()
+# 输出 : yes...
+```
+
+Last, you can also use function as parameter
+
+```
+def doSomethingBefore(func):
+    print "I do something before then I call the function you gave me"
+    print func()
+
+doSomethingBefore(scream)
+# 输出:
+#I do something before then I call the function you gave me
+#Yes!
+```
+
 
 
