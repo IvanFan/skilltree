@@ -4,10 +4,11 @@
 * [Network](neetwork.md)
   * [TCP](neetwork/tcp.md)
 * [Python](python-basic.md)
-  * [Python Basic](python-tricks.md)
+  * [Python Tricks](python-tricks.md)
   * [Python Singleton](python-advance.md)
   * [Python Scope](python-scope.md)
   * [Python GIL & Coroutine](python-gil.md)
+  * [Python Closure](closure.md)
 * [Machine Learning](machine-learning.md)
   * Feature engineering
 * [Leetcode](leetcode.md)
