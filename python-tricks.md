@@ -848,5 +848,5 @@ Django use decorator to manage cache and ac
 
 Twisted use it to modify async function
 
-we can use it to extend third party libs
+we can use it to extend third party libs or debug existing functions
 
