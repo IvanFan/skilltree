@@ -67,10 +67,6 @@ from mysingleton import my_singleton
 my_singleton.foo()
 ```
 
-
-
-
-
 ## Go Deep
 
 ```
@@ -85,8 +81,6 @@ s1 = Singleton()
 s2 = Singleton()
 print s1
 print s2
-
-
 ```
 
 the result is:
@@ -97,6 +91,39 @@ the result is:
 ```
 
 let's go one step further
+
+```
+class Singleton(object):
+    __instance = None
+
+    def __new__(cls, *args, **kwargs):
+        if cls.__instance is None:
+            cls.__instance = super(
+                Singleton, cls).__new__(cls, *args, **kwargs)
+        return cls.__instance
+
+    def __init__(self, status_number):
+        self.status_number = status_number
+
+
+s1 = Singleton(2)
+s2 = Singleton(5)
+print s1
+print s2
+
+print s1.status_number
+print s2.status_number
+
+```
+
+output
+
+```
+<__main__.Singleton object at 0x7f5116865490>
+<__main__.Singleton object at 0x7f5116865490>
+5
+5
+```
 
 
 
