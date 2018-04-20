@@ -844,5 +844,9 @@ decorated_function("Universe and", "everything")
 # Whoooot!
 ```
 
+Django use decorator to manage cache and ac
 
+Twisted use it to modify async function
+
+we can use it to extend third party libs
 
