@@ -32,3 +32,5 @@ print (variable)
 
 Local -&gt; Enclosing -&gt; Global -&gt; Built-in
 
+extra link [https://www.jianshu.com/p/17a9d8584530](https://www.jianshu.com/p/17a9d8584530)
+
