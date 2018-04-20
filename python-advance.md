@@ -69,3 +69,34 @@ my_singleton.foo()
 
 
 
+
+
+## Go Deep
+
+```
+class Singleton(object):
+    __instance = None
+    def __new__(cls, *args, **kwargs):  # 这里不能使用__init__，因为__init__是在instance已经生成以后才去调用的
+        if cls.__instance is None:
+            cls.__instance = super(Singleton, cls).__new__(cls, *args, **kwargs)
+        return cls.__instance
+
+s1 = Singleton()
+s2 = Singleton()
+print s1
+print s2
+
+
+```
+
+the result is:
+
+```
+<__main__.Singleton object at 0x7f3580dbe110>
+<__main__.Singleton object at 0x7f3580dbe110>
+```
+
+let's go one step further
+
+
+

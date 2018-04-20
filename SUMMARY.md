@@ -5,7 +5,7 @@
   * [TCP](neetwork/tcp.md)
 * [Python](python-basic.md)
   * [Python Basic](python-tricks.md)
-  * [Python Advance](python-advance.md)
+  * [Python Singleton](python-advance.md)
 * [Machine Learning](machine-learning.md)
   * Feature engineering
 * [Leetcode](leetcode.md)
