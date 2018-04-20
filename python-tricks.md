@@ -569,3 +569,37 @@ It can be used for logging, performance testing ...
 
 In python, we can use decorator to implement AOP. **Decorator adds extra functions to the existing objects.**
 
+First all functions in python are obejcts:
+
+```
+def shout(word="yes"):
+    return word.capitalize()+"!"
+
+print shout()
+# 输出 : 'Yes!'
+
+# 作为一个对象,你可以把它赋值给任何变量
+
+scream = shout
+
+# 注意啦我们没有加括号,我们并不是调用这个函数,我们只是把函数"shout"放在了变量"scream"里.
+# 也就是说我们可以通过"scream"调用"shout":
+
+print scream()
+# 输出 : 'Yes!'
+
+# 你可以删除旧名"shout",而且"scream"依然指向函数
+
+del shout
+try:
+    print shout()
+except NameError, e:
+    print e
+    #输出: "name 'shout' is not defined"
+
+print scream()
+# 输出: 'Yes!'
+```
+
+
+
