@@ -850,3 +850,9 @@ Twisted use it to modify async function
 
 we can use it to extend third party libs or debug existing functions
 
+## DuckType
+
+for some functions, e.g. list.extend\(\) we don't care about the type as long as it is iteration. So the parameter can be list/tuple/dict or str/generator
+
+
+
