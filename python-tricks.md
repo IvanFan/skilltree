@@ -543,5 +543,7 @@ cabbage = vegetable
 apple = fruit
 ```
 
+We also can use named parameter and \*args \*\*kwargs together
+
 
 
