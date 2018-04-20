@@ -561,5 +561,11 @@ You can also use \* or \*\* for functions
 a = aardvark, b = baboon, c = cat
 ```
 
+## AOP & decorators
 
+AOP is a programming concept. E.g. Spring framework has used AOP for syntax suggers
+
+It can be used for logging, performance testing ...
+
+In python, we can use decorator to implement AOP. **Decorator adds extra functions to the existing objects.**
 
