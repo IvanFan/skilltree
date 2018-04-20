@@ -861,9 +861,13 @@ Python don't need overload
 1. if parameter type is different, python can accept different types
 2. if parameter number is undefined, we can use \*args
 
-
-
 ## \_\_new\_\_ & \_\_init\_\_
+
+Use**\_\_new\_\_**when you need to control the creation of a new instance. Use**\_\_init\_\_**when you need to control initialization of a new instance.
+
+**\_\_new\_\_**is the first step of instance creation. It's called first, and is responsible for returning a new instance of your class. In contrast,**\_\_init\_\_**doesn't return anything; it's only responsible for initializing the instance after it's been created.
+
+In general, you shouldn't need to override**\_\_new\_\_**unless you're subclassing an immutable type like str, int, unicode or tuple.
 
 
 
