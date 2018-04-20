@@ -12,7 +12,6 @@ print variable
 
 ```
 NameError: name 'variable' is not defined
-
 ```
 
 If we define the variable in if-elif-else、for-else、while、try-except\try-finally, it doesn't generate scope.
@@ -31,5 +30,5 @@ print (variable)
 100
 ```
 
-
+Local -&gt; Enclosing -&gt; Global -&gt; Built-in
 
