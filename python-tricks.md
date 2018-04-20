@@ -871,5 +871,7 @@ In general, you shouldn't need to override**\_\_new\_\_**unless you're subclassi
 
 
 
+## Singleton
+
 
 
