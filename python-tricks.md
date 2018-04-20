@@ -854,16 +854,18 @@ we can use it to extend third party libs or debug existing functions
 
 for some functions, e.g. list.extend\(\) we don't care about the type as long as it is iteration. So the parameter can be list/tuple/dict or str/generator
 
-
-
 ## Overload
-
-
 
 Python don't need overload
 
 1. if parameter type is different, python can accept different types
 2. if parameter number is undefined, we can use \*args
+
+
+
+## \_\_new\_\_ & \_\_init\_\_
+
+
 
 
 
