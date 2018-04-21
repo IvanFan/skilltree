@@ -883,5 +883,12 @@ readlines: read the whole file into a generator so we can use iteration
 
 
 
+## range and xrange
+
+都在循环时使用，xrange内存性能更好。 for i in range\(0, 20\): for i in xrange\(0, 20\): What is the difference between range and xrange functions in Python 2.X? range creates a list, so if you do range\(1, 10000000\) it creates a list in memory with 9999999 elements. xrange is a sequence object that evaluates lazily.
+
+  
+
+
 
 
