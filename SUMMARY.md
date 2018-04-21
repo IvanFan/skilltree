@@ -9,6 +9,7 @@
   * [Python Scope](python-scope.md)
   * [Python GIL & Coroutine](python-gil.md)
   * [Python Closure](closure.md)
+  * [Python functional programming & lambda](python-functional-programming-and-lambda.md)
 * [Machine Learning](machine-learning.md)
   * Feature engineering
 * [Leetcode](leetcode.md)
