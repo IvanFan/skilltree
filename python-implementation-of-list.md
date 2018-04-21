@@ -52,5 +52,7 @@ If we keep adding 2,3 ,4, we don't have to apply new space because the extra spa
 
 
 
+![](/assets/pythonlistimplementation2.png)
+
 
 
