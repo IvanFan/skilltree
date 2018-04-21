@@ -75,13 +75,32 @@ If ob\_size is less than half of the allocated space, the allocated space will b
 6个，list的实际使用空间现在是3个\(译者注：根据\(newsize &gt;&gt; 3\) + \(newsize &lt; 9 ? 3 : 6\) = 3在文章最后有详述\)  
 你可以发现（下图）3号和4号内存空间还存储着一些整数，但是list的实际使用\(存储元素\)空间却只有3个了。
 
-
-
-
-
 ![](/assets/pythonlistimplementation5.png)
 
+### Remove
 
+切开list和删除元素，调用了list\_ass\_slice\(\)（译者注：在上文slice list between element's slot and element's slot + 1被调用），来看下list\_ass\_slice\(\)是如何工作的。在这里，低位为1 高位为2（译者注：传入的参数），我们移除在1号内存空间存储的数据5
+
+![](/assets/pythonlistimplementation6.png)
+
+
+
+
+
+```
+我们能看到 Python 设计者的苦心。在需要的时候扩容,但又不允许过度的浪费,适当的内存回收是非常必要的。
+这个确定调整后的空间大小算法很有意思。
+调整后大小 (new_allocated) = 新元素数量 (newsize) + 预留空间 (new_allocated)
+调整后的空间肯定能存储 newsize 个元素。要关注的是预留空间的增长状况。
+将预留算法改成 Python 版就更清楚了:(newsize // 8) + (newsize < 9 and 3 or 6)。
+当 newsize >= allocated,自然按照这个新的长度 "扩容" 内存。
+而如果 newsize < allocated,且利用率低于一半呢?
+allocated    newsize       new_size + new_allocated
+10           4             4 + 3
+20           9             9 + 7
+很显然,这个新长度小于原来的已分配空间长度,自然会导致 realloc 收缩内存。(不容易啊)
+
+```
 
 
 
