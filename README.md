@@ -8,11 +8,11 @@ _**Hold what you really know and tell what you do not know - this will lead to k
 
 Completed sections:
 
-* Python
-
-
+* ~~Python~~
 
 Sections in progress:
+
+* OS
 
 * Network
 
