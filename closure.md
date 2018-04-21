@@ -49,3 +49,15 @@ Decorator is an implementation of closure concept
 
 
 
+In summary, if we want implement a closure:
+
+1. There must be a nested function
+2. the nested function must use the outside function's variable
+3. the return of outside function must be the nested function
+
+
+
+
+
+
+
