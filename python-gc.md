@@ -14,3 +14,11 @@ PyObject is a common content for each object. ob\_refcnt is the reference count.
 
 
 
+### Mark-swap
+
+![](/assets/import3.png)
+
+Generational GC
+
+
+
