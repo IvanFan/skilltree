@@ -37,5 +37,9 @@ reduce get 3!
 6
 ```
 
+The main idea of functional programming is trying to avoid modifying state outside the function.
+
+Same input should always get the same output
+
 
 
