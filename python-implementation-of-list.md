@@ -34,7 +34,7 @@ PyListNew:
 
 ### Append
 
-what happened when appending a new element
+what happened when appending a new element  
 
 
 ```python
@@ -48,4 +48,6 @@ app1:
 
 ```
 
+
+list_resize() will apply more space to avoid frequent re-application. so the increasing model of list is :0,4,8,16,25,35,46,58,72,88...
 
