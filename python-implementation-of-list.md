@@ -1,5 +1,7 @@
 ## Implement List
 
+This post describes the CPython implementation of the list object. CPython is the most used Python implementation.
+
 The c structure of list
 
 ```
@@ -83,10 +85,6 @@ If ob\_size is less than half of the allocated space, the allocated space will b
 
 ![](/assets/pythonlistimplementation6.png)
 
-
-
-
-
 ```
 我们能看到 Python 设计者的苦心。在需要的时候扩容,但又不允许过度的浪费,适当的内存回收是非常必要的。
 这个确定调整后的空间大小算法很有意思。
@@ -99,7 +97,6 @@ allocated    newsize       new_size + new_allocated
 10           4             4 + 3
 20           9             9 + 7
 很显然,这个新长度小于原来的已分配空间长度,自然会导致 realloc 收缩内存。(不容易啊)
-
 ```
 
 
