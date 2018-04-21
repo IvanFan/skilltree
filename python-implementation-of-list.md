@@ -29,5 +29,4 @@ PyListNew:
     set list's allocated var to 0 = 0 slots
     return list object
 
-
 ```
