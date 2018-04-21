@@ -48,3 +48,9 @@ list\_resize\(\) will apply more space to avoid frequent re-application. so the 
 
 ![](/assets/importlistimplementation.png)
 
+If we keep adding 2,3 ,4, we don't have to apply new space because the extra space is big enough
+
+
+
+
+
