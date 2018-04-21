@@ -869,7 +869,9 @@ Use**\_\_new\_\_**when you need to control the creation of a new instance. Use**
 
 In general, you shouldn't need to override**\_\_new\_\_**unless you're subclassing an immutable type like str, int, unicode or tuple.
 
-## 
+## is & ==
+
+is compares address while == compare the value
 
 
 
