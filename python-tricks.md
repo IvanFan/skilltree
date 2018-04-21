@@ -873,5 +873,15 @@ In general, you shouldn't need to override**\_\_new\_\_**unless you're subclassi
 
 is compares address while == compare the value
 
+## read, readline and readlines
+
+read : read the whole file
+
+readline: read next line by using generator
+
+readlines: read the whole file into a generator so we can use iteration
+
+
+
 
 
