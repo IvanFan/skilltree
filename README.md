@@ -6,13 +6,19 @@ _**Hold what you really know and tell what you do not know - this will lead to k
 
 --- Confucius
 
-components in progress:
+Completed sections:
+
+* Python
+
+
+
+Sections in progress:
 
 * Network
-* Python Baisc
+
 * Leetcode
 
-next step:
+Next step:
 
 * database
 * my own open-source project
