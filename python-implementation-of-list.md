@@ -56,15 +56,9 @@ If we keep adding 2,3 ,4, we don't have to apply new space because the extra spa
 
 let's insert 5 into index 1
 
-
-
 ![](/assets/pythonlistimplementation3.png)
 
+you can see that the allocated space is 8 but we only used 5 space there
 
-
-
-
-
-
-
+the time complexity of insert is O\(n\)
 
