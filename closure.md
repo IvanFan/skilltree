@@ -16,10 +16,10 @@ another()
 
 another  example
 
-```
+```py
 def adder(x):
     def wrapper(y):
-        return x + y
+        print(x + y)
     return wrapper
 
 adder5 = adder(5)
@@ -31,17 +31,15 @@ adder5(6)
 
 Closure is like a package which contains variables. From above examples, we can say that another is a closure. It consists of 2 things: printer and msg. Because of Closure, msg is always saved within memory.
 
-All functions have an attribute called _**\_\_closure\_\_**  ._ If the function is a Closure, this attribute represents a tuple which consists of cell objects
+All functions have an attribute called _\*\*\_\_closure\_\_\*\*  .\_ If the function is a Closure, this attribute represents a tuple which consists of cell objects
 
-```
+```py
 >>> adder.__closure__
 >>> adder5.__closure__
 (<cell at 0x103075910: int object at 0x7fd251604518>,)
 >>> adder5.__closure__[0].cell_contents
 5
 ```
-
-
 
 Scope, Closure and GC are common concept in many programming languages. E.g. javascript and php
 
