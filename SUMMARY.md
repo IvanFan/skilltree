@@ -12,6 +12,7 @@
   * [Python functional programming & lambda](python-functional-programming-and-lambda.md)
   * [Python Copy  & Deepcopy ](python-copy-and-deepcopy.md)
   * [Python GC](python-gc.md)
+  * [Python Implementation of List](python-implementation-of-list.md)
 * [Machine Learning](machine-learning.md)
   * Feature engineering
 * [Leetcode](leetcode.md)
