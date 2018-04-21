@@ -50,9 +50,15 @@ list\_resize\(\) will apply more space to avoid frequent re-application. so the 
 
 If we keep adding 2,3 ,4, we don't have to apply new space because the extra space is big enough
 
-
-
 ![](/assets/pythonlistimplementation2.png)
+
+
+
+## Insert
+
+let's insert 5 into index 1
+
+
 
 
 
