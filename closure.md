@@ -47,8 +47,6 @@ They all dynamic programming languages. Since the variables be saved in the memo
 
 Decorator is an implementation of closure concept
 
-
-
 In summary, if we want implement a closure:
 
 1. There must be a nested function
@@ -56,6 +54,12 @@ In summary, if we want implement a closure:
 3. the return of outside function must be the nested function
 
 
+
+Other tips:
+
+Within the nested function, you can use the outside variable, but you cannot change it.
+
+![](/assets/import.png)
 
 
 
