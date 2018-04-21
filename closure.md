@@ -14,5 +14,20 @@ another = print_msg()
 another()
 ```
 
+another  example
+
+```
+def adder(x):
+    def wrapper(y):
+        return x + y
+    return wrapper
+
+adder5 = adder(5)
+# 输出 15
+adder5(10)
+# 输出 11
+adder5(6)
+```
+
 
 
