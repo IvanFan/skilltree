@@ -59,9 +59,9 @@ Within the nested function, you can use the outside variable, but you cannot cha
 
 ![](/assets/import.png)
 
-
-
 But within python 3 we can use nonlocal which allows us to update the variable
 
 ![](/assets/import1.png)
+
+The issue of closure is that class can implement 80% similar and have a better readability. 
 
