@@ -45,3 +45,7 @@ Scope, Closure and GC are common concept in many programming languages. E.g. jav
 
 They all dynamic programming languages. Since the variables be saved in the memory, the incorrect usage may lead to GC issues.
 
+Decorator is an implementation of closure concept
+
+
+
