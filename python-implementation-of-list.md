@@ -62,8 +62,6 @@ you can see that the allocated space is 8 but we only used 5 space there
 
 the time complexity of insert is O\(n\)
 
-
-
 ### Pop
 
 when popping an element, the list\_resize function will be called
@@ -72,13 +70,16 @@ If ob\_size is less than half of the allocated space, the allocated space will b
 
 ![](/assets/pythonlistimplementation4.png)
 
+你可以发现4号内存空间指向还指向那个数值（译者注：弹出去的那个数值），但是很重要的是ob\_size现在却成了4.  
+让我们再弹出一个元素。在list\_resize内部，size – 1 = 4 – 1 = 3 比allocated（已经申请的空间）的一半还要小。所以list的申请空间缩小到  
+6个，list的实际使用空间现在是3个\(译者注：根据\(newsize &gt;&gt; 3\) + \(newsize &lt; 9 ? 3 : 6\) = 3在文章最后有详述\)  
+你可以发现（下图）3号和4号内存空间还存储着一些整数，但是list的实际使用\(存储元素\)空间却只有3个了。
 
-你可以发现4号内存空间指向还指向那个数值（译者注：弹出去的那个数值），但是很重要的是ob_size现在却成了4.
-让我们再弹出一个元素。在list_resize内部，size – 1 = 4 – 1 = 3 比allocated（已经申请的空间）的一半还要小。所以list的申请空间缩小到
-6个，list的实际使用空间现在是3个(译者注：根据(newsize >> 3) + (newsize < 9 ? 3 : 6) = 3在文章最后有详述)
-你可以发现（下图）3号和4号内存空间还存储着一些整数，但是list的实际使用(存储元素)空间却只有3个了。  
 
 
+
+
+![](/assets/pythonlistimplementation5.png)
 
 
 
