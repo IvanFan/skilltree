@@ -53,8 +53,6 @@ In summary, if we want implement a closure:
 2. the nested function must use the outside function's variable
 3. the return of outside function must be the nested function
 
-
-
 Other tips:
 
 Within the nested function, you can use the outside variable, but you cannot change it.
@@ -63,5 +61,7 @@ Within the nested function, you can use the outside variable, but you cannot cha
 
 
 
+But within python 3 we can use nonlocal which allows us to update the variable
 
+![](/assets/import1.png)
 
