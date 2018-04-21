@@ -9,14 +9,14 @@ It's used for the following situations:
 3. if the server need to handle tcp and udp 
 4. if the server need to provide different services and different protocols
 
-
-
 ## Compared with multi-process and multi-thread
 
 Pros:
 
 * less system resources
 * don't need to build and maintain new process/thread
+
+## Select
 
 
 
