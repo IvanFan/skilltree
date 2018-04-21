@@ -13,6 +13,7 @@
   * [Python Copy  & Deepcopy ](python-copy-and-deepcopy.md)
   * [Python GC](python-gc.md)
   * [Python Implementation of List](python-implementation-of-list.md)
+  * [Python 2 and 3](python-2-and-3.md)
 * [Machine Learning](machine-learning.md)
   * Feature engineering
 * [Leetcode](leetcode.md)
