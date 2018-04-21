@@ -52,11 +52,17 @@ If we keep adding 2,3 ,4, we don't have to apply new space because the extra spa
 
 ![](/assets/pythonlistimplementation2.png)
 
-
-
 ## Insert
 
 let's insert 5 into index 1
+
+
+
+![](/assets/pythonlistimplementation3.png)
+
+
+
+
 
 
 
