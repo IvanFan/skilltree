@@ -11,6 +11,7 @@
   * [Python Closure](closure.md)
   * [Python functional programming & lambda](python-functional-programming-and-lambda.md)
   * [Python Copy  & Deepcopy ](python-copy-and-deepcopy.md)
+  * [Python GC](python-gc.md)
 * [Machine Learning](machine-learning.md)
   * Feature engineering
 * [Leetcode](leetcode.md)
