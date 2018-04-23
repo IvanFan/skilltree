@@ -56,8 +56,12 @@ int select(int max_fd, fd_set *readset, fd_set *writeset, fd_set *exceptset, str
 FD_ZERO(int fd, fd_set* fds)   //清空集合
 FD_SET(int fd, fd_set* fds)    //将给定的描述符加入集合
 FD_ISSET(int fd, fd_set* fds)  //判断指定描述符是否在集合中
-FD_CLR(int fd, fd_set* fds)    //将给定的描述符从文件中删除  
+FD_CLR(int fd, fd_set* fds)    //将给定的描述符从文件中删除
 ```
+
+![](/assets/osiomultiplexing3.png)
+
+
 
 事件驱动不是无敌的，在事件驱动模型中，处理事件的进程一定是单线程的。
 
