@@ -25,11 +25,32 @@ Definition:
 3. user control the workflow
 4. if I/O has been blocked, switch to other coroutine
 
-
-
 # Event Drive & Async I/O
 
 # 
+
+通常，我们写服务器处理模型的时候，有以下几种模型：
+
+1. 每收到一个请求，创建一个新的进程，来处理该请求
+2. 每收到一个请求，创建一个新的线程，来处理该请求
+3. 每收到一个请求，放入一个时间列表，让主进程通过非阻塞I/O方式来处理请求
+
+以上几种方式各有优缺点：
+
+* 第一种方法中，由于创建新的进程开销比较大，会导致服务器性能比较差，但是实现比较简单
+* 第二种方式，由于要设计成线程的同步，有可能会死锁等问题。
+* 第三种方式中，在写应用程序代码时，逻辑比前两种都复杂。
+
+
+
+
+
+Event Drive Model:
+
+1. has a message queue
+2. add event to the queue
+3. the loop will keep popping event to handle
+4. event has its own function to handle the event
 
 
 
