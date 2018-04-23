@@ -9,6 +9,10 @@ It's used for the following situations:
 3. if the server need to handle tcp and udp 
 4. if the server need to provide different services and different protocols
 
+使用阻塞模式的套接字编写网络程序比较简单，容易实现。但是在服务器端，通常要处理大量的套接字通信请求，如果线程阻塞于上述的某一个输入或输出调用时，将无法处理其他任何运算或响应其他网络请求，这么做无疑是十分低效的，当然可以采用多线程，但大量的线程占用很大的内存空间，并且线程切换会带来很大的开销。而I/O多路复用模型能处理多个connection的优点就使其
+
+**能支持更多的并发连接请求**
+
 ## Compared with multi-process and multi-thread
 
 Pros:
@@ -40,14 +44,9 @@ lientSocket s = accept(ServerSocket);  // 阻塞
      }
       item.close();
   }
-
-
 ```
 
 事件驱动不是无敌的，在事件驱动模型中，处理事件的进程一定是单线程的。
-
-  
-
 
 在现代工业中我们会面临两个问题：
 
@@ -55,9 +54,6 @@ lientSocket s = accept(ServerSocket);  // 阻塞
    **另外，单线程模型不能很好的利用多核cpu**
    。
 2. 既然不能有阻塞，那我们只有用多线程去做异步io，那马上就会面临回掉地狱。
-
-  
-
 
 为了解决我上述说的两个问题人们做出了一些改进：
 
