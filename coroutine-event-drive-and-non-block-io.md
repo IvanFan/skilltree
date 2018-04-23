@@ -52,3 +52,9 @@ Event Drive Model:
 
 
 
+event drive is a pattern
+
+let's compare single thread, multi thread and event drive
+
+![](/assets/os coroutine event drive2.png)
+
