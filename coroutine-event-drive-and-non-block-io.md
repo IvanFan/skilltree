@@ -41,16 +41,14 @@ Definition:
 * 第二种方式，由于要设计成线程的同步，有可能会死锁等问题。
 * 第三种方式中，在写应用程序代码时，逻辑比前两种都复杂。
 
-
-
-
-
 Event Drive Model:
 
 1. has a message queue
 2. add event to the queue
 3. the loop will keep popping event to handle
 4. event has its own function to handle the event
+
+![](/assets/oscoroutineenevtdrive1.png)
 
 
 
