@@ -46,6 +46,12 @@ lientSocket s = accept(ServerSocket);  // 阻塞
   }
 ```
 
+![](/assets/osiomultiplexing2.png)
+
+
+
+
+
 事件驱动不是无敌的，在事件驱动模型中，处理事件的进程一定是单线程的。
 
 在现代工业中我们会面临两个问题：
