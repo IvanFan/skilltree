@@ -65,10 +65,21 @@ FD_CLR(int fd, fd_set* fds)    //将给定的描述符从文件中删除
 
 
 
+## Poll
 
 
 
+## select,poll & epoll
 
+![](/assets/osiomultiplexing1.png)
+
+They are all sync I/O \(the R/W is blocked\)
+
+select has 3 issues:
+
+1. limitation of connection number
+2. slow to find comparsion
+3. 
 事件驱动不是无敌的，在事件驱动模型中，处理事件的进程一定是单线程的。
 
 在现代工业中我们会面临两个问题：
@@ -85,18 +96,5 @@ FD_CLR(int fd, fd_set* fds)    //将给定的描述符从文件中删除
    但是对于提升的性能来说，可以忽略不计。
 2. **发明了协程。**
 
-## 
-
-## select,poll & epoll
-
-![](/assets/osiomultiplexing1.png)
-
-They are all sync I/O \(the R/W is blocked\)
-
-select has 3 issues:
-
-1. limitation of connection number
-2. slow to find comparsion
-3. 
 
 
