@@ -109,8 +109,6 @@ _注：进程控制块，是操作系统核心中的一种数据结构，主要�
 
 注：信号驱动IO在实际中并不常用，所以下面只提及剩下的四中IO模型
 
-
-
 ### 阻塞I/O（blocking IO） {#阻塞ioblocking-io}
 
 在linux中，没默认情况下所有的socket都是blocking，一个典型的读操作流程是这样的：  
@@ -140,4 +138,36 @@ _所以，I/O多路复用的特点是通过一种机制，一个进程能同时�
 所以，如果处理连接数不是很高 的话，使用select、epool的web server不一定比使用multithreading + nlocking IO的web server性能更好，可能延迟还更大。select、epool的优势并不是对于单个链接能处理的更快，而是在于能处理更多的链接。
 
 在 IO multiplexing Model中，对于每一个socket，一般都设置成为non-blocking，但是，如上图所示，整个用户的process其实是一直被block的，只不过process是被select这个函数block，而不是被socket IO给block。
+
+
+
+### 异步I/O（asynchronous IO） {#异步ioasynchronous-io}
+
+Linux下的asynchronous IO其实用的很少，流程如下:  
+![](https://img-blog.csdn.net/20170722142116879?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2lsbDAzODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast "这里写图片描述")
+
+用户进程发起read操作之后，立刻就可以做其他的事情。而另一方面，从kernel的角度，当他收到一个asynchronous read之后，首先他会立刻返回。所以不会对用户进程产生任何的block。然后，kernel会等待数据准备完成，然后将数据拷贝到用户内存，当这一切完成之后，kernel会给用户进程发送一个signal，告诉它read操作完成了
+
+
+
+## 总结 {#总结}
+
+**blocking和non-blocking的区别**  
+调用blocking IO会一直block住对应的进程直到操作完成，而non-blockig IO在kernel还准备数据的情况下立刻返回
+
+**同步IO（synchronous IO）和异步IO（asynchronous）的区别**  
+在说明同步IO和异步IO的区别之前，需要先给出两个定义。POSIX的定义是这个样子的：
+
+* 同步的输入/输出操作导致请求进程被阻塞，直到该输入/输出操作完成;
+* 异步的输入/输出操作不会导致请求进程被阻塞;
+
+二者的区别就在于同步IO做IO操作的时候会将process阻塞，安装这个定义，之前所述的阻塞IO（blocking IO），非阻塞IO（non-blocking IO），IO多路复用（IO multiiplexing）都属于同步IO。  
+_注：虽然非阻塞IO没有被阻塞，但是也是同步IO，因为定义中提高的IO操作是指真实的IO操作，就是例子中的recvfrom这个system call。非阻塞IO在执行recvform这个system call的时候，如果kernel的数据没有准备好，这时候不会block进程。但是当kernel准备好数据的时候，recvform会将数据从kernel拷贝到 用户内存中，这时候进程是被block了，在这段时间内进程是被block的。_
+
+而异步IO不一样，当进程发起IO操作后，就直接返回，再也不理睬了，直到kernel发送一个信号，告诉进程说IO完成。在这整体过程中，进程完全没有被block。
+
+各个IO模型的比较示意图：  
+![](https://img-blog.csdn.net/20170722155532073?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2lsbDAzODM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast "这里写图片描述")
+
+通过上面的图片，可以发现非阻塞IO和异步IO的区别还是很明显的。在非阻塞IO中，虽然劲曾大部分时间不会被block，但是他仍要求进程去主动的check，并且当数据准备完成后，越要进程主动的再次调用recvfrom来将数据拷贝到用户内存。而异步IO则完全同。他就像是用户进程将整个IO操作交给了其他人（kernel）完成，然后别人做完之后发信号通知。在此期间，用户进程不需要检查IO的操作状态，也不需要主动的拷贝数据。
 
