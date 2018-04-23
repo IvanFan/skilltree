@@ -66,6 +66,8 @@ lientSocket s = accept(ServerSocket);  // 阻塞
 
 ## select,poll & epoll
 
+![](/assets/osiomultiplexing1.png)
+
 They are all sync I/O \(the R/W is blocked\)
 
 select has 3 issues:
