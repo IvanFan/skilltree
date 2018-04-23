@@ -63,9 +63,44 @@ FD_CLR(int fd, fd_set* fds)    //将给定的描述符从文件中删除
 
 基于select的I/O复用模型的是单进程执行，占用资源少，可以为多个客户端服务。但是select需要轮询每一个描述符，在高并发时仍然会存在效率问题，同时select能支持的最大连接数通常受限。
 
-
-
 ## Poll
+
+poll的机制与select类似，与select在本质上没有多大差别，管理多个描述符也是进行轮询，根据描述符的状态进行处理，但是poll没有最大文件描述符数量的限制。  
+
+
+Linux提供的poll函数接口如下：
+
+```
+#include <poll.h>
+int poll(struct pollfd fds[], nfds_t nfds, int timeout);
+
+typedef struct pollfd {
+        int fd;                         // 需要被检测或选择的文件描述符
+        short events;                   // 对文件描述符fd上感兴趣的事件
+        short revents;                  // 文件描述符fd上当前实际发生的事件*/
+} pollfd_t;
+
+```
+
+poll\(\)函数返回fds集合中就绪的读、写，或出错的描述符数量，返回0表示超时，返回-1表示出错；
+
+1. fds是一个struct pollfd类型的数组，用于存放需要检测其状态的socket描述符，并且调用poll函数之后fds数组不会被清空；
+2. nfds记录数组fds中描述符的总数量；
+3. timeout是调用poll函数阻塞的超时时间，单位毫秒；
+4. 一个pollfd结构体表示一个被监视的文件描述符，通过传递fds\[\]指示 poll\(\) 监视多个文件描述符。其中，结构体的events域是监视该文件描述符的事件掩码，由用户来设置这个域，结构体的revents域是文件描述符的操作结果事件掩码，内核在调用返回时设置这个域。events域中请求的任何事件都可能在revents域中返回。
+
+
+
+## Epoll
+
+epoll在Linux2.6内核正式提出，是基于事件驱动的I/O方式，相对于select和poll来说，epoll没有描述符个数限制，使用一个文件描述符管理多个描述符，将用户关心的文件描述符的事件存放到内核的一个事件表中，这样在用户空间和内核空间的copy只需一次。优点如下：
+
+1. 没有最大并发连接的限制，能打开的fd上限远大于1024（1G的内存能监听约10万个端口）
+ 
+2. 采用回调的方式，效率提升。只有
+   **活跃可用**
+   的fd才会调用callback函数，也就是说 epoll 只管你“活跃”的连接，而跟连接总数无关，因此在实际的网络环境中，epoll的效率就会远远高于select和poll。
+3. 内存拷贝。使用mmap\(\)文件映射内存来加速与内核空间的消息传递，减少复制开销。
 
 
 
@@ -79,8 +114,7 @@ select has 3 issues:
 
 1. limitation of connection number
 2. slow to find comparsion
-3. 
-事件驱动不是无敌的，在事件驱动模型中，处理事件的进程一定是单线程的。
+3. 事件驱动不是无敌的，在事件驱动模型中，处理事件的进程一定是单线程的。
 
 在现代工业中我们会面临两个问题：
 
