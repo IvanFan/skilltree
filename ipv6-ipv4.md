@@ -8,3 +8,27 @@ Internet Protocol version 6 \(IPv6\) is the most recent version of the Internet 
 
 
 
+IPv6 uses a 128-bit address, theoretically allowing 2128, or approximately 3.4×1038 addresses
+
+The total number of possible IPv6 addresses is more than 7.9×1028 times as many as IPv4, which uses 32-bit addresses and provides approximately 4.3 billion addresses. 
+
+**Internet protocol suite**
+
+**Application layer**
+
+BGP DHCP DNS FTP HTTP IMAP LDAP MGCP MQTT NNTP NTP POP ONC/RPC RTP RTSP RIP SIP SMTP SNMP SSH Telnet TLS/SSL XMPP more...
+
+**Transport layer**
+
+TCP UDP DCCP SCTP RSVP more...
+
+**Internet layer**
+
+IP IPv4 IPv6 ICMP ICMPv6 ECN IGMP IPsec more...
+
+**Link layer**
+
+ARP NDP OSPF Tunnels L2TP PPP MAC Ethernet DSL ISDN FDDI more...
+
+
+
