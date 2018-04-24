@@ -4,6 +4,8 @@
 * [Network](neetwork.md)
   * [TCP](neetwork/tcp.md)
   * IPv6 IPv4
+  * [GET & Post](neetwork/get-and-post.md)
+  * [Cookie Session & Stateless](neetwork/cookie-session-and-stateless.md)
 * [Python](python-basic.md)
   * [Python Tricks](python-tricks.md)
   * [Python Singleton](python-advance.md)
