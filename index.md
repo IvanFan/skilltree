@@ -2,6 +2,16 @@
 
 [https://www.imooc.com/article/22915](https://www.imooc.com/article/22915)
 
+
+
+With a clustered index the rows are stored physically on the disk in the same order as the index. Therefore, there can be only one clustered index.
+
+With a non clustered index there is a second list that has pointers to the physical rows. You can have many non clustered indexes, although each new index will increase the time it takes to write new records.
+
+It is generally faster to read from a clustered index if you want to get back all the columns. You do not have to go first to the index and then to the table.
+
+Writing to a table with a clustered index can be slower, if there is a need to rearrange the data.
+
 ## Clustered index
 
 定义：数据行的物理顺序与列值（一般是主键的那一列）的逻辑顺序相同，一个表中只能拥有一个聚集索引。
@@ -267,10 +277,6 @@ data = BTree_Search(root, my_key);
 
 另外，由于插入删除新的数据记录会破坏B-Tree的性质，因此在插入删除时，需要对树进行一个分裂、合并、转移等操作以保持B-Tree性质，本文不打算完整讨论B-Tree这些内容，因为已经有许多资料详细说明了B-Tree的数学性质及插入删除算法，有兴趣的朋友可以在本文末的参考文献一栏找到相应的资料进行阅读。
 
-
-
-
-
 ### B+Tree
 
 B-Tree有许多变种，其中最常见的是B+Tree，例如MySQL就普遍使用B+Tree实现其索引结构。
@@ -303,7 +309,6 @@ B-Tree有许多变种，其中最常见的是B+Tree，例如MySQL就普遍使用
 
 这一节对B-Tree和B+Tree进行了一个简单的介绍，下一节结合存储器存取原理介绍为什么目前B+Tree是数据库系统实现索引的首选数据结构。
 
-  
 MySQL索引实现
 
 在MySQL中，索引属于存储引擎级别的概念，不同存储引擎对索引的实现方式是不同的，本文主要讨论MyISAM和InnoDB两个存储引擎的索引实现方式。
@@ -347,7 +352,4 @@ MyISAM的索引方式也叫做“非聚集”的，之所以这么称呼是为�
 这里以英文字符的ASCII码作为比较准则。聚集索引这种实现方式使得按主键的搜索十分高效，但是辅助索引搜索需要检索两遍索引：首先检索辅助索引获得主键，然后用主键到主索引中检索获得记录。
 
 了解不同存储引擎的索引实现方式对于正确使用和优化索引都非常有帮助，例如知道了InnoDB的索引实现后，就很容易明白为什么不建议使用过长的字段作为主键，因为所有辅助索引都引用主索引，过长的主索引会令辅助索引变得过大。再例如，用非单调的字段作为主键在InnoDB中不是个好主意，因为InnoDB数据文件本身是一颗B+Tree，非单调的主键会造成在插入新记录时数据文件为了维持B+Tree的特性而频繁的分裂调整，十分低效，而使用自增字段作为主键则是一个很好的选择。
-
-  
-
 

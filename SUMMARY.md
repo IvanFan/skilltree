@@ -36,4 +36,5 @@
   * [Transaction](transaction.md)
   * [Index](index.md)
   * [Slow select query optimisation](slow-select-query-optimisation.md)
+  * [Redis](redis.md)
 
