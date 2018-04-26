@@ -2,7 +2,9 @@
 
 ![](/assets/importnetworksocket1.png)
 
-![](/assets/networksocket2.png)Sockets allow communication between two different processes on the same or different machines. To be more precise, it's a way to talk to other computers using standard Unix file descriptors. In Unix, every I/O action is done by writing or reading a file descriptor. A file descriptor is just an integer associated with an open file and it can be a network connection, a text file, a terminal, or something else.
+![](/assets/networksocket2.png)
+
+Sockets allow communication between two different processes on the same or different machines. To be more precise, it's a way to talk to other computers using standard Unix file descriptors. In Unix, every I/O action is done by writing or reading a file descriptor. A file descriptor is just an integer associated with an open file and it can be a network connection, a text file, a terminal, or something else.
 
 To a programmer, a socket looks and behaves much like a low-level file descriptor. This is because commands such as read\(\) and write\(\) work with sockets in the same way they do with files and pipes.
 
@@ -26,6 +28,5 @@ Processes are presumed to communicate only between sockets of the same type but 
 
 * **Sequenced Packet Sockets**− They are similar to a stream socket, with the exception that record boundaries are preserved. This interface is provided only as a part of the Network Systems \(NS\) socket abstraction, and is very important in most serious NS applications. Sequenced-packet sockets allow the user to manipulate the Sequence Packet Protocol \(SPP\) or Internet Datagram Protocol \(IDP\) headers on a packet or a group of packets, either by writing a prototype header along with whatever data is to be sent, or by specifying a default header to be used with all outgoing data, and allows the user to receive the headers on incoming packets.
 
-  
 
 
