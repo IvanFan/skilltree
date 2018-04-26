@@ -69,7 +69,7 @@ TCP的状态机
 * **关于ISN的初始化**  
   。ISN是不能hard code的，不然会出问题的——比如：如果连接建好后始终用1来做ISN，如果client发了30个segment过去，但是网络断了，于是 client重连，又用了1做ISN，但是之前连接的那些包到了，于是就被当成了新连接的包，此时，client的Sequence Number 可能是3，而Server端认为client端的这个号是30了。全乱了。  
   [RFC793](http://tools.ietf.org/html/rfc793)  
-  中说，ISN会和一个假的时钟绑在一起，这个时钟会在每4微秒对ISN做加一操作，直到超过2^32，又从0开始。这样，一个ISN的周期大约是4.55个小时。因为，我们假设我们的TCP Segment在网络上的存活时间不会超过Maximum Segment Lifetime（缩写为MSL –   
+  中说，ISN会和一个假的时钟绑在一起，这个时钟会在每4微秒对ISN做加一操作，直到超过2^32，又从0开始。这样，一个ISN的周期大约是4.55个小时。因为，我们假设我们的TCP Segment在网络上的存活时间不会超过Maximum Segment Lifetime（缩写为MSL –  
   [Wikipedia语条](http://en.wikipedia.org/wiki/Maximum_Segment_Lifetime)  
   ），所以，只要MSL的值小于4.55小时，那么，我们就不会重用到ISN。
 
@@ -176,17 +176,15 @@ D-SACK使用了SACK的第一个段来做标志，
 
 下面的示例中，丢了两个ACK，所以，发送端重传了第一个数据包（3000-3499），于是接收端发现重复收到，于是回了一个SACK=3000-3500，因为ACK都到了4000意味着收到了4000之前的所有数据，所以这个SACK就是D-SACK——旨在告诉发送端我收到了重复的数据，而且我们的发送端还知道，数据包没有丢，丢的是ACK包。
 
-`Transmitted  Received    ACK Sent`
+`Transmitted  Received    ACK Sent`
 
-`Segment      Segment     (Including SACK Blocks)`
+`Segment      Segment     (Including SACK Blocks)`
 
-`3000-3499    3000-3499   3500 (ACK dropped)`
+`3000-3499    3000-3499   3500 (ACK dropped)`
 
-`3500-3999    3500-3999   4000 (ACK dropped)`
+`3500-3999    3500-3999   4000 (ACK dropped)`
 
-`3000-3499    3000-3499   4000, SACK=3000-3500`
-
-
+`3000-3499    3000-3499   4000, SACK=3000-3500`
 
 ** 示例二，网络延误**
 
@@ -229,6 +227,12 @@ Segment        Segment     \(Including SACK Blocks\)
 **知道这些东西可以很好得帮助TCP了解网络情况，从而可以更好的做网络上的流控**。
 
 Linux下的tcp\_dsack参数用于开启这个功能（Linux 2.4后默认打开）
+
+
+
+
+
+https://coolshell.cn/articles/11609.html
 
 ## TCP 3 handshake to build connection
 

@@ -13,6 +13,7 @@
   * TCP transmission stick package
 * Security
   * [JWT Oauth](jwt-oauth.md)
+  * [Encryption](encryption.md)
 * [Python](python-basic.md)
   * [Python Tricks](python-tricks.md)
   * [Python Singleton](python-advance.md)
