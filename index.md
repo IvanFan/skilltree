@@ -214,10 +214,6 @@ where
 4. 索引列不能参与计算，保持列“干净”，比如from\_unixtime\(create\_time\) = ’2014-05-29’就不能使用到索引，原因很简单，b+树中存的都是数据表中的字段值，但进行检索时，需要把所有元素都应用函数才能比较，显然成本太大。所以语句应该写成create\_time = unix\_timestamp\(’2014-05-29’\);
 5. 尽量的扩展索引，不要新建索引。比如表中已经有a的索引，现在要加\(a,b\)的索引，那么只需要修改原来的索引即可
 
-
-
-
-
 ### B-Tree
 
 为了描述B-Tree，首先定义一条数据记录为一个二元组\[key, data\]，key为记录的键值，对于不同数据记录，key是互不相同的；data为数据记录除key外的数据。那么B-Tree是满足下列条件的数据结构：
@@ -251,4 +247,29 @@ key和指针互相间隔，节点两端是指针。
 ![](http://blog.codinglabs.org/uploads/pictures/theory-of-mysql-index/2.png)
 
 图2
+
+
+
+由于B-Tree的特性，在B-Tree中按key检索数据的算法非常直观：首先从根节点进行二分查找，如果找到则返回对应节点的data，否则对相应区间的指针指向的节点递归进行查找，直到找到节点或找到null指针，前者查找成功，后者查找失败。B-Tree上查找算法的伪代码如下：
+
+
+
+```
+BTree_Search(node, key) {
+    if(node == null) return null;
+    foreach(node.key)
+    {
+        if(node.key[i] == key) return node.data[i];
+            if(node.key[i] > key) return BTree_Search(point[i]->node);
+    }
+    return BTree_Search(point[i+1]->node);
+}
+data = BTree_Search(root, my_key);
+```
+
+关于B-Tree有一系列有趣的性质，例如一个度为d的B-Tree，设其索引N个key，则其树高h的上限为logd\(\(N+1\)/2\)，检索一个key，其查找节点个数的渐进复杂度为O\(logdN\)。从这点可以看出，B-Tree是一个非常有效率的索引数据结构。
+
+另外，由于插入删除新的数据记录会破坏B-Tree的性质，因此在插入删除时，需要对树进行一个分裂、合并、转移等操作以保持B-Tree性质，本文不打算完整讨论B-Tree这些内容，因为已经有许多资料详细说明了B-Tree的数学性质及插入删除算法，有兴趣的朋友可以在本文末的参考文献一栏找到相应的资料进行阅读。
+
+
 
