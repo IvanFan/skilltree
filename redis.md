@@ -62,8 +62,6 @@ Redis Sentinal着眼于高可用，在master宕机时会自动将slave提升为m
 
 Redis Cluster着眼于扩展性，在单个redis内存不足时，使用Cluster进行分片存储。
 
-
-
 ### Redis是什么？
 
 1. 是一个完全开源免费的key-value内存数据库
