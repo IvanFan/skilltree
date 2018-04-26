@@ -1,6 +1,6 @@
 # skilltree
 
-This is an overview of my current skill tree. It's still under development. It takes time to summarize all my IT knowledge.
+This is an overview of my current skill tree. It's still under development and includes Chinese and English. It takes time to summarize all my IT knowledge.
 
 _**Hold what you really know and tell what you do not know - this will lead to knowledge.**_
 
