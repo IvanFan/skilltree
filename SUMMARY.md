@@ -6,6 +6,7 @@
   * IPv6 IPv4
   * [GET & Post](neetwork/get-and-post.md)
   * [Cookie Session & Stateless](neetwork/cookie-session-and-stateless.md)
+  * [Socket](neetwork/socket.md)
 * Security
   * [JWT Oauth](jwt-oauth.md)
 * [Python](python-basic.md)
