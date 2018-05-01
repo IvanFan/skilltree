@@ -44,4 +44,6 @@
   * [Slow select query optimisation](slow-select-query-optimisation.md)
   * [Redis](redis.md)
 * [Multi-thread](multi-thread.md)
+* Linux
+  * [Shell scripts](shell-scripts.md)
 
