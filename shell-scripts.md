@@ -72,7 +72,7 @@ $ grep -n 'root' /etc/passwd
 
 Sed:
 
-get line number
+export line  
 
 ```
 cat test.txt| sed -n "2p"
