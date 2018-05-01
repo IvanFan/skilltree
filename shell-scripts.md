@@ -8,5 +8,18 @@ To get system details:
 uname -a
 ```
 
+get all background tasks
+
+```
+jobs
+```
+
+To execute commands at background, add & at the very end
+
+```
+$ sudo rsync Templates/* /var/www/html/files/ &
+
+```
+
 
 
