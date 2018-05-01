@@ -68,7 +68,15 @@ option to precede each line of output with the number of the line in the text fi
 
 ```
 $ grep -n 'root' /etc/passwd
+```
 
+Sed:
+
+get line number
+
+```
+cat test.txt| sed -n "2p"
+2, Taylor Swift, Title 723, Price $7.90
 ```
 
 
