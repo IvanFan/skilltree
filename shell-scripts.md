@@ -30,6 +30,7 @@ To kill process
 
 ```
 kill -9 PID
+killall keyword
 ```
 
 
