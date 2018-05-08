@@ -31,7 +31,7 @@
   * [Array](array.md)
     * [Binary Search](array/binary-search.md)
     * [Binary Tree: inorder, preorder, postorder](array/binary-tree-inorder-preorder-postorder.md)
-  * hashtable
+  * [hashtable](hashtable.md)
     * [Find Duplicate File in System](find-duplicate-file-in-system.md)
 * OS
   * [I/O Multiplexing（Event  driving）](general.md)
