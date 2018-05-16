@@ -22,7 +22,7 @@ class Solution:
         maxlen = 0
         while r < len(chars):
             #print('maxlen', maxlen, 'l:', l, 'r:', r)
- 
+            if not chars[r] in hc:
                 hc[chars[r]] = r
                 dist = abs(r-l+1) if l >=0 else abs(r-l)
                 if dist > maxlen:
@@ -35,6 +35,7 @@ class Solution:
                     maxlen = dist
             r += 1
         return maxlen
+
 ```
 
 
