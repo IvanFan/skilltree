@@ -24,13 +24,13 @@ class Solution:
             #print('maxlen', maxlen, 'l:', l, 'r:', r)
             if not chars[r] in hc:
                 hc[chars[r]] = r
-                dist = abs(r-l+1) if l >=0 else abs(r-l)
+                dist = abs(r-l+1)
                 if dist > maxlen:
                     maxlen = dist
             else:
                 l = max(hc[chars[r]] + 1, l)
                 hc[chars[r]] = r
-                dist = abs(r - l + 1) if l > 0 else abs(r - l)
+                dist = abs(r - l + 1)
                 if dist > maxlen:
                     maxlen = dist
             r += 1
