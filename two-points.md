@@ -1,16 +1,11 @@
-
-
-The idea of two points problem is always the same: 
+The idea of two points problem is always the same:
 
 1. ** use two points**
 2. **move towards a direction \(same direction, different direction\)**
 3. **define left and right**
-
-
+4. **O\(N\)**
 
 #### Same direction:
-
-
 
 Given a string, find the length of thelongest substringwithout repeating characters.
 
@@ -50,10 +45,6 @@ class Solution:
             r += 1
         return maxlen
 ```
-
-
-
-
 
 
 
