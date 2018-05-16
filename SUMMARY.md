@@ -33,6 +33,7 @@
     * [Binary Tree: inorder, preorder, postorder](array/binary-tree-inorder-preorder-postorder.md)
   * [hashtable](hashtable.md)
     * [Find Duplicate File in System](find-duplicate-file-in-system.md)
+    * [Two points](two-points.md)
 * OS
   * [I/O Multiplexing（Event  driving）](general.md)
   * [Coroutine Event Drive & Non-block I/O](coroutine-event-drive-and-non-block-io.md)
