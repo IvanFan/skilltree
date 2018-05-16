@@ -1,4 +1,18 @@
-Given a string, find the length of the**longest substring**without repeating characters.
+
+
+The idea of two points problem is always the same: 
+
+1. ** use two points**
+2. **move towards a direction \(same direction, different direction\)**
+3. **define left and right**
+
+
+
+#### Same direction:
+
+
+
+Given a string, find the length of thelongest substringwithout repeating characters.
 
 **Examples:**
 
@@ -36,6 +50,10 @@ class Solution:
             r += 1
         return maxlen
 ```
+
+
+
+
 
 
 
