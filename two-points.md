@@ -30,12 +30,11 @@ class Solution:
             else:
                 l = max(hc[chars[r]] + 1, l)
                 hc[chars[r]] = r
-                dist = abs(r - l + 1) if l >= 0 else abs(r - l)
+                dist = abs(r - l + 1) if l > 0 else abs(r - l)
                 if dist > maxlen:
                     maxlen = dist
             r += 1
         return maxlen
-
 ```
 
 
