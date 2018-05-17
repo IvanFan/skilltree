@@ -35,6 +35,7 @@
     * [Find Duplicate File in System](find-duplicate-file-in-system.md)
     * [Two points](two-points.md)
     * [One loop, multiple hashtable](one-loop-multiple-hashtable.md)
+    * [HashTable & Link](hashtable-and-link.md)
   * Tree
     * [binary tree order](binary-tree-order.md)
 * OS
