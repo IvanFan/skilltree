@@ -40,11 +40,15 @@ Post-order: A, C, E, D, B, H, I, G, F.
 
 **Summary:**
 
-Preorder: Root Left Right
+**Preorder: Root Left Right**
 
-Inorder: Left Root Right
+**Inorder: Left Root Right**
 
-Postorder: Left Right Root
+**Postorder: Left Right Root**
+
+
+
+Question1:
 
 Given inorder and postorder traversal of a tree, construct the binary tree.
 
