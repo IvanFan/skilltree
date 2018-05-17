@@ -38,6 +38,14 @@ Post-order: A, C, E, D, B, H, I, G, F.
 3. Traverse the right subtree by recursively calling the post-order function.
 4. Display the data part of the root \(or current node\).
 
+**Summary:**
+
+Preorder: Root Left Right
+
+Inorder: Left Root Right
+
+
+
 Given inorder and postorder traversal of a tree, construct the binary tree.
 
 **Note:**  
