@@ -1,14 +1,10 @@
 # Binary Tree
 
-
-
 Deep-first search
 
-Preorder: 
+**Preorder:**
 
 [![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Sorted_binary_tree_preorder.svg/220px-Sorted_binary_tree_preorder.svg.png)](https://en.wikipedia.org/wiki/File:Sorted_binary_tree_preorder.svg)
-
-
 
 Pre-order: F, B, A, D, C, E, G, I, H.
 
@@ -16,6 +12,8 @@ Pre-order: F, B, A, D, C, E, G, I, H.
 2. Display the data part of the root \(or current node\).
 3. Traverse the left subtree by recursively calling the pre-order function.
 4. Traverse the right subtree by recursively calling the pre-order function.
+
+
 
 
 
