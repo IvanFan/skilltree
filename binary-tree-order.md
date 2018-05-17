@@ -44,7 +44,7 @@ Preorder: Root Left Right
 
 Inorder: Left Root Right
 
-
+Postorder: Left Right Root
 
 Given inorder and postorder traversal of a tree, construct the binary tree.
 
