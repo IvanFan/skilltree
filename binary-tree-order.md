@@ -46,9 +46,7 @@ Post-order: A, C, E, D, B, H, I, G, F.
 
 **Postorder: Left Right Root**
 
-
-
-Question1:
+## Question1:
 
 Given inorder and postorder traversal of a tree, construct the binary tree.
 
