@@ -27,7 +27,7 @@ In-order: A, B, C, D, E, F, G, H, I.
 
 In a[binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree), in-order traversal retrieves data in sorted order.[\[4\]](https://en.wikipedia.org/wiki/Tree_traversal#cite_note-4)
 
-#### Post-order \(LRN\)\[[edit](https://en.wikipedia.org/w/index.php?title=Tree_traversal&action=edit&section=6)\]
+**Post-order \(LRN\):**
 
 [![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Sorted_binary_tree_postorder.svg/220px-Sorted_binary_tree_postorder.svg.png)](https://en.wikipedia.org/wiki/File:Sorted_binary_tree_postorder.svg)
 
