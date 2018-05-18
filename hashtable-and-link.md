@@ -22,7 +22,7 @@ e.g.
 
 hashtable\[node1\] =&gt; node1
 
-node1.next = node2
+node1.next =&gt; node2
 
 hashtable\[node2\] =&gt;  node2
 
