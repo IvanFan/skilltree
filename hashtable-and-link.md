@@ -26,8 +26,6 @@ node1.next =&gt; node2
 
 hashtable\[node2\] =&gt;  node2
 
-
-
 ```py
 # Definition for singly-linked list with a random pointer.
 # class RandomListNode(object):
@@ -52,7 +50,6 @@ class Solution(object):
             dic[n].random = dic[n.random]
             n = n.next
         return dic[head]
-        
 ```
 
 
