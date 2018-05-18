@@ -58,10 +58,6 @@ class Solution:
         res.insert(pos+3,'(')
         res.append(')')
         return ''.join(res).replace('(0)','').rstrip('.')
-        
-            
-            
-        
 ```
 
 
