@@ -60,11 +60,20 @@ class Solution:
         return ''.join(res).replace('(0)','').rstrip('.')
 ```
 
+#### Approach \#1 \(Long Division\) \[Accepted\] {#approach-1-long-division-accepted}
 
+**Intuition**
 
+The key insight here is to notice that once the remainder starts repeating, so does the divided result.
 
+  
+**Algorithm**
 
+You will need a hash table that maps from the remainder to its position of the fractional part. Once you found a repeating remainder, you may enclose the reoccurring fractional part with parentheses by consulting the position from the table.
 
+The remainder could be zero while doing the division. That means there is no repeating fractional part and you should stop right away.
+
+Just like the question[Divide Two Integers](https://leetcode.com/problems/divide-two-integers/), be wary of edge cases such as negative fractions and nasty extreme case such as\frac{-2147483648}{-1}​−1​​−2147483648​​.
 
 
 
