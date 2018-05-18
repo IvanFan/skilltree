@@ -31,6 +31,7 @@
   * [Array](array.md)
     * [Binary Search](array/binary-search.md)
     * [Binary Tree: inorder, preorder, postorder](array/binary-tree-inorder-preorder-postorder.md)
+    * [Two Sum](array/two-sum.md)
   * [Hashtable](hashtable.md)
     * [Find Duplicate File in System](find-duplicate-file-in-system.md)
     * [Two points](two-points.md)
