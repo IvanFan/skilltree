@@ -64,6 +64,8 @@ class Solution:
 
 For long division, if it's infinite number, the number will start repeating at some point.
 
+![](/assets/Screen Shot 2018-05-18 at 5.15.17 pm.png)
+
 #### Approach \#1 \(Long Division\) \[Accepted\] {#approach-1-long-division-accepted}
 
 **Intuition**
