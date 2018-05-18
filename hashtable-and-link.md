@@ -16,9 +16,5 @@ key =&gt; value
 
 
 
-
-
-
-
-
+Obviously, these two data structures have sth in common. 
 
