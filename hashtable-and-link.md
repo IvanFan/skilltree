@@ -6,9 +6,19 @@ link architecture:
 
 head =&gt; node =&gt; node =&gt; node =&gt; tail
 
-hastable
+hastable:
 
 key =&gt; value
+
+key =&gt; value
+
+key =&gt; value
+
+
+
+
+
+
 
 
 
