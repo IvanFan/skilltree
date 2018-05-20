@@ -4,6 +4,8 @@
 
 Find two numbers such that they add up to a specific target number.
 
+It can also be extended to more than 2 numbers
+
 This question can be solved from different aspects.
 
 ## Two points
@@ -34,8 +36,6 @@ Explanation:
  The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
 ```
 
-
-
 ```py
 class Solution:
     def twoSum(self, numbers, target):
@@ -56,14 +56,21 @@ class Solution:
                 r -=1
             else:
                 l += 1
-            
-           
+
+
         return []
-                
-            
-            
-        
 ```
+
+From this question, we can see two conditions:
+
+1. order array
+2. the number don't have to be the continues
+
+We set the start to be left point and end to be the right point. 
+
+Every time we check of left and right number, if larger than target, right point moves left. Otherwise, left point moves right.
+
+
 
 
 
