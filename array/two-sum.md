@@ -70,11 +70,7 @@ We set the start to be left point and end to be the right point.
 
 Every time we check of left and right number, if larger than target, right point moves left. Otherwise, left point moves right.
 
-
-
 ## HashTable
-
-
 
 Design and implement a TwoSum class. It should support the following operations:`add`and`find`.
 
@@ -91,7 +87,6 @@ find(4) -
 find(7) -
 >
  false
-
 ```
 
 **Example 2:**
@@ -113,7 +108,7 @@ class TwoSum:
         """
         Initialize your data structure here.
         """
-        
+
         self.hnums = {}
 
     def add(self, number):
@@ -125,7 +120,7 @@ class TwoSum:
         # try:
         #     val = int(userInput)
         # except ValueError:
-            
+
         if not self.hnums.get(number):
             self.hnums[number] = 1
         else:
@@ -145,8 +140,8 @@ class TwoSum:
                 #print(value, value - num, index)
                 return True
         return False
-        
-        
+
+
 
 
 # Your TwoSum object will be instantiated and called as such:
@@ -154,18 +149,6 @@ class TwoSum:
 # obj.add(number)
 # param_2 = obj.find(value)
 ```
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
