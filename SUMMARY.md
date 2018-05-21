@@ -42,6 +42,7 @@
     * [binary tree order](binary-tree-order.md)
   * [Math](math.md)
     * [Long division](math/long-division.md)
+    * [Cycle](math/cycle.md)
 * OS
   * [I/O Multiplexing（Event  driving）](general.md)
   * [Coroutine Event Drive & Non-block I/O](coroutine-event-drive-and-non-block-io.md)
