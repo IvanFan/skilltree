@@ -1,6 +1,8 @@
 # Cycle
 
-Endless cycle can be easily detected by a simple algorithm
+Endless cycle can be easily detected by a simple algorithm or a hash table
+
+
 
 example:
 
@@ -11,8 +13,6 @@ A happy number is a number defined by the following process: Starting with any p
 **Example: **
 
 ![](/assets/Screen Shot 2018-05-21 at 5.24.30 pm.png)
-
-
 
 ```py
 def isHappy(self, n):
