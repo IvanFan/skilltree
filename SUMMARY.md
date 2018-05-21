@@ -37,6 +37,7 @@
     * [Two points](two-points.md)
     * [One loop, multiple hashtable](one-loop-multiple-hashtable.md)
     * [HashTable & Link](hashtable-and-link.md)
+    * [Substring](substring.md)
   * Tree
     * [binary tree order](binary-tree-order.md)
   * [Math](math.md)
