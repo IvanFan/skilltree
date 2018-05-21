@@ -2,9 +2,7 @@
 
 Endless cycle can be easily detected by a simple algorithm or a hash table
 
-
-
-example:
+# example:
 
 Write an algorithm to determine if a number is "happy".
 
