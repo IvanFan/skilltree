@@ -1,26 +1,6 @@
 # Cycle
 
-
-
-Endless cycle can be easily detected as a 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Endless cycle can be easily detected by a simple algorithm
 
 
 
