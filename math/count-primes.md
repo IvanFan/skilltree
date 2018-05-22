@@ -31,6 +31,8 @@ class Solution:
         return sum(primes)
 ```
 
+The basic idea is to find all not prime number from 2 to n/2 +1. Then mark them as 0. Therefore the last part of this array is the count of all prime numbers
+
 # Sieve of Eratosthenes {#firstHeading}
 
 In math, this algorithm is a simple algorithm to find all prime numbers update to any given limit
@@ -38,6 +40,4 @@ In math, this algorithm is a simple algorithm to find all prime numbers update t
 [![](https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif)](https://en.wikipedia.org/wiki/File:Sieve_of_Eratosthenes_animation.gif)
 
 Sieve of Eratosthenes: algorithm steps for primes below 121 \(including optimization of starting from prime's square\).
-
-
 
