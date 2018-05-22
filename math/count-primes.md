@@ -35,6 +35,20 @@ class Solution:
 
 In math, this algorithm is a simple algorithm to find all prime numbers update to any given limit
 
+[![](https://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif)](https://en.wikipedia.org/wiki/File:Sieve_of_Eratosthenes_animation.gif)
+
+Sieve of Eratosthenes: algorithm steps for primes below 121 \(including optimization of starting from prime's square\).
+
+
+
+
+
+
+
+
+
+
+
 
 
 
