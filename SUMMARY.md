@@ -44,6 +44,7 @@
     * [Long division](math/long-division.md)
     * [Cycle](math/cycle.md)
     * [Count Primes](math/count-primes.md)
+  * [Link](link.md)
 * OS
   * [I/O Multiplexing（Event  driving）](general.md)
   * [Coroutine Event Drive & Non-block I/O](coroutine-event-drive-and-non-block-io.md)
