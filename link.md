@@ -25,7 +25,6 @@ class Solution:
         :rtype: ListNode
         """
         return self.backTrack(l1, l2, 0)
-        
 ```
 
 
