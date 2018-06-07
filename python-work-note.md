@@ -39,8 +39,6 @@ if "asdf" not in sthstring:
 
 continue
 
-
-
 str.index\(\)
 
 str.isalnum\(\)
@@ -66,8 +64,18 @@ def is_digit(self, n):
 
 for number in string, it's better to consider about multiple situations:
 it can be '9' single number but can also be '100' consist of multiple numbers
-
 ```
 
- 
+```
+from datetime import date, datetime
+
+def json_serial(obj):
+    """JSON serializer for objects not serializable by default json code"""
+
+    if isinstance(obj, (datetime, date)):
+        return obj.isoformat()
+    raise TypeError ("Type %s not serializable" % type(obj))
+```
+
+
 
