@@ -81,7 +81,12 @@ def json_serial(obj):
 # RE parse all the operator and number, put into a list
         # For example, "(2+6* 3+5- (3*14/7+2)*5)+3" gave the following list:
         # ['(', '2', '+', '6', '*', '3', '+', '5', '-', '(', '3', '*', '14', '/', '7', '+', '2', ')', '*', '5', ')', '+', '3']
-        for i in re.compile('\d+|[(+-/\*)]').findall(s):           
+        for i in re.compile('\d+|[(+-/\*)]').findall(s):
+        
+s = "(2+6* 3+5- (3*14/7+2)*5)+3"
+print(re.compile('\d+|[(+-/\*)]').findall(s))
+['(', '2', '+', '6', '*', '3', '+', '5', '-', '(', '3', '*', '14', '/', '7', '+', '2', ')', '*', '5', ')', '+', '3']
+
 ```
 
 
