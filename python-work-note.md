@@ -77,5 +77,12 @@ def json_serial(obj):
     raise TypeError ("Type %s not serializable" % type(obj))
 ```
 
+```
+# RE parse all the operator and number, put into a list
+        # For example, "(2+6* 3+5- (3*14/7+2)*5)+3" gave the following list:
+        # ['(', '2', '+', '6', '*', '3', '+', '5', '-', '(', '3', '*', '14', '/', '7', '+', '2', ')', '*', '5', ')', '+', '3']
+        for i in re.compile('\d+|[(+-/\*)]').findall(s):           
+```
+
 
 
