@@ -19,3 +19,27 @@ stack.pop\(\) remove last one
 
 stack.top\(\) get last one
 
+
+
+
+
+result = second\_number / first\_number
+
+if result &gt; 0:
+
+    result = math.floor\(result\)
+
+else:
+
+    result = math.ceil\(result\)
+
+
+
+It's equal to int\(\)
+
+
+
+if "asdf" not in sthstring:
+
+  continue
+
