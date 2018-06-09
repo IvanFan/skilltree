@@ -92,5 +92,11 @@ print(re.compile('\d+|[(+-/\*)]').findall(s))
 2, 1 = divmod(5, 2)
 ```
 
+```
+test = -234
+abs(test)
+234
+```
+
 
 
