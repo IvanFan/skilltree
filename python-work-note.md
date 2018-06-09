@@ -124,6 +124,7 @@ points[1] = 1
 points[3] = 3
 points[4] = 4
 print(sorted(list(points.keys()), key=lambda x:x))
+[1, 2, 3, 4]
 ```
 
 
