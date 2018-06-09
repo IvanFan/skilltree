@@ -127,5 +127,11 @@ print(sorted(list(points.keys()), key=lambda x:x))
 [1, 2, 3, 4]
 ```
 
+```
+a = list()
+a.append(x)
+a.remove(x)
+```
+
 
 
