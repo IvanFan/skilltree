@@ -133,5 +133,14 @@ a.append(x)
 a.remove(x)
 ```
 
+```
+import heapq
+hp = []
+heapq.heappush(hp, -b[2])
+hp.remove(-b[2])
+heapq.heapify(hp)
+hp[0]==heapq.heappop(hp)
+```
+
 
 
