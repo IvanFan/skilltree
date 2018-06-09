@@ -98,5 +98,24 @@ abs(test)
 234
 ```
 
+```
+The lowest valued entries are retrieved first 
+(the lowest valued entry is the one returned by sorted(list(entries))[0]). 
+A typical pattern for entries is a tuple in the form: (priority_number, data).
+
+import queue
+
+pq = queue.PriorityQueue()
+pq.put((2, [2]))
+pq.put((3, [4]))
+pq.put((1, [4]))
+while not pq.empty():
+    key,val =  pq.get()
+    print(key, val)
+1 [4]
+2 [2]
+3 [4]
+```
+
 
 
