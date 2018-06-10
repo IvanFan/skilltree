@@ -142,5 +142,12 @@ heapq.heapify(hp)
 hp[0]==heapq.heappop(hp)
 ```
 
+```
+test = [[0, 30],[20, 30],[15, 20]]
+sorted(test, key=lambda x: x[0])
+[[0, 30], [15, 20], [20, 30]]
+
+```
+
 
 
