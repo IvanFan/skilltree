@@ -10,3 +10,24 @@ This built-in function is similar to isinstance, but to check if a type is an in
 
 Again, the only gotcha is that bool type is subclass of int type.
 
+
+
+```
+>>> isinstance(True, int)
+True
+>>> isinstance(True, float)
+False
+>>> isinstance(3, int)
+True
+>>> isinstance([1,2,3], list)
+True
+>>> isinstance("aa", str)
+True
+>>> isinstance(u"as", unicode)
+True
+>>> issubclass(bool, int)
+True
+```
+
+
+
