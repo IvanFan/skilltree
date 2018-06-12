@@ -26,6 +26,7 @@
   * [Python Implementation of List](python-implementation-of-list.md)
   * [Python 2 and 3](python-2-and-3.md)
   * [Python work note](python-work-note.md)
+  * [Differences](differences.md)
 * [Machine Learning](machine-learning.md)
   * Feature engineering
 * [Leetcode](leetcode.md)
