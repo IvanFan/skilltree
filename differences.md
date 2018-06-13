@@ -10,8 +10,6 @@ This built-in function is similar to isinstance, but to check if a type is an in
 
 Again, the only gotcha is that bool type is subclass of int type.
 
-
-
 ```
 >>> isinstance(True, int)
 True

@@ -153,5 +153,13 @@ print(int('05'))
 5
 ```
 
+```
+import statistics
+
+test = [1,2,3]
+statistics.mean(test)
+statistics.median(test)
+```
+
 
 
