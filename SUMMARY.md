@@ -47,6 +47,8 @@
     * [Cycle](math/cycle.md)
     * [Count Primes](math/count-primes.md)
   * [Link](link.md)
+  * [Stack](stack.md)
+    * [155 Min Stack](stack/155-min-stack.md)
 * OS
   * [I/O Multiplexing（Event  driving）](general.md)
   * [Coroutine Event Drive & Non-block I/O](coroutine-event-drive-and-non-block-io.md)
