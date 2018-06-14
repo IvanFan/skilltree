@@ -1,7 +1,5 @@
 ![](/assets/Screen Shot 2018-06-14 at 11.12.56 pm.png)
 
-
-
 ```py
 # Definition for an interval.
 # class Interval:
@@ -21,7 +19,7 @@ class Solution:
         for input in intervals:
             points[input.start].append(input)
             points[input.end].append(input)
-        
+
         current_meeting = []
         max_meetings = 0
         for point in sorted(list(points.keys()), key=lambda x:x):
@@ -34,10 +32,9 @@ class Solution:
                     # heapq.heapify(current_meeting)
             max_meetings = max(max_meetings, len(current_meeting))
         return max_meetings
-        
-        
-        
 ```
 
 
+
+Same idea of the previous question
 
