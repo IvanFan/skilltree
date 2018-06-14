@@ -32,3 +32,17 @@ Then we can push all element into the list and pop it out
 
 ---
 
+The idea is the find the smallest letter and put it at the beginning.
+
+Then the problem is,  how can we make sure that all letter we have met previously will occur again?
+
+so we now convert the problem to:
+
+we need to check if all previous values can occur again in the future
+
+The idea is to use a hash table to calculate the number of all letters.
+
+Since we need to use the previous values under certain condition, we can use a stack to hold them
+
+---
+
