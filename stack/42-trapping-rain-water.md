@@ -91,7 +91,9 @@ From left to right, if the height is decreasing, add to the stack
 while the height is higher than the last element of the stack, then we need to handle the container size calculation
     pop the element from the stack, this is the current bottom of the container. Then the last element of the stack is the left side of the current container.
     the size of hold water will be the container width X min height of left side and right side
+    this will calculate all containers from right to left
+add the current height to the stack 
 ```
 
-
+In summary,  we need to find the previous left sides. So we save those data into the stack and setup a condition to calculate the left and right sides of the container
 
