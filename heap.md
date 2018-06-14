@@ -39,3 +39,11 @@ So if length of small part &lt; larger part, we need to get the smallest element
 
 ---
 
+This is another classic heap problem
+
+First we push the first element into the heap
+
+The get the element from the heap and push all elements relevant to this element
+
+We need to avoid duplicated elements
+
