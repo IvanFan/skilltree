@@ -13,14 +13,14 @@ class Solution:
             return first_num * second_num
         elif op == '/':
             return int(first_num / second_num)
-        
+
     def is_digit(self, n):
         try:
             int(n)
             return True
         except ValueError:
             return False
-        
+
     def calculate(self, s):
         """
         :type s: str
@@ -42,16 +42,15 @@ class Solution:
                     ops_stack.append(i)
             else:
                 num_stack.append(int(i))
-                
+
         while len(ops_stack) != 0:
             num_stack.append(self.cal(ops_stack.pop(), num_stack.pop(), num_stack.pop()))
         return num_stack[0]
-                
-        
-                    
-                    
-        
 ```
+
+This question is similar to the previous question, But more complex
+
+First the ops has different priority. Second we need to consider the bracket
 
 
 
