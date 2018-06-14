@@ -80,5 +80,9 @@ So we have two conditions:
 
 ---
 
+The target of this problem is to find the left and right side of the current height.
 
+The first height &lt; the current height is the side of the current height
+
+---
 
