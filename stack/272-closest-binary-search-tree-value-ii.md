@@ -1,7 +1,5 @@
 ![](/assets/Screen Shot 2018-06-14 at 5.58.07 pm.png)
 
-
-
 ```py
 # Definition for a binary tree node.
 # class TreeNode:
@@ -20,7 +18,7 @@ class Solution:
         successor.append(root.val)
         self.inorderSuccessor(root.left, target, successor)
         return 
-        
+
     def inorderPredecessor(self, root, target, predecessor):
         if root is None:
             return
@@ -56,5 +54,7 @@ class Solution:
         return res
 ```
 
+The idea is to find a sorted list of all elements &gt; target and a sorted list of all elements &lt; target
 
+Since it's a BST, it's easy to go through the tree and find the list
 
