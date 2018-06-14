@@ -58,6 +58,8 @@
     * [84 Largest Rectangle in Histogram](stack/84-largest-rectangle-in-histogram.md)
     * [255 Verify Preorder Sequence in Binary Search Tree](stack/255-verify-preorder-sequence-in-binary-search-tree.md)
     * [272 Closest Binary Search Tree Value II](stack/272-closest-binary-search-tree-value-ii.md)
+  * [Heap](heap.md)
+    * [23 Merge k Sorted Lists](heap/23-merge-k-sorted-lists.md)
 * OS
   * [I/O Multiplexing（Event  driving）](general.md)
   * [Coroutine Event Drive & Non-block I/O](coroutine-event-drive-and-non-block-io.md)
