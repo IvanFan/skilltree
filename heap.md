@@ -49,5 +49,7 @@ We need to avoid duplicated elements
 
 ---
 
+heap go through same level of height one by one and for each one, use DFS
 
+---
 
