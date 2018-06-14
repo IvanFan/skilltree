@@ -56,5 +56,29 @@ The only issue is : one number can hold multiple chars
 
 ---
 
+This question is similar to the previous question, But more complex
+
+First the ops has different priority. Second we need to consider the bracket
+
+e.g. we need to calculate the content within the bracket
+
+we also need to consider the ops
+
+So it's a more complex situation for saving previous values and handle it under conditions
+
+1. we need to handle the bracket
+2. we need to calculate the \* and / before + and -
+
+Therefore, we can save the ops and numbers in two stacks
+
+If there is no + and  - after \* and /, we can do the calculate just like before
+
+So we have two conditions:
+
+1. if we meet \) 
+2. if we meet -and + after \* and /
+
+---
+
 
 

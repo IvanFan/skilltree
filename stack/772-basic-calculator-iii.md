@@ -56,8 +56,6 @@ e.g. we need to calculate the content within the bracket
 
 we also need to consider the ops
 
-
-
 So it's a more complex situation for saving previous values and handle it under conditions
 
 1. we need to handle the bracket
