@@ -50,6 +50,7 @@
   * [Stack](stack.md)
     * [155 Min Stack](stack/155-min-stack.md)
     * [42 Trapping Rain Water](stack/42-trapping-rain-water.md)
+    * [150 Evaluate Reverse Polish Notation](stack/150-evaluate-reverse-polish-notation.md)
 * OS
   * [I/O Multiplexing（Event  driving）](general.md)
   * [Coroutine Event Drive & Non-block I/O](coroutine-event-drive-and-non-block-io.md)
