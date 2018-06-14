@@ -53,3 +53,15 @@ heap go through same level of height one by one and for each one, use DFS
 
 ---
 
+So we need to record 2 things:
+
+First, the difference of letter should be &gt; than k,  otherwise, ''
+
+Secondly, We also need to count the number of each letter
+
+Therefore, we push all unique letter into heap and get top k times
+
+If heap is empty, we don't have enough unique letters
+
+For each round, if the letter remains, then push it into next round
+
