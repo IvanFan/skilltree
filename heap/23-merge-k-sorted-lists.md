@@ -1,9 +1,5 @@
 ![](/assets/Screen Shot 2018-06-14 at 10.43.10 pm.png)
 
-
-
-
-
 ```py
 class Solution:
     def mergeKLists(self, lists):
@@ -11,7 +7,7 @@ class Solution:
         :type lists: List[ListNode]
         :rtype: ListNode
         """
-    
+
         nodes = []
         for i in range(len(lists)):
             curr = lists[i]
@@ -31,6 +27,8 @@ class Solution:
                 tem = new_node
         return head
 ```
+
+Above is a simple solution, sort the elements directly which has nlogn complex
 
 
 
