@@ -37,8 +37,6 @@ class Solution:
         return ''.join(res)
 ```
 
-
-
 So we need to record 2 things:
 
 First, the difference of letter should be &gt; than k,  otherwise, ''
@@ -49,5 +47,5 @@ Therefore, we push all unique letter into heap and get top k times
 
 If heap is empty, we don't have enough unique letters
 
- 
+For each round, if the letter remains, then push it into next round
 
