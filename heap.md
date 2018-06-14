@@ -23,3 +23,19 @@ The idea of this question is quite popular
 
 ---
 
+The idea of this question is to hold two heaps:
+
+a heap contains all elements from smallest to mid
+
+a heap contains all elements from largest to mid
+
+Therefore, if a new element come in, we first push it into small part
+
+Then get the largest element from small part and push it into larger part
+
+At the same time we need to keep the length of small part &gt;= larger part and the max difference is 1
+
+So if length of small part &lt; larger part, we need to get the smallest element from larger part and push it into the smallest part
+
+---
+
