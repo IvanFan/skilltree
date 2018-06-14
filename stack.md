@@ -24,5 +24,11 @@ But the main idea is the same, save previous values in to the stack and setup a 
 
 ---
 
+This question has a lot of solution. Usually when it related to getting max or min value, we can use heap.
 
+Heap is good for unsorted data. For this question we know it's a binary search tree. It means that we can go through the tree and get a sorted list.
+
+Then we can push all element into the list and pop it out
+
+---
 
