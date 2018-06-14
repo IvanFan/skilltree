@@ -59,3 +59,13 @@ Therefore, we need to find both sides for a container and then find the shortest
 
 
 
+So our target is to find both side of the container:
+
+BruteForce: 
+
+for each point, find the max left and max right and then find the min side 
+
+Obviously it's n^2
+
+
+
