@@ -65,3 +65,5 @@ If heap is empty, we don't have enough unique letters
 
 For each round, if the letter remains, then push it into next round
 
+---
+
