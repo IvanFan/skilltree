@@ -46,3 +46,13 @@ Since we need to use the previous values under certain condition, we can use a s
 
 ---
 
+The idea of this question is clean.
+
+Saved values in to the stack and do the calculation under certain condition.
+
+It doesn't have \* and /  so it's actually eaay.
+
+The only issue is : one number can hold multiple chars
+
+---
+
