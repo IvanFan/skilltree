@@ -1,7 +1,5 @@
 ![](/assets/Screen Shot 2018-06-14 at 2.14.01 pm.png)
 
-
-
 ```py
 import math
 
@@ -41,8 +39,11 @@ class Solution:
                         #     result = math.ceil(result)
                         stack.append(result)
         return stack.pop()
-                
 ```
 
 
+
+This is a classic problem for stack. We also have more complex problem similar to this
+
+But the main idea is the same, save previous values in to the stack and setup a condition to handle the previous values
 
