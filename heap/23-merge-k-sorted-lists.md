@@ -35,8 +35,8 @@ We can also do it with heap
 1. directly push everything into heap
 2. while heap is not empty, get the smallest value
 
-```
-rom Queue import PriorityQueue
+```py
+from Queue import PriorityQueue
 
 class Solution(object):
     def mergeKLists(self, lists):
