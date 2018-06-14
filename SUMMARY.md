@@ -56,6 +56,7 @@
     * [224 Basic Calculator](stack/224-basic-calculator.md)
     * [772  Basic Calculator III](stack/772-basic-calculator-iii.md)
     * [84 Largest Rectangle in Histogram](stack/84-largest-rectangle-in-histogram.md)
+    * [255 Verify Preorder Sequence in Binary Search Tree](stack/255-verify-preorder-sequence-in-binary-search-tree.md)
 * OS
   * [I/O Multiplexing（Event  driving）](general.md)
   * [Coroutine Event Drive & Non-block I/O](coroutine-event-drive-and-non-block-io.md)
