@@ -65,8 +65,6 @@ for each point, find the max left and max right and then find the min side
 
 Obviously it's n^2
 
-
-
 **Dynamic programming:**
 
 From the previous solution, we can optimize the performance e.g. use space to get better time complexity
@@ -78,4 +76,18 @@ calculate max right for each point
 the calculate the height for each point
 
 It's N
+
+
+
+**Stack:**
+
+Since we need to use both side and we also want to do it once for all
+
+Therefore we need to save the previous values for a certain period until it has been used
+
+Stack is the best option for this situation
+
+From left to right, if the height is decreasing, add to the stack
+
+if the height is higher than 
 
