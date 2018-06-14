@@ -1,7 +1,5 @@
 ![](/assets/Screen Shot 2018-06-15 at 12.53.15 am.png)
 
-
-
 ```py
 import collections
 import heapq
@@ -35,12 +33,21 @@ class Solution:
                     stack.append((prio+1, val))
             while stack:
                 heapq.heappush(hq, stack.pop())
-                
-        return ''.join(res)
 
-                
-        
+        return ''.join(res)
 ```
 
 
+
+So we need to record 2 things:
+
+First, the difference of letter should be &gt; than k,  otherwise, ''
+
+Secondly, We also need to count the number of each letter
+
+Therefore, we push all unique letter into heap and get top k times
+
+If heap is empty, we don't have enough unique letters
+
+ 
 
