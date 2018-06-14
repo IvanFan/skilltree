@@ -65,6 +65,7 @@
     * [295 Find Median from Data Stream](heap/295-find-median-from-data-stream.md)
     * [264 Ugly Number II](heap/264-ugly-number-ii.md)
     * [407 Trapping Rain Water II](heap/407-trapping-rain-water-ii.md)
+    * [358 Rearrange String k Distance Apart](heap/358-rearrange-string-k-distance-apart.md)
 * OS
   * [I/O Multiplexing（Event  driving）](general.md)
   * [Coroutine Event Drive & Non-block I/O](coroutine-event-drive-and-non-block-io.md)
