@@ -1,7 +1,5 @@
 ![](/assets/Screen Shot 2018-06-14 at 2.33.13 pm.png)
 
-
-
 ```py
 class Solution:
     def is_digit(self, n):
@@ -50,18 +48,20 @@ class Solution:
                     last_number = stack.pop() + last_number
                 front_bucket = stack.pop()
                 char = last_number
-                
+
         last_number = stack.pop()
         while len(stack) != 0 and self.is_digit(stack[-1]):
             last_number = stack.pop() + last_number
         return int(last_number)
-                
-                
-            
-                
-        
-        
 ```
 
 
+
+The idea of this question is clean. 
+
+Saved values in to the stack and do the calculation under certain condition. 
+
+It doesn't have \* and /  so it's actually eaay.
+
+The only issue is : one number can hold multiple chars
 
