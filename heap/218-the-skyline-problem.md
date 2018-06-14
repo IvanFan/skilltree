@@ -36,15 +36,15 @@ class Solution:
         return res
 ```
 
-
-
 The idea of this question is quite popular
 
 1. Find all cirtical points \(e.g. start and end points\) and put the point and it's relevant events into the hash together
 
 2. go through all cirtical points, for each point, find all relevant events of it
 
-3. if it's the start of the event, push the event into heap. If it's end of the event, remove the event. 
+3. if it's the start of the event, push the event into heap. If it's end of the event, remove the event.
 
 4. after the operations, check how many events are in the heap. Then based on the condition to do some operations
+
+
 
