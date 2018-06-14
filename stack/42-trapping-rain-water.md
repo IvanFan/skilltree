@@ -77,8 +77,6 @@ the calculate the height for each point
 
 It's N
 
-
-
 **Stack:**
 
 Since we need to use both side and we also want to do it once for all
@@ -89,5 +87,9 @@ Stack is the best option for this situation
 
 From left to right, if the height is decreasing, add to the stack
 
-if the height is higher than 
+while the height is higher than the last element of the stack, then we need to handle the container size calculation
+
+      pop the element from the stack, this is the current bottom of the container. Then the last element of the stack is the left side of the current container.
+
+     the size of hold water will be the container width X min height of left side and right side
 
