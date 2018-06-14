@@ -14,12 +14,11 @@ minStack.getMin();   --> Returns -3.
 minStack.pop();
 minStack.top();      --> Returns 0.
 minStack.getMin();   --> Returns -2.
-
 ```
 
 Solution:
 
-```
+```py
 class MinStack:
     stack = []
     def __init__(self):
@@ -27,7 +26,7 @@ class MinStack:
         initialize your data structure here.
         """
         self.stack = []
-        
+
 
     def push(self, x):
         """
@@ -35,7 +34,7 @@ class MinStack:
         :rtype: void
         """
         self.stack.append(x)
-        
+
 
     def pop(self):
         """
@@ -45,7 +44,7 @@ class MinStack:
             return self.stack.pop(-1)
         else:
             return None
-        
+
 
     def top(self):
         """
@@ -64,7 +63,7 @@ class MinStack:
             return min(self.stack)
         else:
             return None
-        
+
 
 
 # Your MinStack object will be instantiated and called as such:
@@ -73,8 +72,13 @@ class MinStack:
 # obj.pop()
 # param_3 = obj.top()
 # param_4 = obj.getMin()
-            
 ```
+
+In python, we use list to represent stack. So stack is just a list
+
+Then we can use all operation of list for stack
+
+e.g. list.pop\(\) min\(list\)
 
 
 
