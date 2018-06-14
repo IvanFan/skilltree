@@ -30,12 +30,36 @@ class Solution:
 
 Above is a simple solution, sort the elements directly which has nlogn complex
 
-
-
 We can also do it with heap
 
 1. directly push everything into heap
-2.  while heap is not empty, get the smallest value
+2. while heap is not empty, get the smallest value
 
+```
+rom Queue import PriorityQueue
 
+class Solution(object):
+    def mergeKLists(self, lists):
+        """
+        :type lists: List[ListNode]
+        :rtype: ListNode
+        """
+        head = point = ListNode(0)
+        q = PriorityQueue()
+        for l in lists:
+            if l:
+                q.put((l.val, l))
+        while not q.empty():
+            val, node = q.get()
+            point.next = ListNode(val)
+            point = point.next
+            node = node.next
+            if node:
+                q.put((node.val, node))
+        return head.next
+```
+
+or we can first push the top round into the heap and if we get the smallest element, then we push the next element into the heap
+
+Heap is used to get largest or smallest value with nLogk
 
