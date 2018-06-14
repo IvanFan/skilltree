@@ -19,7 +19,7 @@ class BSTIterator(object):
         curr = root
         self.backTrace(curr)
         self.pool_size = len(self.stack)
-    
+
     def backTrace(self, node):
         if not node:
             return 
@@ -27,9 +27,9 @@ class BSTIterator(object):
             self.backTrace(node.right)
             self.stack.append(node.val)
             self.backTrace(node.left)
-            
+
         return
-        
+
 
     def hasNext(self):
         """
@@ -39,7 +39,7 @@ class BSTIterator(object):
             return True
         else:
             return False
-        
+
 
     def next(self):
         """
@@ -48,13 +48,17 @@ class BSTIterator(object):
         if self.pool_size != 0:
             self.pool_size -=1 
             return self.stack.pop()
-        
-        
+
+
 
 # Your BSTIterator will be called like this:
 # i, v = BSTIterator(root), []
 # while i.hasNext(): v.append(i.next())
 ```
 
+This question has a lot of solution. Usually when it related to getting max or min value, we can use heap.
 
+Heap is good for unsorted data. For this question we know it's a binary search tree. It means that we can go through the tree and get a sorted list.
+
+Then we can push all element into the list and pop it out
 
