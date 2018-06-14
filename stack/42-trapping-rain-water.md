@@ -14,8 +14,8 @@
                     ans += distance*bound_height
                 stack.append(i)
         return ans
-                    
-                
+
+
     def trapDynamicProgramming(self, height):
         ans = 0
         left_max = [0] * len(height)
@@ -31,8 +31,8 @@
         for i in range(len(height)):
             ans += min(left_max[i], right_max[i]) - height[i]
         return ans
-        
-        
+
+
     def trapbruteforce(self, height):
         """
         :type height: List[int]
