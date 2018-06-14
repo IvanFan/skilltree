@@ -57,15 +57,25 @@ The height of container is based on the shortest side
 
 Therefore, we need to find both sides for a container and then find the shortest side
 
-
-
 So our target is to find both side of the container:
 
-BruteForce: 
+**BruteForce:**
 
-for each point, find the max left and max right and then find the min side 
+for each point, find the max left and max right and then find the min side
 
 Obviously it's n^2
 
 
+
+**Dynamic programming:**
+
+From the previous solution, we can optimize the performance e.g. use space to get better time complexity
+
+calculate max left for each point
+
+calculate max right for each point
+
+the calculate the height for each point
+
+It's N
 
