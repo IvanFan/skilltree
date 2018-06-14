@@ -1,9 +1,5 @@
 ![](/assets/Screen Shot 2018-06-14 at 11.28.41 am.png)
 
-
-
-
-
 ```py
 class Solution:
     def trap(self, height):
@@ -20,8 +16,8 @@ class Solution:
                     ans += distance*bound_height
                 stack.append(i)
         return ans
-                    
-                
+
+
     def trapDynamicProgramming(self, height):
         ans = 0
         left_max = [0] * len(height)
@@ -37,8 +33,8 @@ class Solution:
         for i in range(len(height)):
             ans += min(left_max[i], right_max[i]) - height[i]
         return ans
-        
-        
+
+
     def trapbruteforce(self, height):
         """
         :type height: List[int]
@@ -54,6 +50,12 @@ class Solution:
             ans += min(max_left, max_right) - height[i]
         return ans
 ```
+
+The main idea of this question is to find the container which can hold the water
+
+The height of container is based on the shortest side
+
+Therefore, we need to find both sides for a container and then find the shortest side
 
 
 
