@@ -104,3 +104,9 @@ all elements after this right tree should larger than root
 
 ---
 
+The idea is to find a sorted list of all elements &gt; target and a sorted list of all elements &lt; target
+
+Since it's a BST, it's easy to go through the tree and find the list
+
+---
+
