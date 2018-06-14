@@ -32,3 +32,10 @@ Above is a simple solution, sort the elements directly which has nlogn complex
 
 
 
+We can also do it with heap
+
+1. directly push everything into heap
+2.  while heap is not empty, get the smallest value
+
+
+
