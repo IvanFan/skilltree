@@ -1,7 +1,5 @@
 ![](/assets/Screen Shot 2018-06-14 at 3.10.21 pm.png)
 
-
-
 ```py
 class Solution:
     def largestRectangleArea(self, heights):
@@ -31,10 +29,15 @@ class Solution:
             if maxarea < area:
                 maxarea = area
         return maxarea
-                
-                    
-        
 ```
+
+
+
+The target of this problem is to find the left and right side of the current height.
+
+The first height &lt; the current height is the side of the current height
+
+
 
 
 
