@@ -18,3 +18,9 @@ In summary,  we need to find the previous left sides. So we save those data into
 
 ---
 
+This is a classic problem for stack. We also have more complex problem similar to this
+
+But the main idea is the same, save previous values in to the stack and setup a condition to handle the previous values
+
+---
+
