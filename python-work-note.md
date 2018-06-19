@@ -179,12 +179,35 @@ a = filter(lambda x:x>3, test)
 print(a)
 for i in a:
     print(i)
-    
+
 <filter object at 0x106497c88>
 4
 5
 6
 9
+```
+
+```
+test= [-10,-5,-4,-2,0,1,3,4,5,6,9]
+a = map(lambda x:x*3, test)
+print(a)
+for i in a:
+    print(i)
+    
+    
+<map object at 0x106497b38>
+-30
+-15
+-12
+-6
+0
+3
+9
+12
+15
+18
+27
+
 ```
 
 
