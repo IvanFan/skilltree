@@ -171,8 +171,20 @@ for i in test[5::-1]:
 -4
 -5
 -10
+```
 
-
+```
+test= [-10,-5,-4,-2,0,1,3,4,5,6,9]
+a = filter(lambda x:x>3, test)
+print(a)
+for i in a:
+    print(i)
+    
+<filter object at 0x106497c88>
+4
+5
+6
+9
 ```
 
 
