@@ -189,7 +189,8 @@ for i in a:
 
 ```
 test= [-10,-5,-4,-2,0,1,3,4,5,6,9]
-a = map(lambda x:x*3, test)
+a = map(lambda x:x*3, test)snum = 100000.0
+print("%0.2f" % snum)
 print(a)
 for i in a:
     print(i)
@@ -207,6 +208,12 @@ for i in a:
 15
 18
 27
+```
+
+```
+snum = 100000.0
+print("%0.2f" % snum)
+100000.00
 ```
 
 
