@@ -224,5 +224,11 @@ print(a)
 [1, 2, 3, 4, 9, 8, 2]
 ```
 
+```
+test= "test"
+test.capitalize()
+'Test'
+```
+
 
 
