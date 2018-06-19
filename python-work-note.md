@@ -193,8 +193,8 @@ a = map(lambda x:x*3, test)
 print(a)
 for i in a:
     print(i)
-    
-    
+
+
 <map object at 0x106497b38>
 -30
 -15
@@ -207,7 +207,6 @@ for i in a:
 15
 18
 27
-
 ```
 
 
