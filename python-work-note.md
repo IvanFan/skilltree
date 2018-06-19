@@ -225,9 +225,13 @@ print(a)
 ```
 
 ```
-test= "test"
-test.capitalize()
-'Test'
+test= "tesT"
+print(test.capitalize())
+print(test.upper())
+print(test.lower())
+Test
+TEST
+test
 ```
 
 
