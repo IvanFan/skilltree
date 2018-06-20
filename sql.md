@@ -55,6 +55,74 @@ Some of the popular DBMS’s are MySql, Oracle, Sybase, etc.
 * _**Third Normal Form \(3NF\):**_
   A relation is said to be in 3NF only if it is in 2NF and every non-key attribute of the table is not transitively dependent on the primary key.
 
+
+
+### 第一范式（1NF）
+
+强调的是
+
+**列的原子性**
+
+，即列不能够再分成其他几列。 
+
+  
+
+
+考虑这样一个表：【联系人】（姓名，性别，电话） 
+
+  
+
+
+如果在实际场景中，一个联系人有家庭电话和公司电话，那么这种表结构设计就没有达到 1NF。要符合 1NF 我们只需把列（电话）拆分，即：【联系人】（姓名，性别，家庭电话，公司电话）。1NF 很好辨别，但是 2NF 和 3NF 就容易搞混淆。 
+
+说明：在任何一个[关系数据库](http://baike.baidu.com/view/68348.htm)中，第一范式（1NF）是对[关系模式](http://baike.baidu.com/view/68347.htm)的设计基本要求，一般设计中都必须满足第一范式（1NF）。不过有些[关系模型](http://baike.baidu.com/view/176484.htm)中突破了1NF的限制，这种称为非1NF的关系模型。换句话说，是否必须满足1NF的最低要求，主要依赖于所使用的[关系模型](http://baike.baidu.com/view/176484.htm)。
+
+
+
+### 第二范式（2NF）
+
+
+
+首先是 1NF，另外包含两部分内容，一是表必须有一个主键；二是没有包含在主键中的列必须完全依赖于主键，而不能只依赖于主键的一部分。 
+
+考虑一个订单明细表：【OrderDetail】（OrderID，ProductID，UnitPrice，Discount，Quantity，ProductName）。 
+
+  
+
+
+因为我们知道在一个订单中可以订购多种产品，所以单单一个 OrderID 是不足以成为主键的，主键应该是（OrderID，ProductID）。显而易见 Discount（折扣），Quantity（数量）完全依赖（取决）于主键（OderID，ProductID），而 UnitPrice，ProductName 只依赖于 ProductID。所以 OrderDetail 表不符合 2NF。不符合 2NF 的设计容易产生冗余数据。 
+
+  
+
+
+可以把【OrderDetail】表拆分为【OrderDetail】（OrderID，ProductID，Discount，Quantity）和【Product】（ProductID，UnitPrice，ProductName）来消除原订单表中UnitPrice，ProductName多次重复的情况。
+
+第二范式（2NF）要求实体的属性**完全依赖**于主关键字。所谓完全依赖是指不能存在仅依赖主关键字一部分的属性，如果存在，那么这个属性和主关键字的这一部分应该分离出来形成一个新的实体，新实体与原实体之间是一对多的关系。为实现区分通常需要为表加上一个列，以存储各个实例的唯一标识。简而言之，第二范式就是在第一范式的基础上属性完全依赖于主键。
+
+
+
+### 第三范式（3NF）
+
+
+
+在1NF基础上，任何非主[**属性**](http://baike.baidu.com/view/77730.htm)不依赖于其它非主属性\[在2NF基础上消除传递依赖\]。
+
+第三范式（3NF）是第二范式（2NF）的一个子集，即满足第三范式（3NF）必须满足第二范式（2NF）。
+
+首先是 2NF，另外非主键列必须**直接依赖**于主键，不能存在传递依赖。即不能存在：非主键列 A 依赖于非主键列 B，非主键列 B 依赖于主键的情况。 考虑一个订单表【Order】（OrderID，OrderDate，CustomerID，CustomerName，CustomerAddr，CustomerCity）主键是（OrderID）。 
+
+其中 OrderDate，CustomerID，CustomerName，CustomerAddr，CustomerCity 等非主键列都完全依赖于主键（OrderID），所以符合 2NF。不过问题是 CustomerName，CustomerAddr，CustomerCity 直接依赖的是 CustomerID（非主键列），而不是直接依赖于主键，它是通过传递才依赖于主键，所以不符合 3NF。 
+
+  
+
+
+通过拆分【Order】为【Order】（OrderID，OrderDate，CustomerID）和【Customer】（CustomerID，CustomerName，CustomerAddr，CustomerCity）从而达到 3NF。 
+
+第二范式（2NF）和第三范式（3NF）的概念很容易混淆，区分它们的关键点在于，2NF：非主键列是否完全依赖于主键，还是依赖于主键的一部分；3NF：非主键列是直接依赖于主键，还是直接依赖于非主键列。
+
+  
+
+
 **Q \#9\) What is BCNF?**
 
 **Ans:**BCNF is Boyce Code Normal form. It is the higher version of 3Nf which does not have any multiple overlapping candidate keys.
@@ -260,9 +328,6 @@ A Non-clustered index does alter the records that are stored in the table but cr
 
 **Ans:**Given below are the types of Join, which are explained with respect to the tables as an_**Example**_:
 
-  
-
-
 **employee table:**
 
 [![](https://cdn.softwaretestinghelp.com/wp-content/qa/uploads/2017/04/employee-table.jpg "employee table")](https://cdn.softwaretestinghelp.com/wp-content/qa/uploads/2017/04/employee-table.jpg)
@@ -272,6 +337,8 @@ A Non-clustered index does alter the records that are stored in the table but cr
 [![](https://cdn.softwaretestinghelp.com/wp-content/qa/uploads/2017/04/employee_info-table.jpg "employee\_info table")](https://cdn.softwaretestinghelp.com/wp-content/qa/uploads/2017/04/employee_info-table.jpg)
 
 **1\) Inner JOIN:**Inner JOIN is also known as a simple JOIN. This SQL query returns result from both the tables having a common value in rows.
+
+https://www.w3resource.com/sql/joins/perform-an-inner-join.php
 
 **SQL Query:**
 
@@ -450,13 +517,13 @@ SELECT \* from Employee WHERE empName LIKE ‘R%’;
 
 **Ans:**
 
-SELECT empId, empName, Age from Employee  ORDER BY Age;
+SELECT empId, empName, Age from Employee  ORDER BY Age;
 
 **Result:**
 
 [![](https://cdn.softwaretestinghelp.com/wp-content/qa/uploads/2017/04/employees-with-their-age-in-ascending.jpg "employees with their age in ascending")](https://cdn.softwaretestinghelp.com/wp-content/qa/uploads/2017/04/employees-with-their-age-in-ascending.jpg)
 
-SELECT empId, empName, Age from Employee  ORDER BY Age Desc;
+SELECT empId, empName, Age from Employee  ORDER BY Age Desc;
 
 **Result:**
 

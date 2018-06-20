@@ -14,6 +14,7 @@
 * Security
   * [JWT Oauth](jwt-oauth.md)
   * [Encryption](encryption.md)
+  * Security Principles & Architecture Design
 * [Python](python-basic.md)
   * [Python Tricks](python-tricks.md)
   * [Python Singleton](python-advance.md)
