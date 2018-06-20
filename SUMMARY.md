@@ -84,4 +84,5 @@
   * [Shell scripts](shell-scripts.md)
 * [Cache](cache.md)
   * [Cache strategy](cache/cache-strategy.md)
+  * [Basic](cache/basic.md)
 
