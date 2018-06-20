@@ -472,9 +472,5 @@ info
 
 但偶尔重新启动是必须的，如为升级 Redis 程序到新的版本，或者当你需要修改某些目前 CONFIG 命令还不支持的配置参数的时候。
 
-
-
-
-
-![](/assets/Screen Shot 2018-06-20 at 11.44.56 pm.png)
+![](/assets/Screen Shot 2018-06-20 at 11.44.56 pm.png)![](/assets/Screen Shot 2018-06-20 at 11.45.04 pm.png)![](/assets/Screen Shot 2018-06-20 at 11.45.12 pm.png)
 
