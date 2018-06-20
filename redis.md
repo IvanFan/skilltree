@@ -104,6 +104,8 @@ bgsave做镜像全量持久化，aof做增量持久化。因为bgsave会耗费�
 
 对方追问那如果突然机器掉电会怎样？取决于aof日志sync属性的配置，如果不要求性能，在每条写指令时都sync一下磁盘，就不会丢失数据。但是在高性能的要求下每次都sync是不现实的，一般都使用定时sync，比如1s1次，这个时候最多就会丢失1s的数据。
 
+Using AOF Redis is much more durable: you can have different fsync policies: no fsync at all, fsync every second, fsync at every query. With the default policy of fsync every second write performances are still great \(fsync is performed using a background thread and the main thread will try hard to perform writes when no fsync is in progress.\) but you can only lose one second worth of writes.
+
 对方追问bgsave的原理是什么？你给出两个词汇就可以了，fork和cow。fork是指redis通过创建子进程来进行bgsave操作，cow指的是copy on write，子进程创建后，父子进程共享数据段，父进程继续提供读写服务，写脏的页面数据会逐渐和子进程分离开来。
 
 This strategy is known as_snapshotting_.
