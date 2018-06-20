@@ -85,4 +85,5 @@
 * [Cache](cache.md)
   * [Cache strategy](cache/cache-strategy.md)
   * [Basic](cache/basic.md)
+  * [cache invalid, cache breakthrough, cache lock](cache/cache-invalid-cache-breakthrough-cache-lock.md)
 
