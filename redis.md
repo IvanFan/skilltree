@@ -36,22 +36,26 @@ HyperLogLog 不能像集合那样，返回输入的各个元素。
 
 这时候你要给予惊讶的反馈：唉，是喔，这个锁就永远得不到释放了。紧接着你需要抓一抓自己得脑袋，故作思考片刻，好像接下来的结果是你主动思考出来的，然后回答：我记得set指令有非常复杂的参数，这个应该是可以同时把setnx和expire合成一条指令来用的！对方这时会显露笑容，心里开始默念：摁，这小子还不错。
 
-```
 it's possible to avoid this issue using the following algorithm. Let's see how C4, our sane client, uses the good algorithm:
 
-C4 sends SETNX lock.foo in order to acquire the lock
+* C4 sends`SETNX lock.foo`in order to acquire the lock
 
-The crashed client C3 still holds it, so Redis will reply with 0 to C4.
+* The crashed client C3 still holds it, so Redis will reply with`0`to C4.
 
-C4 sends GET lock.foo to check if the lock expired. If it is not, it will sleep for some time and retry from the start.
+* C4 sends`GET lock.foo`to check if the lock expired. If it is not, it will sleep for some time and retry from the start.
 
-Instead, if the lock is expired because the Unix time at lock.foo is older than the current Unix time, C4 tries to perform:
+* Instead, if the lock is expired because the Unix time at`lock.foo`is older than the current Unix time, C4 tries to perform:
 
-GETSET lock.foo <current Unix timestamp + lock timeout + 1>
-Because of the GETSET semantic, C4 can check if the old value stored at key is still an expired timestamp. If it is, the lock was acquired.
+  ```
+  GETSET lock.foo 
+  <
+  current Unix timestamp + lock timeout + 1
+  >
+  ```
 
-If another client, for instance C5, was faster than C4 and acquired the lock with the GETSET operation, the C4 GETSET operation will return a non expired timestamp. C4 will simply restart from the first step. Note that even if C4 set the key a bit a few seconds in the future this is not a problem.
-```
+* Because of the[GETSET](https://redis.io/commands/getset)semantic, C4 can check if the old value stored at`key`is still an expired timestamp. If it is, the lock was acquired.
+
+* If another client, for instance C5, was faster than C4 and acquired the lock with the[GETSET](https://redis.io/commands/getset)operation, the C4[GETSET](https://redis.io/commands/getset)operation will return a non expired timestamp. C4 will simply restart from the first step. Note that even if C4 set the key a bit a few seconds in the future this is not a problem.
 
 ### 假如Redis里面有1亿个key，其中有10w个key是以某个固定的已知的前缀开头的，如果将它们全部找出来？
 
@@ -120,10 +124,6 @@ Redis Cluster着眼于扩展性，在单个redis内存不足时，使用Cluster�
 
 * 是数据库容量受到物理内存的限制,不能用作海量数据的高性能读写,因此Redis适合的场景主要局限在较小数据量的高性能操作和运算上。
 * Redis较难支持在线扩容，在集群容量达到上限时在线扩容会变得很复杂。为避免这一问题，运维人员在系统上线时必须确保有足够的空间，这对资源造成了很大的浪费。
-
-
-
-
 
 ##### 1、什么是Redis？
 
@@ -440,6 +440,4 @@ info
 针对运行实例，有许多配置选项可以通过 CONFIG SET 命令进行修改，而无需执行任何形式的重启。 从 Redis 2.2 开始，可以从 AOF 切换到 RDB 的快照持久性或其他方式而不需要重启 Redis。检索 ‘CONFIG GET \*’ 命令获取更多信息。
 
 但偶尔重新启动是必须的，如为升级 Redis 程序到新的版本，或者当你需要修改某些目前 CONFIG 命令还不支持的配置参数的时候。
-
-
 
