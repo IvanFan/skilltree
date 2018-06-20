@@ -82,4 +82,6 @@
 * [Multi-thread](multi-thread.md)
 * Linux
   * [Shell scripts](shell-scripts.md)
+* [Cache](cache.md)
+  * [Cache strategy](cache/cache-strategy.md)
 
