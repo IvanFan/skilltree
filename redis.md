@@ -65,6 +65,21 @@ it's possible to avoid this issue using the following algorithm. Let's see how C
 
 这个时候你要回答redis关键的一个特性：redis的单线程的。keys指令会导致线程阻塞一段时间，线上服务会停顿，直到指令执行完毕，服务才能恢复。这个时候可以使用scan指令，scan指令可以无阻塞的提取出指定模式的key列表，但是会有一定的重复概率，在客户端做一次去重就可以了，但是整体所花费的时间会比直接用keys指令长。
 
+```
+redis> MSET firstname Jack lastname Stuntman age 35
+"OK"
+redis> KEYS *name*
+1) "firstname"
+2) "lastname"
+redis> KEYS a??
+1) "age"
+redis> KEYS *
+1) "firstname"
+2) "age"
+3) "lastname"
+redis> 
+```
+
 ### 使用过Redis做异步队列么，你是怎么用的？
 
 一般使用list结构作为队列，rpush生产消息，lpop消费消息。当lpop没有消息的时候，要适当sleep一会再重试。
