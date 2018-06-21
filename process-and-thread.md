@@ -30,8 +30,6 @@ The idea of virtual memory is to use disk space to extend the RAM. Running proce
 
 Thrashing is a situation when the performance of a computer degrades or collapses. Thrashing occurs when a system spends more time processing page faults than executing transactions. While processing page faults is necessary to in order to appreciate the benefits of virtual memory, thrashing has a negative affect on the system. As the page fault rate increases, more transactions need processing from the paging device. The queue at the paging device increases, resulting in increased service time for a page fault \(Source: h[ttp://cs.gmu.edu/cne/modules/vm/blue/thrash.html](http://cs.gmu.edu/cne/modules/vm/blue/thrash.html)\)
 
-
-
 **Multiprogramming – **A computer running more than one program at a time \(like running Excel and Firefox simultaneously\).
 
 **Multiprocessing – **A computer using more than one CPU at a time.
@@ -44,6 +42,23 @@ Tasks sharing a common resource \(like 1 CPU\).
 
 is an extension of multitasking.
 
+
+
+### **Multi programming –**
+
+In a modern computing system, there are usually several concurrent application processes which want to execute. Now it is the responsibility of the Operating System to manage all the processes effectively and efficiently.  
+One of the most important aspects of an Operating System is to multi program.  
+In a computer system, there are multiple processes waiting to be executed, i.e. they are waiting when the CPU will be allocated to them and they begin their execution. These processes are also known as jobs. Now the main memory is too small to accommodate all of these processes or jobs into it. Thus, these processes are initially kept in an area called job pool. This job pool consists of all those processes awaiting allocation of main memory and CPU.  
+CPU selects one job out of all these waiting jobs, brings it from the job pool to main memory and starts executing it. The processor executes one job until it is interrupted by some external factor or it goes for an I/O task.
+
   
+The main idea of multi programming is to maximize the CPU time.  
+**Multi programmed system’s working –**
+
+* In a multi-programmed system, as soon as one job goes for an I/O task, the Operating System interrupts that job, chooses another job from the job pool \(waiting queue\), gives CPU to this new job and starts its execution. The previous job keeps doing its I/O operation while this new job does CPU bound tasks. Now say the second job also goes for an I/O task, the CPU chooses a third job and starts executing it. As soon as a job completes its I/O operation and comes back for CPU tasks, the CPU is allocated to it.
+* In this way, no CPU time is wasted by the system waiting for the I/O task to be completed.
+ 
+  Therefore, the ultimate goal of multi programming is to keep the CPU busy as long as there are processes ready to execute. This way, multiple programs can be executed on a single processor by executing a part of a program at one time, a part of another program after this, then a part of another program and so on, hence executing multiple programs. Hence, the CPU never remains idle.
+
 
 
