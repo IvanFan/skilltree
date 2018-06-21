@@ -55,3 +55,53 @@ In a process context switch, the state of the first process must be saved someho
 **Answer: \(C\)**  
 **Explanation:**Process switching involves mode switch. Context switching can occur only in kernel mode.
 
+
+
+
+
+# States of a process
+
+States of a process are as following:
+
+![](https://www.geeksforgeeks.org/wp-content/uploads/gq/2015/06/process-states1.png)
+
+* **New \(Create\) –**
+  In this step process is about to create but not yet created, it is the program which is present in secondary memory that will be picked up by OS to create the process.
+* **Ready –**
+  New -
+  &gt;
+   Ready to run. After creation of process, the process enters the ready state i.e. into the main memory. The process here is ready to run and is waiting to get the CPU time for its execution.
+* **Run –**
+  The process is running in the main memory.
+* **Blocked or wait –**
+  Whenever the process requests the I/O it enters the blocked or wait state. It is executed in the main memory and it doesn’t require CPU. Once the I/O operation is completed the process goes to ready state.
+* **Terminated or completed –**
+  Process is killed as well as PCB is deleted.
+* **Suspend ready –**
+  Set of process that were initially in ready state but lack of main memory caused them to go to suspend ready, it is a secondary memory.
+* **Suspend wait or suspend blocked –**
+  Similar to suspend ready but uses the process which was performing I/O operation and lack of main memory caused them to move to secondary memory.
+ 
+  When work is finished it may go to suspend ready.
+
+**CPU and IO Bound Processes:**  
+If process is having lots of CPU operation then it is called CPU bound process. Similarly, If process is having lots of IO operation then it is called IO bound process.
+
+**Types of schedulers:**
+
+1. **Long term – performance –**
+   Makes decision about how many processes should be made to stay in the ready state this decides the degree of multiprogramming. Once decision is taken it lasts for long time hence called long term scheduler.
+2. **Short term – Context switching time –**
+   Short term scheduler will decide which process to be executed next and then it will call dispatcher. Dispatcher is a software that moves process from ready to run and vice versa. In other words, it is context switching.
+3. **Medium term – Swapping time –**
+   Suspension decision is taken by medium term scheduler. Medium term scheduler is used for swapping that is moving the process from main memory to secondary and vice versa.
+
+**Multiprogramming –**We have many processes ready to run. There are two types of multiprogramming:
+
+1. **Pre-emption –**
+   Process is forcefully removed from CPU. Pre-emption is also called as time sharing or multitasking.
+2. **Non pre-emption –**
+   Processes are not removed until they complete the execution.
+
+
+
