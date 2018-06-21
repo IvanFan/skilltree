@@ -42,8 +42,6 @@ Tasks sharing a common resource \(like 1 CPU\).
 
 is an extension of multitasking.
 
-
-
 ### **Multi programming –**
 
 In a modern computing system, there are usually several concurrent application processes which want to execute. Now it is the responsibility of the Operating System to manage all the processes effectively and efficiently.  
@@ -51,14 +49,23 @@ One of the most important aspects of an Operating System is to multi program.
 In a computer system, there are multiple processes waiting to be executed, i.e. they are waiting when the CPU will be allocated to them and they begin their execution. These processes are also known as jobs. Now the main memory is too small to accommodate all of these processes or jobs into it. Thus, these processes are initially kept in an area called job pool. This job pool consists of all those processes awaiting allocation of main memory and CPU.  
 CPU selects one job out of all these waiting jobs, brings it from the job pool to main memory and starts executing it. The processor executes one job until it is interrupted by some external factor or it goes for an I/O task.
 
-  
 The main idea of multi programming is to maximize the CPU time.  
 **Multi programmed system’s working –**
 
 * In a multi-programmed system, as soon as one job goes for an I/O task, the Operating System interrupts that job, chooses another job from the job pool \(waiting queue\), gives CPU to this new job and starts its execution. The previous job keeps doing its I/O operation while this new job does CPU bound tasks. Now say the second job also goes for an I/O task, the CPU chooses a third job and starts executing it. As soon as a job completes its I/O operation and comes back for CPU tasks, the CPU is allocated to it.
 * In this way, no CPU time is wasted by the system waiting for the I/O task to be completed.
- 
+
   Therefore, the ultimate goal of multi programming is to keep the CPU busy as long as there are processes ready to execute. This way, multiple programs can be executed on a single processor by executing a part of a program at one time, a part of another program after this, then a part of another program and so on, hence executing multiple programs. Hence, the CPU never remains idle.
+
+### **Multiprocessing –**
+
+In a uni-processor system, only one process executes at a time.  
+Multiprocessing is the use of two or more CPUs \(processors\) within a single Computer system. The term also refers to the ability of a system to support more than one processor within a single computer system. Now since there are multiple processors available, multiple processes can be executed at a time. These multi processors share the computer bus, sometimes the clock, memory and peripheral devices also.
+
+**Multi processing system’s working –**
+
+* With the help of multiprocessing, many processes can be executed simultaneously. Say processes P1, P2, P3 and P4 are waiting for execution. Now in a single processor system, firstly one process will execute, then the other, then the other and so on.
+* But with multiprocessing, each process can be assigned to a different processor for its execution. If its a dual-core processor \(2 processors\), two processes can be executed simultaneously and thus will be two times faster, similarly a quad core processor will be four times as fast as a single processor.
 
 
 
