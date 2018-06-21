@@ -1,3 +1,22 @@
+A process has following Attributes.
+
+```
+1. Process Id:    A unique identifier assigned by operating system
+2. Process State: Can be ready, running, .. etc
+3. CPU registers: Like Program Counter (CPU registers must be saved and 
+                  restored when a process is swapped out and in of CPU)
+5. Accounts information:
+6. I/O status information: For example devices allocated to process, 
+                           open files, etc
+8. CPU scheduling information: For example Priority (Different processes 
+                               may have different priorities, for example
+                               a short process may be assigned a low priority
+                               in the shortest job first scheduling)
+```
+
+All the above attributes of a process are also known as_**Context of the process**_.  
+Every Process has its known[Program control Block](http://en.wikipedia.org/wiki/Process_control_block)\(PCB\) i.e each process will have a unique PCB. All the Above Attributes are the part of the PCB.
+
 **Context Switching**  
 The process of saving the context of one process and loading the context of other process is known as Context Switching. In simple term, it is like loading and unloading of the process from running state to ready state.
 
@@ -14,8 +33,6 @@ A mode switch typically occurs for a process context switch to occur. Only the K
 **CPU Bound vs I/O Bound Processes:**  
 A CPU Bound Process requires more amount of CPU time or spends more time in the running state.  
 I/O Bound Process requires more amount of I/O time and less CPU time. I/O Bound process more time in the waiting state.
-
-
 
 **Exercise:**  
 **1.**Which of the following need not necessarily be saved on a context switch between processes? \(GATE-CS-2000\)  
