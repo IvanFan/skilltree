@@ -20,13 +20,15 @@ Deadlock is a situation when two or more processes wait for each other to finish
 \_No Preemption:\_The operating system is not allowed to take a resource back from a process until process gives it back.  
 \_Circular Wait:  \_A set of processes are waiting for each other in circular form.
 
-
-
-
-
 **What is Virtual Memory? How is it implemented?**
 
 Virtual memory creates an illusion that each user has one or more contiguous address spaces, each beginning at address zero. The sizes of such virtual address spaces is generally very high.
 
 The idea of virtual memory is to use disk space to extend the RAM. Running processes don’t need to care whether the memory is from RAM or disk. The illusion of such a large amount of memory is created by subdividing the virtual memory into smaller pieces, which can be loaded into physical memory whenever they are needed by a process.
+
+**What is Thrashing?**
+
+
+
+Thrashing is a situation when the performance of a computer degrades or collapses. Thrashing occurs when a system spends more time processing page faults than executing transactions. While processing page faults is necessary to in order to appreciate the benefits of virtual memory, thrashing has a negative affect on the system. As the page fault rate increases, more transactions need processing from the paging device. The queue at the paging device increases, resulting in increased service time for a page fault \(Source: h[ttp://cs.gmu.edu/cne/modules/vm/blue/thrash.html](http://cs.gmu.edu/cne/modules/vm/blue/thrash.html)\)
 
