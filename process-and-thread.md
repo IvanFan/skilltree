@@ -149,20 +149,39 @@ The above design of init is called SysV- pronounced as[System five](https://en.w
 
 The next step of init is to start up various daemons that support networking and other services. X server daemon is one of the most important daemon. It manages display, keyboard, and mouse. When X server daemon is started you see a Graphical Interface and a login screen is displayed.
 
-
-
 # Difference between 32-bit and 64-bit operating systems
 
 A 32-bit system can access 2^32
 
 memory addresses, i.e 4 GB of RAM or physical memory.
 
-  
-
-
 A 64-bit system can access 2^64
 
 memory addresses, i.e actually 18-Billion GB of RAM. In short, any amount of memory greater than 4 GB can be easily handled by it.
+
+
+
+# Types of computer memory \(RAM and ROM\)
+
+```
+Random Access Memory (RAM) –
+
+It is also called as read write memory or the main memory or the primary memory.
+The programs and data that the CPU requires during execution of a program are stored in this memory.
+It is a volatile memory as the data loses when the power is turned off.
+RAM is further classified into two types- SRAM (Static Random Access Memory) and DRAM (Dynamic Random Access Memory).
+```
+
+```
+Read Only Memory (ROM) –
+
+Stores crucial information essential to operate the system, like the program essential to boot the computer.
+It is not volatile.
+Always retains its data.
+Used in embedded systems or where the programming needs no change.
+Used in calculators and peripheral devices.
+ROM is further classified into 4 types- ROM, PROM, EPROM, and EEPROM.
+```
 
 
 
