@@ -73,6 +73,7 @@
   * [Scheduling algorithm & Dynamic Scheduling](scheduling-algorithm.md)
   * [Edge trigger & Level trigger](edge-trigger-and-level-trigger.md)
   * [Basic](process-and-thread.md)
+  * [CPU Scheduling ](cpu-scheduling.md)
 * [Database](database.md)
   * [Transaction](transaction.md)
   * [Index](index.md)
