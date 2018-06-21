@@ -100,11 +100,39 @@ Multiprocessing refers to the hardware \(i.e., the CPU units\) rather than the s
 
 A computer without a program running is just an inert hunk of electronics. The first thing a computer has to do when it is turned on is start up a special program called an operating system. The operating system’s job is to help other computer programs to work by handling the messy details of controlling the computer’s hardware.
 
-**An overview of the boot process**  
-  
-![](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/boot_process.png "sequence")  
-  
+**An overview of the boot process**
+
+![](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/boot_process.png "sequence")
+
 The boot process is something that happens every time you turn your computer on. You don’t really see it, because it happens so fast. You press the power button come back a few minutes later and Windows XP, or Windows Vista, or whatever Operating System you use is all loaded.
 
 The BIOS chip tells it to look in a fixed place, usually on the lowest-numbered hard disk \(the boot disk\) for a special program called a boot loader \(under Linux the boot loader is called Grub or LILO\). The boot loader is pulled into memory and started. The boot loader’s job is to start the real operating system.
+
+**Functions of BIOS**
+
+  
+
+
+  
+
+
+**POST**
+
+\(Power On Self Test\) The Power On Self Test happens each time you turn your computer on. It sounds complicated and thats because it kind of is. Your computer does so much when its turned on and this is just part of that.
+
+  
+
+
+  
+
+
+It initializes the various hardware devices. It is an important process so as to ensure that all the devices operate smoothly without any conflicts. BIOSes following ACPI create tables describing the devices in the computer.
+
+  
+
+
+  
+
+
+The POST first checks the bios and then tests the CMOS RAM. If there is no problems with this then POST continues to check the CPU, hardware devices such as the Video Card, the secondary storage devices such as the Hard Drive, Floppy Drives, Zip Drive or CD/DVD Drives.If some errors found then an error message is displayed on screen or a number of beeps are heard. These beeps are known as POST beep codes.
 
