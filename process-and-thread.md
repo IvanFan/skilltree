@@ -110,29 +110,26 @@ The BIOS chip tells it to look in a fixed place, usually on the lowest-numbered 
 
 **Functions of BIOS**
 
-  
-
-
-  
-
-
 **POST**
 
 \(Power On Self Test\) The Power On Self Test happens each time you turn your computer on. It sounds complicated and thats because it kind of is. Your computer does so much when its turned on and this is just part of that.
 
-  
-
-
-  
-
-
 It initializes the various hardware devices. It is an important process so as to ensure that all the devices operate smoothly without any conflicts. BIOSes following ACPI create tables describing the devices in the computer.
 
-  
-
-
-  
-
-
 The POST first checks the bios and then tests the CMOS RAM. If there is no problems with this then POST continues to check the CPU, hardware devices such as the Video Card, the secondary storage devices such as the Hard Drive, Floppy Drives, Zip Drive or CD/DVD Drives.If some errors found then an error message is displayed on screen or a number of beeps are heard. These beeps are known as POST beep codes.
+
+
+
+**Master Boot Record**
+
+  
+
+
+  
+
+
+The Master Boot Record \(MBR\) is a small program that starts when the computer is booting, in order to find the operating system \(eg. Windows XP\). This complicated process \(called the Boot Process\) starts with the POST \(Power On Self Test\) and ends when the Bios searches for the MBR on the Hard Drive, which is generally located in the first sector, first head, first cylinder \(cylinder 0, head 0, sector 1\).
+
+  
+
 
