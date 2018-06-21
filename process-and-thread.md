@@ -118,18 +118,43 @@ It initializes the various hardware devices. It is an important process so as to
 
 The POST first checks the bios and then tests the CMOS RAM. If there is no problems with this then POST continues to check the CPU, hardware devices such as the Video Card, the secondary storage devices such as the Hard Drive, Floppy Drives, Zip Drive or CD/DVD Drives.If some errors found then an error message is displayed on screen or a number of beeps are heard. These beeps are known as POST beep codes.
 
-
-
 **Master Boot Record**
-
-  
-
-
-  
-
 
 The Master Boot Record \(MBR\) is a small program that starts when the computer is booting, in order to find the operating system \(eg. Windows XP\). This complicated process \(called the Boot Process\) starts with the POST \(Power On Self Test\) and ends when the Bios searches for the MBR on the Hard Drive, which is generally located in the first sector, first head, first cylinder \(cylinder 0, head 0, sector 1\).
 
+
+
+**init**
+
   
+
+
+  
+
+
+init is the last step of the kernel boot sequence. It looks for the file
+
+_/etc/inittab_
+
+to see if there is an entry for
+
+_initdefault_
+
+. It is used to determine initial run-level of the system. A run-level is used to decide the initial state of the operating system.
+
+```
+Some of the run levels are:
+Level
+
+0 –> System Halt
+1 –> Single user mode
+3 –> Full multiuser mode with network
+5 –> Full multiuser mode with network and X display manager
+6 –> Reboot
+```
+
+The above design of init is called SysV- pronounced as[System five](https://en.wikipedia.org/wiki/UNIX_System_V). Several other implementations of init have been written now. Some of the popular implementatios are systemd and upstart. Upstart is being used by ubuntu since 2006. More details of the upstart can be found[here](https://help.ubuntu.com/community/UbuntuBootupHowto).  
+  
+The next step of init is to start up various daemons that support networking and other services. X server daemon is one of the most important daemon. It manages display, keyboard, and mouse. When X server daemon is started you see a Graphical Interface and a login screen is displayed.  
 
 
