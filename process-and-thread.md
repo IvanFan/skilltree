@@ -67,5 +67,19 @@ Multiprocessing is the use of two or more CPUs \(processors\) within a single Co
 * With the help of multiprocessing, many processes can be executed simultaneously. Say processes P1, P2, P3 and P4 are waiting for execution. Now in a single processor system, firstly one process will execute, then the other, then the other and so on.
 * But with multiprocessing, each process can be assigned to a different processor for its execution. If its a dual-core processor \(2 processors\), two processes can be executed simultaneously and thus will be two times faster, similarly a quad core processor will be four times as fast as a single processor.
 
+**Why use multi processing –**
+
+* The main advantage of multiprocessor system is to get more work done in a shorter period of time. These types of systems are used when very high speed is required to process a large volume of data. Multi processing systems can save money in comparison to single processor systems because the processors can share peripherals and power supplies.
+* It also provides increased reliability in the sense that if one processor fails, the work does not halt, it only slows down. e.g. if we have 10 processors and 1 fails, then the work does not halt, rather the remaining 9 processors can share the work of the 10th processor. Thus the whole system runs only 10 percent slower, rather than failing altogether.
+
+Multiprocessing refers to the hardware \(i.e., the CPU units\) rather than the software \(i.e., running processes\). If the underlying hardware provides more than one processor then that is multiprocessing.
+
+  
+**Multi tasking system’s working –**
+
+* In a time sharing system, each process is assigned some specific quantum of time for which a process is meant to execute. Say there are 4 processes P1, P2, P3, P4 ready to execute. So each of them are assigned some time quantum for which they will execute e.g time quantum of 5 nanoseconds \(5 ns\). As one process begins execution \(say P2\), it executes for that quantum of time \(5 ns\). After 5 ns the CPU starts the execution of the other process \(say P3\) for the specified quantum of time.
+* Thus the CPU makes the processes to share time slices between them and execute accordingly. As soon as time quantum of one process expires, another process begins its execution.
+* Here also basically a context switch is occurring but it is occurring so fast that the user is able to interact with each program separately while it is running. This way, the user is given the illusion that multiple processes/ tasks are executing simultaneously. But actually only one process/ task is executing at a particular instant of time. In multitasking, time sharing is best manifested because each running process takes only a fair quantum of the CPU time.
+
 
 
