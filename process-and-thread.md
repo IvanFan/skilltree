@@ -80,8 +80,6 @@ Multiprocessing refers to the hardware \(i.e., the CPU units\) rather than the s
 * Thus the CPU makes the processes to share time slices between them and execute accordingly. As soon as time quantum of one process expires, another process begins its execution.
 * Here also basically a context switch is occurring but it is occurring so fast that the user is able to interact with each program separately while it is running. This way, the user is given the illusion that multiple processes/ tasks are executing simultaneously. But actually only one process/ task is executing at a particular instant of time. In multitasking, time sharing is best manifested because each running process takes only a fair quantum of the CPU time.
 
-
-
 **Multi threading system’s working –**
 
 **Example 1 –**
@@ -93,11 +91,20 @@ Multiprocessing refers to the hardware \(i.e., the CPU units\) rather than the s
 
 * We can think of threads as child processes that share the parent process resources but execute independently. Now take the case of a GUI. Say we are performing a calculation on the GUI \(which is taking very long time to finish\). Now we can not interact with the rest of the GUI until this command finishes its execution. To be able to interact with the rest of the GUI, this command of calculation should be assigned to a separate thread. So at this point of time, 2 threads will be executing i.e. one for calculation, and one for the rest of the GUI. Hence here in a single process, we used multiple threads for multiple functionality.
 
-  
 **Advantages of Multi threading –**
 
 * Benefits of Multi threading include increased responsiveness. Since there are multiple threads in a program, so if one thread is taking too long to execute or if it gets blocked, the rest of the threads keep executing without any problem. Thus the whole program remains responsive to the user by means of remaining threads.
 * Another advantage of multi threading is that it is less costly. Creating brand new processes and allocating resources is a time consuming task, but since threads share resources of the parent process, creating threads and switching between them is comparatively easy. Hence multi threading is the need of modern Operating Systems.
 
+# What happens when we turn on computer?
 
+A computer without a program running is just an inert hunk of electronics. The first thing a computer has to do when it is turned on is start up a special program called an operating system. The operating system’s job is to help other computer programs to work by handling the messy details of controlling the computer’s hardware.
+
+**An overview of the boot process**  
+  
+![](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/boot_process.png "sequence")  
+  
+The boot process is something that happens every time you turn your computer on. You don’t really see it, because it happens so fast. You press the power button come back a few minutes later and Windows XP, or Windows Vista, or whatever Operating System you use is all loaded.
+
+The BIOS chip tells it to look in a fixed place, usually on the lowest-numbered hard disk \(the boot disk\) for a special program called a boot loader \(under Linux the boot loader is called Grub or LILO\). The boot loader is pulled into memory and started. The boot loader’s job is to start the real operating system.
 
