@@ -28,7 +28,22 @@ The idea of virtual memory is to use disk space to extend the RAM. Running proce
 
 **What is Thrashing?**
 
-
-
 Thrashing is a situation when the performance of a computer degrades or collapses. Thrashing occurs when a system spends more time processing page faults than executing transactions. While processing page faults is necessary to in order to appreciate the benefits of virtual memory, thrashing has a negative affect on the system. As the page fault rate increases, more transactions need processing from the paging device. The queue at the paging device increases, resulting in increased service time for a page fault \(Source: h[ttp://cs.gmu.edu/cne/modules/vm/blue/thrash.html](http://cs.gmu.edu/cne/modules/vm/blue/thrash.html)\)
+
+
+
+**Multiprogramming – **A computer running more than one program at a time \(like running Excel and Firefox simultaneously\).
+
+**Multiprocessing – **A computer using more than one CPU at a time.
+
+**Multitasking –**
+
+Tasks sharing a common resource \(like 1 CPU\).
+
+**Multithreading**
+
+is an extension of multitasking.
+
+  
+
 
