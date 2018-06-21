@@ -11,14 +11,22 @@ A thread has its own program counter \(PC\), a register set, and a stack space. 
 
 **Thread is the minimum unit for CPU resource management**
 
-
-
-**What is deadlock? **  
-Deadlock is a situation when two or more processes wait for each other to finish and none of them ever finish.  Consider an example when two trains are coming toward each other on same track and there is only one track, none of the trains can move once they are in front of each other.  Similar situation occurs in operating systems when there are two or more processes hold some resources and wait for resources held by other\(s\).
+**What is deadlock? **  
+Deadlock is a situation when two or more processes wait for each other to finish and none of them ever finish.  Consider an example when two trains are coming toward each other on same track and there is only one track, none of the trains can move once they are in front of each other.  Similar situation occurs in operating systems when there are two or more processes hold some resources and wait for resources held by other\(s\).
 
 **What are the necessary conditions for deadlock?**  
-_Mutual Exclusion:_There is s resource that cannot be shared.  
-_Hold and Wait: _A process is holding at least one resource and waiting for another resource which is with some other process.  
-_No Preemption:_The operating system is not allowed to take a resource back from a process until process gives it back.  
-_Circular Wait:  _A set of processes are waiting for each other in circular form.
+\_Mutual Exclusion:\_There is s resource that cannot be shared.  
+\_Hold and Wait: \_A process is holding at least one resource and waiting for another resource which is with some other process.  
+\_No Preemption:\_The operating system is not allowed to take a resource back from a process until process gives it back.  
+\_Circular Wait:  \_A set of processes are waiting for each other in circular form.
+
+
+
+
+
+**What is Virtual Memory? How is it implemented?**
+
+Virtual memory creates an illusion that each user has one or more contiguous address spaces, each beginning at address zero. The sizes of such virtual address spaces is generally very high.
+
+The idea of virtual memory is to use disk space to extend the RAM. Running processes don’t need to care whether the memory is from RAM or disk. The illusion of such a large amount of memory is created by subdividing the virtual memory into smaller pieces, which can be loaded into physical memory whenever they are needed by a process.
 
