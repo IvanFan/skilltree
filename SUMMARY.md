@@ -74,6 +74,7 @@
   * [Edge trigger & Level trigger](edge-trigger-and-level-trigger.md)
   * [Basic](process-and-thread.md)
   * [CPU Scheduling ](cpu-scheduling.md)
+  * [Dead Lock](dead-lock.md)
 * [Database](database.md)
   * [Transaction](transaction.md)
   * [Index](index.md)
