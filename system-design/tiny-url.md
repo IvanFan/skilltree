@@ -22,9 +22,7 @@ collect relevant data
 
 Use the distributed id generator to generate a 64bits integer and convert the 64bits integer to a 62hex
 
-
-
-Redirect
+**Redirect**
 
 use 302 which is temporary redirect
 
