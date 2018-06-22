@@ -2,8 +2,6 @@ idea：relational database is not the best option here
 
 we can use redis to implement the push/pull  pub/sub function
 
-
-
 Concept:
 
 Feed: each news is a feed
@@ -16,8 +14,6 @@ Rank: a kind of feed flow
 
 Aggregate: a kind of feed flow with similar topic
 
-
-
 Features:
 
 complex relation
@@ -26,15 +22,11 @@ unstable relation
 
 Write/read: 1:100
 
-
-
 Storage:
 
-account relation: nosql relation is clear but data is huge
+account relation: nosql relation is clear but data is huge redis
 
 feed data: huge data set. Stable relational db + redis
-
-
 
 Solution:
 
