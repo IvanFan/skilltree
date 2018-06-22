@@ -4,9 +4,9 @@ hash conflicts
 
 thread safe
 
-
-
 Hash conflict:
 
-![](/assets/Screen Shot 2018-06-22 at 3.52.22 pm.png)
+![](/assets/Screen Shot 2018-06-22 at 3.52.22 pm.png)Java JDK7 and 8 are using chainning solution
+
+
 
