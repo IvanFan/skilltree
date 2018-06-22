@@ -91,4 +91,5 @@
   * [cache invalid, cache breakthrough, cache lock](cache/cache-invalid-cache-breakthrough-cache-lock.md)
 * [System Design](system-design.md)
   * Distributed ID Generator
+  * [Tiny URL](system-design/tiny-url.md)
 
