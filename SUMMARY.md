@@ -92,5 +92,5 @@
 * [System Design](system-design.md)
   * Distributed ID Generator
   * [Tiny URL](system-design/tiny-url.md)
-  * News feed
+  * [News feed](system-design/news-feed.md)
 
