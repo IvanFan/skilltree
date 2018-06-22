@@ -19,14 +19,16 @@ Mongodb Object id is a uuid 12 bytes = 12 \* 8 bits:
 
 Cons: too long bad for memory not efficient for index
 
-
-
 Twitter Snowflake:
 
 * 64bits
 * 41bits for timestamp
 * 10bits for machine id
 * 12 bits for serial id
+
+
+
+Distributed system cannot make sure strictly sortable by time
 
 
 
