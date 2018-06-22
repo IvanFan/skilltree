@@ -97,4 +97,6 @@
   * [API rate limiting](system-design/api-rate-limiting.md)
   * [Thread safe hashtable](system-design/thread-safe-hashtable.md)
   * [Top 10 IPs within 1 hour](system-design/top-10-ips-within-1-hour.md)
+* [Algorithm](algorithm.md)
+  * [Data flow - lossy counting](algorithm/data-flow-lossy-counting.md)
 
