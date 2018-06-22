@@ -6,7 +6,5 @@ The id should be unique. e.g. Database clustered index
 
 The id should be short to save the memory. Usually 64bit integer is good enough
 
-
-
-
+the record should be sortable by time
 
