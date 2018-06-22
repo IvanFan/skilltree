@@ -28,3 +28,13 @@ use 302 which is temporary redirect
 
 301 is always redirect but it will miss the relevant information
 
+
+
+**Limit**
+
+limit the request number of single ip
+
+use redis as a cache. save the long address-&gt; tiny id
+
+
+
