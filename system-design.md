@@ -21,3 +21,12 @@ Cons: too long bad for memory not efficient for index
 
 
 
+Twitter Snowflake:
+
+* 64bits
+* 41bits for timestamp
+* 10bits for machine id
+* 12 bits for serial id
+
+
+
