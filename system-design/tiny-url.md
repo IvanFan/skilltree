@@ -8,3 +8,17 @@ Also we can use a 7 chars string which can be treated as 62 hex \(A-Za-z0-9\)
 
 So we can convert the 64 bits integer into a 62hex string
 
+Mapping:
+
+
+
+one long url to many tiny url
+
+reason:
+
+different users, time for different url
+
+collect relevant data
+
+
+
