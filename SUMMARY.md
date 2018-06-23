@@ -99,4 +99,5 @@
   * [Top 10 IPs within 1 hour](system-design/top-10-ips-within-1-hour.md)
 * [Algorithm](algorithm.md)
   * [Data flow - lossy counting](algorithm/data-flow-lossy-counting.md)
+  * Binary Search & sorted array
 
