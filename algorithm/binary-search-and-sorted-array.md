@@ -16,13 +16,20 @@ KeyPoints:
 
 the end condition of while:  while start +1 &lt; end \(next to\)
 
-
-
 ```
-while start +1 < end:
+while start +1 < end: # start and end do not have to +1
    mid = start + (end - start)// 2 # 防止溢出 if end is max integer
-   
-   
+   if a[mid] ==target:
+        end = mid
+  elif a[mid] < target:
+        start = mid
+  elif a[mid] > target:
+        end = mid
+
+
+
+
+
 if a[start] == target:
    return start
 if a[end] == target:
