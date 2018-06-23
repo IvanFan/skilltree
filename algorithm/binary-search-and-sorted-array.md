@@ -409,14 +409,20 @@ class Solution:
                 end = mid
             else:
                 start = mid
-                
+
         if isBadVersion(start):
             return start
         elif isBadVersion(end):
             return end
-
-            
 ```
+
+# Find peak element
+
+# 
+
+O\(logn\) &lt; O\(n\)
+
+O\(Logn\): binary search
 
 
 
