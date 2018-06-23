@@ -312,8 +312,6 @@ Then we find 6 &gt;5 move above. Then we find 5
 
 If there are duplicated numbers, when we found 5, we need to move to right+1 and row -1
 
-
-
 ```
 class Solution:
     def searchMatrix(self, matrix, target):
@@ -322,7 +320,7 @@ class Solution:
         :type target: int
         :rtype: bool
         """
-        
+
         rows = len(matrix)
         if rows == 0:
             return False
@@ -330,7 +328,7 @@ class Solution:
         if cols == 0:
             return False
         x, y = rows-1, 0
-        
+
         while x >= 0 and y < cols:
             cur = matrix[x][y]
             if cur > target:
@@ -339,8 +337,39 @@ class Solution:
                 y +=1
             elif cur == target:
                 return True
-        return False
 ```
+
+# First Bad Version
+
+
+
+You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
+
+Suppose you have`n`versions`[1, 2, ..., n]`and you want to find out the first bad one, which causes all the following ones to be bad.
+
+You are given an API`bool isBadVersion(version)`which will return whether`version`is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.
+
+**Example:**
+
+```
+Given n = 5, and version = 4 is the first bad version.
+
+
+call isBadVersion(3) -
+>
+ false
+call isBadVersion(5) -
+>
+ true
+call isBadVersion(4) -
+>
+ true
+
+Then 4 is the first bad version. 
+```
+
+  
+
 
 
 
