@@ -17,7 +17,7 @@ KeyPoints:
 the end condition of while:  while start +1 &lt; end \(next to\)
 
 ```
-while start +1 < end: # start and end do not have to +1
+while start +1 < end: # start and end do not have to +1 but we need to do extra check for the last two numbers
    mid = start + (end - start)// 2 # 防止溢出 if end is max integer
    if a[mid] ==target:
         end = mid
@@ -25,9 +25,6 @@ while start +1 < end: # start and end do not have to +1
         start = mid
   elif a[mid] > target:
         end = mid
-
-
-
 
 
 if a[start] == target:
