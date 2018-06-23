@@ -4,13 +4,30 @@ T\(n\) = T\(n/2\) + T\(1\)
 
 O\(LogN\)
 
-Recursion or While-loop? 
+Recursion or While-loop?
 
 recursion costs stack space
 
 all ok
 
 if we can use while instead of recursion, then use while
+
+KeyPoints:
+
+the end condition of while:  while start +1 &lt; end \(next to\)
+
+
+
+```
+while start +1 < end:
+   mid = start + (end - start)// 2 # 防止溢出 if end is max integer
+   
+   
+if a[start] == target:
+   return start
+if a[end] == target:
+   return end
+```
 
 
 
