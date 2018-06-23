@@ -90,7 +90,7 @@
   * [Basic](cache/basic.md)
   * [cache invalid, cache breakthrough, cache lock](cache/cache-invalid-cache-breakthrough-cache-lock.md)
 * [System Design](system-design.md)
-  * Distributed ID Generator
+  * [Distributed ID Generator](system-design/distributed-id-generator.md)
   * [Tiny URL](system-design/tiny-url.md)
   * [News feed](system-design/news-feed.md)
   * [Task schedule](system-design/task-schedule.md)
