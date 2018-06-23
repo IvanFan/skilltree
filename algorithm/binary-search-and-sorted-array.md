@@ -296,14 +296,11 @@ Consider the following matrix:
   [10, 13, 14, 17, 24],
   [18, 21, 23, 26, 30]
 ]
-
 ```
 
-Given target = `5`, return `true`.
+Given target = `5`, return `true`.
 
-Given target = `20`, return `false`.
-
-
+Given target = `20`, return `false`.
 
 Tips the idea is to first check the left-bottom number
 
@@ -311,9 +308,7 @@ Since 18 is larger than 5 and it's the smallest number of the row, we can ignore
 
 we keep doing this until 3.3 is less than 5 so we need to check if 5 is on the right side of this row. we move right
 
-Then we find 6 &gt;5 move above
+Then we find 6 &gt;5 move above. Then we find 5
 
-
-
-
+If there are duplicated numbers, when we found 5, we need to move to right+1 and row -1
 
