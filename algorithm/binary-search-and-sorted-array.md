@@ -243,14 +243,14 @@ Output:
 
 ```
 class Solution:
-        
+
     def searchMatrix(self, matrix, target):
         """
         :type matrix: List[List[int]]
         :type target: int
         :rtype: bool
         """
-        
+
         rows = len(matrix)
         if rows == 0:
             return False
@@ -275,11 +275,45 @@ class Solution:
         if matrix[x][y] == target:
             return True
         return False
-      
-                
-                
-        
 ```
+
+# Search a 2D Matrix II
+
+Write an efficient algorithm that searches for a value in anmxnmatrix. This matrix has the following properties:
+
+* Integers in each row are sorted in ascending from left to right.
+* Integers in each column are sorted in ascending from top to bottom.
+
+**Example:**
+
+Consider the following matrix:
+
+```
+[
+  [1,   4,  7, 11, 15],
+  [2,   5,  8, 12, 19],
+  [3,   6,  9, 16, 22],
+  [10, 13, 14, 17, 24],
+  [18, 21, 23, 26, 30]
+]
+
+```
+
+Given target = `5`, return `true`.
+
+Given target = `20`, return `false`.
+
+
+
+Tips the idea is to first check the left-bottom number
+
+Since 18 is larger than 5 and it's the smallest number of the row, we can ignore the row and move the row above
+
+we keep doing this until 3.3 is less than 5 so we need to check if 5 is on the right side of this row. we move right
+
+Then we find 6 &gt;5 move above
+
+
 
 
 
