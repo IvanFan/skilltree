@@ -312,3 +312,35 @@ Then we find 6 &gt;5 move above. Then we find 5
 
 If there are duplicated numbers, when we found 5, we need to move to right+1 and row -1
 
+
+
+```
+class Solution:
+    def searchMatrix(self, matrix, target):
+        """
+        :type matrix: List[List[int]]
+        :type target: int
+        :rtype: bool
+        """
+        
+        rows = len(matrix)
+        if rows == 0:
+            return False
+        cols = len(matrix[0])
+        if cols == 0:
+            return False
+        x, y = rows-1, 0
+        
+        while x >= 0 and y < cols:
+            cur = matrix[x][y]
+            if cur > target:
+                x -=1
+            elif cur < target:
+                y +=1
+            elif cur == target:
+                return True
+        return False
+```
+
+
+
