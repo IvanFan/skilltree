@@ -33,7 +33,7 @@ if a[end] == target:
    return end
 ```
 
-e.g. Search for a Range https://leetcode.com/problems/search-for-a-range/description/
+**Search for a Range** [https://leetcode.com/problems/search-for-a-range/description/](https://leetcode.com/problems/search-for-a-range/description/)
 
 Given an array of integers`nums`sorted in ascending order, find the starting and ending position of a given`target`value.
 
@@ -100,10 +100,10 @@ class Solution:
             left = l
         elif nums[r] == target:
             left = r
-            
+
         l = 0
         r = len(nums) - 1
-        
+
         # find the end 
         while l +1 < r:
             mid = l+ (r-l)//2
@@ -113,15 +113,13 @@ class Solution:
                 l = mid
             elif nums[mid] > target:
                 r = mid
-                
+
         if nums[r] == target:
             right = r
         elif nums[l] == target:
             right = l
-            
-        return [left, right]
-        
 
+        return [left, right]
 ```
 
 
