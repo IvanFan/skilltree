@@ -27,13 +27,9 @@ Preventing injection requires keeping data separate from commands and queries.
 
 * Use LIMIT and other SQL controls within queries to prevent mass disclosure of records in case of SQL injection.
 
-
-
 # Broken Authentication
 
 Attackers have access to hundreds of millions of valid username and password combinations for credential stuffing, default administrative account lists, automated brute force, and dictionary attack tools. Session management attacks are well understood, particularly in relation to unexpired session tokens.
-
-
 
 Confirmation of the user's identity, authentication, and session management are critical to protect against authentication-related attacks.  
  There may be authentication weaknesses if the application:
@@ -58,8 +54,6 @@ Confirmation of the user's identity, authentication, and session management are 
 
   authentication tokens \(particularly single sign-on \(SSO\) tokens\)aren’t properly invalidated during logout or a period of inactivity.
 
-
-
 How to Prevent
 
 * Where possible, implement multi-factor authentication to prevent automated, credential stuffing, brute force, and stolen credential re-use attacks.
@@ -77,6 +71,58 @@ How to Prevent
 * Limit or increasingly delay failed login attempts. Log all failures and alert administrators when credential stuffing, brute force, or other attacks are detected.
 
 * Use a server-side, secure, built-in session manager that generates a new random session ID with high entropy after login. Session IDs should not be in the URL, be securely stored and invalidated after logout, idle, and absolute timeouts.
+
+# Sensitive Data Exposure
+
+
+
+Rather than directly attacking crypto, attackers steal keys, execute man-in- the-middle attacks, or steal clear text data off the server, while in transit, orfrom the user’s client, e.g. browser. Amanual attack is generally required. Previously retrieved password databases could be brute forced by Graphics Processing Units \(GPUs\).
+
+
+
+Over the last few years, this has been the most common impactful attack. The most common flaw is simply not encrypting sensitive data. When crypto is employed, weak key generation and management, and weak algorithm, protocol and cipher usage is common, particularly for weak password hashing storage techniques. For data in transit, server side weaknesses are mainly easy to detect, but hard for data at rest.
+
+OWASP Top 10 - 2017
+
+The first thing is to determine the protection needs of data in transit and at rest. For example, passwords, credit card numbers, health records, personal information and business secrets require extra protection, particularly if that data falls under privacy laws, e.g. EU's General Data Protection Regulation \(GDPR\), or regulations, e.g. financial data protection such as PCI Data Security Standard \(PCI DSS\). For all such data:
+
+* Is any data transmitted in clear text? This concerns protocols
+
+  such as HTTP, SMTP, and FTP. External internet traffic is especially dangerous. Verify all internal traffic e.g. between load balancers, web servers, or back-end systems.
+
+* Is sensitive data stored in clear text, including backups?
+
+* Are any old or weak cryptographic algorithms used either by default or in older code?
+
+* Are default crypto keys in use, weak crypto keys generated or re-used, or is proper key management or rotation missing?
+
+* Is encryption not enforced, e.g. are any user agent \(browser\) security directives or headers missing?
+
+* Does the user agent \(e.g. app, mail client\) not verify if the received server certificate is valid?
+
+
+
+Do the following, at a minimum, and consult the references:
+
+* Classify data processed, stored, or transmitted by an application. Identify which data is sensitive according to privacy laws, regulatory requirements, or business needs.
+
+* Apply controls as per the classification.
+
+* Don’t store sensitive data unnecessarily.Discard it as soon as possible or use PCI DSS compliant tokenization or even truncation. Data that is not retained cannot be stolen.
+
+* Make sure to encrypt all sensitive data at rest.
+
+* Ensure up-to-date and strong standard algorithms, protocols,
+
+  and keys are in place; use proper key management.
+
+* Encrypt all data in transit with secure protocols such as TLS with perfect forward secrecy \(PFS\) ciphers, cipher prioritization by the server, and secure parameters. Enforce encryption using directives like HTTP Strict Transport Security \(HSTS\).
+
+* Disable caching for responses that contain sensitive data.
+
+* Store passwords using strong adaptive and salted hashing functions with a work factor \(delay factor\), such asArgon2,scrypt,bcrypt, orPBKDF2.
+
+* Verify independently the effectiveness of configuration and settings.
 
 
 
