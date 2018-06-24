@@ -95,5 +95,17 @@ Privilege Access control solution: minimising admin privileges
 
 Single sign on: manage credentials within the organisation
 
+---
+
+secure file transfer solution: to send sensitive files securely over external public network
+
+data encryption on laptops endpoints 
+
+HSM based encryption to handle database level encryption
+
+DLP solution: should consider both data in motion and data at rest along with covering all channels e.g. email internal removal devices
+
+DRM: digital rights management solution
+
 
 
