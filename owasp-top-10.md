@@ -260,11 +260,7 @@ Preventing XSS requires separation of untrusted data from active browser content
 
 * Enabling aContent Security Policy \(CSP\)is a defense-in-depth mitigating control against XSS. It is effective if no other vulnerabilities exist that would allow placing malicious code via local file includes \(e.g. path traversal overwrites or vulnerable libraries from permitted content delivery networks\).
 
-
-
 ## Insecure Deserialization
-
-
 
 Exploitation of deserialization is somewhat difficult, as off the shelf exploits rarely work without changes or tweaks to the underlying exploit code.
 
@@ -292,8 +288,6 @@ This can result in two primary types of attacks:
 
 * HTTP cookies, HTML form parameters, API authentication tokens
 
-
-
 The only safe architectural pattern is not to accept serialized objects from untrusted sources or to use serialization mediums that only permit primitive data types.  
  If that is not possible, consider one of more of the following:
 
@@ -308,6 +302,44 @@ The only safe architectural pattern is not to accept serialized objects from unt
 * Restricting or monitoring incoming and outgoing network connectivity from containers or servers that deserialize.
 
 * Monitoring deserialization, alerting if a user deserializes constantly.
+
+
+
+
+
+
+
+# Using Components with Known Vulnerabilities
+
+OWASP Top 10 - 2017
+
+You are likely vulnerable:
+
+* If you do not know the versions of all components you use \(both client-side and server-side\). This includes components you directly use as well as nested dependencies.
+
+* If software is vulnerable, unsupported, or out of date. This includes the OS, web/application server, database management system \(DBMS\), applications, APIs and all components, runtime environments, and libraries.
+
+* If you do not scan for vulnerabilities regularly and subscribe to security bulletins related to the components you use.
+
+* If you do not fix or upgrade the underlying platform, frameworks, and dependencies in a risk-based, timely fashion. This commonly happens in environments when patching is a monthly or quarterly task under change control, which leaves organizations open to many days or months of unnecessary exposure to fixed vulnerabilities.
+
+* If software developers do not test the compatibility of updated, upgraded, or patched libraries.
+
+* If you do not secure the components' configurations \(seeA6:2017-Security Misconfiguration\).
+
+OWASP Top 10 - 2017
+
+There should be a patch management process in place to:
+
+* Remove unused dependencies, unnecessary features, components, files, and documentation.
+
+* Continuously inventory the versions of both client-side and server-side components \(e.g. frameworks, libraries\) and their dependencies using tools likeversions,DependencyCheck,retire.js, etc. Continuously monitor sources likeCVEandNVDfor vulnerabilities in the components. Use software composition analysis tools to automate the process. Subscribe to email alerts for security vulnerabilities related to components you use.
+
+* Only obtain components from official sources over secure links. Prefer signed packages to reduce the chance of including a modified, malicious component.
+
+* Monitor for libraries and components that are unmaintained or do not create security patches for older versions. If patching is not possible, consider deploying avirtual patchto monitor, detect, or protect against the discovered issue.
+
+  Every organization must ensure that there is an ongoing plan for monitoring, triaging, and applying updates or configuration changes for the lifetime of the application or portfolio.
 
 
 
