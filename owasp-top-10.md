@@ -238,11 +238,7 @@ Secure installation processes should be implemented, including:
 
 * An automated process to verify the effectiveness of the configurations and settings in all environments.
 
-
-
 # Cross-Site Scripting \(XSS\)
-
-
 
 There are three forms of XSS, usually targeting users' browsers:
 
@@ -254,8 +250,6 @@ DOM XSS:JavaScript frameworks, single-page applications, and APIs that dynamical
 
 Typical XSS attacks include session stealing, account takeover, MFA bypass, DOM node replacement or defacement \(such as trojan login panels\), attacks against the user's browser such as malicious software downloads, key logging, and other client-side attacks.
 
-
-
 Preventing XSS requires separation of untrusted data from active browser content. This can be achieved by:
 
 * Using frameworks that automatically escape XSS by design, such as the latest Ruby on Rails, React JS. Learn the limitations of each framework's XSS protection and appropriately handle the use cases which are not covered.
@@ -265,6 +259,55 @@ Preventing XSS requires separation of untrusted data from active browser content
 * Applying context-sensitive encoding when modifying the browser document on the client side acts against DOM XSS. When this cannot be avoided, similar context sensitive escaping techniques can be applied to browser APIs as described in theOWASP Cheat Sheet 'DOM based XSS Prevention'.
 
 * Enabling aContent Security Policy \(CSP\)is a defense-in-depth mitigating control against XSS. It is effective if no other vulnerabilities exist that would allow placing malicious code via local file includes \(e.g. path traversal overwrites or vulnerable libraries from permitted content delivery networks\).
+
+
+
+## Insecure Deserialization
+
+
+
+Exploitation of deserialization is somewhat difficult, as off the shelf exploits rarely work without changes or tweaks to the underlying exploit code.
+
+OWASP Top 10 - 2017
+
+Applications and APIs will be vulnerable if they deserialize hostile or tampered objects supplied by an attacker.
+
+This can result in two primary types of attacks:
+
+* Object and data structure related attacks where the attacker
+
+  modifies application logic or achieves arbitrary remote code execution if there are classes available to the application that can change behavior during or after deserialization.
+
+* Typical data tampering attacks, such as access-control-related attacks, where existing data structures are used but the content is changed.
+
+  Serialization may be used in applications for:
+
+* Remote- and inter-process communication \(RPC/IPC\)
+
+* Wire protocols, web services, message brokers
+
+* Caching/Persistence
+
+* Databases, cache servers, file systems
+
+* HTTP cookies, HTML form parameters, API authentication tokens
+
+
+
+The only safe architectural pattern is not to accept serialized objects from untrusted sources or to use serialization mediums that only permit primitive data types.  
+ If that is not possible, consider one of more of the following:
+
+* Implementing integrity checks such as digital signatures on any serialized objects to prevent hostile object creation or data tampering.
+
+* Enforcing strict type constraints during deserialization before object creation as the code typically expects a definable set of classes. Bypasses to this technique have been demonstrated, so reliance solely on this is not advisable.
+
+* Isolating and running code that deserializes in low privilege environments when possible.
+
+* Logging deserialization exceptions and failures, such as where the incoming type is not the expected type, or the deserialization throws exceptions.
+
+* Restricting or monitoring incoming and outgoing network connectivity from containers or servers that deserialize.
+
+* Monitoring deserialization, alerting if a user deserializes constantly.
 
 
 
