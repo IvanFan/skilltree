@@ -105,5 +105,5 @@ HSM based encryption to handle database level encryption
 
 DLP \(**data loss prevention**\) solution: should consider both data in motion and data at rest along with covering all channels e.g. email internal removal devices
 
-DRM: digital rights management solution
+DRM: digital rights management solution : is a set of access control technologies for restricting the use of proprietary hardware and copyrighted works.
 
