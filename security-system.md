@@ -13,11 +13,11 @@ Security Framework
 |  | Security policy and standard | Risk management | ISMS | GRC |
 | :--- | :--- | :--- | :--- | :--- |
 |  | level 1 | level 2 | level 3 | level 4 |
-| Defensive Network |  |  |  |  |
-| Endpoint & application compliance |  |  |  |  |
-| auth and access control |  |  |  |  |
-| event management |  |  |  |  |
-| data protection |  |  |  |  |
+| Defensive Network | Next generation firewall |  |  |  |
+| Endpoint & application compliance | Next generation antivirus |  |  |  |
+| auth and access control | multi-factor auth |  |  |  |
+| event management | log aggregation |  |  |  |
+| data protection | transfer and recovery |  |  |  |
 
 
 
