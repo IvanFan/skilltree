@@ -303,12 +303,6 @@ The only safe architectural pattern is not to accept serialized objects from unt
 
 * Monitoring deserialization, alerting if a user deserializes constantly.
 
-
-
-
-
-
-
 # Using Components with Known Vulnerabilities
 
 OWASP Top 10 - 2017
@@ -340,6 +334,52 @@ There should be a patch management process in place to:
 * Monitor for libraries and components that are unmaintained or do not create security patches for older versions. If patching is not possible, consider deploying avirtual patchto monitor, detect, or protect against the discovered issue.
 
   Every organization must ensure that there is an ongoing plan for monitoring, triaging, and applying updates or configuration changes for the lifetime of the application or portfolio.
+
+
+
+# Insufficient Logging & Monitoring
+
+
+
+OWASP Top 10 - 2017
+
+Insufficient logging, detection, monitoring and active response
+
+occurs any time:
+
+* Auditable events, such as logins, failed logins, and high-value transactions are not logged.
+
+* Warnings and errors generate no, inadequate, or unclear log messages.
+
+* Logs of applications and APIs are not monitored for suspicious activity.
+
+* Logs are only stored locally.
+
+* Appropriate alerting thresholds and response escalation processes are not in place or effective.
+
+* Penetration testing and scans byDASTtools \(such asOWASP ZAP\) do not trigger alerts.
+
+* The application is unable to detect, escalate, or alert for active attacks in real time or near real time.
+
+  You are vulnerable to information leakage if you make logging and alerting events visible to a user or an attacker \(seeA3:2017- Sensitive Information Exposure\).
+
+OWASP Top 10 - 2017
+
+As per the risk of the data stored or processed by the
+
+application:
+
+* Ensure all login, access control failures, and server-side input validation failures can be logged with sufficient user context to identify suspicious or malicious accounts, and held for sufficient time to allow delayed forensic analysis.
+
+* Ensure that logs are generated in a format that can be easily consumed by a centralized log management solutions.
+
+* Ensure high-value transactions have an audit trail with integrity controls to prevent tampering or deletion, such as append-only database tables or similar.
+
+* Establish effective monitoring and alerting such that suspicious activities are detected and responded to in a timely fashion.
+
+* Establish or adopt an incident response and recovery plan, such asNIST 800-61 rev 2or later.
+
+  There are commercial and open source application protection frameworks such asOWASP AppSensor, web application firewalls such asModSecurity with the OWASP ModSecurity Core Rule Set, and log correlation software with custom dashboards and alerting.
 
 
 
