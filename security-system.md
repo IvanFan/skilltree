@@ -47,11 +47,9 @@ log aggregation and SIEM \(Security incident and event management\)
 
 secure file transfer
 
+**Points:**
 
-
-Points:
-
-DMZ, setup firewall between different layers 
+DMZ, setup firewall between different layers
 
 IPS
 
@@ -63,7 +61,7 @@ next generation anti virus for all endpoints
 
 setup SOE as a standard
 
-regular check of vulnerability and patch management 
+regular check of vulnerability and patch management
 
 MFA
 
@@ -72,6 +70,18 @@ centralise the logging system
 SIEM to check all logs in real time
 
 backup
+
+
+
+**Explain:**
+
+content security controls for outbound web \(http/https\) e.g. email content 
+
+network sandbox\(0-day malware protection\) to protect 0-day malware attack
+
+WAF for inbound web \(http/https\) data flows
+
+
 
 
 
