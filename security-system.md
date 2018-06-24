@@ -35,3 +35,17 @@ Web security solution
 
 web application firewall
 
+next generation anti-virus
+
+formal vulnerability management program
+
+secure operating environment \(SOE\)
+
+multi-factor auth
+
+log aggregation and SIEM \(Security incident and event management\)
+
+secure file transfer
+
+
+
