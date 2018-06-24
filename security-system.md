@@ -107,3 +107,31 @@ DLP \(**data loss prevention**\) solution: should consider both data in motion a
 
 DRM: digital rights management solution : is a set of access control technologies for restricting the use of proprietary hardware and copyrighted works.
 
+
+
+
+
+
+
+
+
+Extra:
+
+HSM
+
+# 三级密钥体制示意图：
+
+![](http://my.csdn.net/uploads/201208/08/1344427452_3046.png)
+
+
+
+　　1. 主密钥用于加密密钥交换密钥和数据密钥作本地存储；
+
+
+
+　　2. 密钥交换密钥用于加密数据密钥作网络传输；
+
+
+
+　　3. 数据密钥用于对数据进行加解密。
+
