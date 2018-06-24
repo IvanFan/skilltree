@@ -118,15 +118,9 @@ Do the following, at a minimum, and consult the references:
 
 * Verify independently the effectiveness of configuration and settings.
 
-
-
 # XML External Entities \(XXE\)
 
-
-
 Attackers can exploit vulnerable XML processors if they can upload XML or include hostile content in an XML document, exploiting vulnerable code, dependencies or integrations.
-
-
 
 Applications and in particular XML-based web services or downstream integrations might be vulnerable to attack if:
 
@@ -160,7 +154,55 @@ Besides that, preventing XXE requires:
 
   If these controls are not possible, consider using virtual patching, API security gateways, or Web Application Firewalls \(WAFs\) to detect, monitor, and block XXE attacks.
 
+# Broken Access Control
 
+
+
+Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers.
+
+Access control detection is not typically amenable to automated static or dynamic testing. Manual testing is the best way to detect missing or ineffective access control, including HTTP method \(GET vs PUT, etc\), controller, direct object references, etc.
+
+
+
+Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification or destruction of all data, or performing a business function outside of the limits of the user. Common access control vulnerabilities include:
+
+* Bypassing access control checks by modifying the URL, internal application state, or the HTML page, or simply using a custom API attack tool.
+
+* Allowing the primary key to be changed to another users record, permitting viewing or editing someone else's account.
+
+* Elevation of privilege. Acting as a user without being logged in, or acting as an admin when logged in as a user.
+
+* Metadata manipulation, such as replaying or tampering with a JSON Web Token \(JWT\) access control token or a cookie or hidden field manipulated to elevate privileges, or abusing JWT invalidation
+
+* CORS misconfiguration allows unauthorized API access.
+
+* Force browsing to authenticated pages as an unauthenticated user or to privileged pages as a standard user. Accessing API with missing access controls for POST, PUT and DELETE.
+
+OWASP Top 10 - 2017
+
+Access control is only effective if enforced in trusted server-side code or server-less API, where the attacker cannot modify the access control check or metadata.
+
+* With the exception of public resources, deny by default.
+
+* Implement access control mechanisms once and re-use them throughout the application, including minimizing CORS usage.
+
+* Model access controls should enforce record ownership, rather than accepting that the user can create, read, update, or delete any record.
+
+* Unique application business limit requirements should be enforced by domain models.
+
+* Disable web server directory listing and ensure file metadata \(e.g. .git\) and backup files are not present within web roots.
+
+* Log access control failures, alert admins when appropriate \(e.g. repeated failures\).
+
+* Rate limit API and controller access to minimize the harm from automated attack tooling.
+
+* JWT tokens should be invalidated on the server after logout.
+
+  Developers and QA staff should include functional access control unit and integration tests.
+
+# Security Misconfiguration
+
+# 
 
 
 
