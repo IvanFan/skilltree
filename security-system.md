@@ -79,9 +79,25 @@ network sandbox\(0-day malware protection\) to protect 0-day malware attack
 
 WAF for inbound web \(http/https\) data flows
 
-----
+---
 
 Security devops: secure software development process e.g. security review during the development
 
 formal application security testing
+
+---
+
+MFA
+
+identity-based network access control: enforce authentication authorisation at the point of accessing the network. network access control from internal network
+
+Privilege Access control solution: minimising admin privileges
+
+Single sign on: manage credentials within the organisation
+
+
+
+
+
+
 
