@@ -19,23 +19,15 @@ Security Framework
 | event management | log aggregation | SIEM | Security analysis | Security orchestration |
 | data protection | transfer and recovery | Encryption and Data anonymization | Data Loss Prevention | User and Data analysis |
 
-
-
 Tips:
 
 Next generation firewall and web application firewall:
 
 Next generation firewall has all features of the existing firewalls and also contains other features like IPS, DPI \(Deep packet inspection\), ssl/ssh, anti virus and etc
 
-
-
 web application firewall: designed for web server including http/https and it focus on the application layer by checking the request data and business logic rule
 
-
-
-
-
-Some recommended solutions:
+**Some recommended solutions:**
 
 Next generation firewall & IPS （Intrusion prevent system）
 
