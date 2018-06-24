@@ -156,13 +156,9 @@ Besides that, preventing XXE requires:
 
 # Broken Access Control
 
-
-
 Access control weaknesses are common due to the lack of automated detection, and lack of effective functional testing by application developers.
 
 Access control detection is not typically amenable to automated static or dynamic testing. Manual testing is the best way to detect missing or ineffective access control, including HTTP method \(GET vs PUT, etc\), controller, direct object references, etc.
-
-
 
 Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification or destruction of all data, or performing a business function outside of the limits of the user. Common access control vulnerabilities include:
 
@@ -202,7 +198,45 @@ Access control is only effective if enforced in trusted server-side code or serv
 
 # Security Misconfiguration
 
-# 
+Security misconfiguration can happen at any level of an application stack, including the network services, platform, web server, application server, database, frameworks, custom code, and pre-installed virtual machines, containers, or storage. Automated scanners are useful for detecting misconfigurations, use of default accounts or configurations, unnecessary services, legacy options, etc.
+
+OWASP Top 10 - 2017
+
+The application might be vulnerable if the application is:
+
+* Missing appropriate security hardening across any part of the application stack, or improperly configured permissions on cloud services.
+
+* Unnecessary features are enabled or installed \(e.g. unnecessary ports, services, pages, accounts, or privileges\).
+
+* Default accounts and their passwords still enabled and unchanged.
+
+* Error handling reveals stack traces or other overly informative error messages to users.
+
+* For upgraded systems, latest security features are disabled or not configured securely.
+
+* The security settings in the application servers, application frameworks \(e.g. Struts, Spring, ASP.NET\), libraries, databases, etc. not set to secure values.
+
+* The server does not send security headers or directives or they are not set to secure values.
+
+* The software is out of date or vulnerable \(seeA9:2017-Using Components with Known Vulnerabilities\).
+
+  Without a concerted, repeatable application security configuration process, systems are at a higher risk.
+
+Secure installation processes should be implemented, including:
+
+* A repeatable hardening process that makes it fast and easy to
+
+  deploy another environment that is properly locked down. Development, QA, and production environments should all be configured identically, with different credentials used in each environment. This process should be automated to minimize the effort required to setup a new secure environment.
+
+* A minimal platform without any unnecessary features, components, documentation, and samples. Remove or do not install unused features and frameworks.
+
+* A task to review and update the configurations appropriate to all security notes, updates and patches as part of the patch management process \(seeA9:2017-Using Components with Known Vulnerabilities\). In particular, review cloud storage permissions \(e.g. S3 bucket permissions\).
+
+* A segmented application architecture that provides effective, secure separation between components or tenants, with segmentation, containerization, or cloud security groups.
+
+* Sending security directives to clients, e.g.Security Headers.
+
+* An automated process to verify the effectiveness of the configurations and settings in all environments.
 
 
 
