@@ -49,3 +49,29 @@ secure file transfer
 
 
 
+Points:
+
+DMZ, setup firewall between different layers 
+
+IPS
+
+web-security solution to reduce the management complexity
+
+Consider of single point of failure
+
+next generation anti virus for all endpoints
+
+setup SOE as a standard
+
+regular check of vulnerability and patch management 
+
+MFA
+
+centralise the logging system
+
+SIEM to check all logs in real time
+
+backup
+
+
+
