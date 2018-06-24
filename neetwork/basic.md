@@ -2,11 +2,75 @@
 
 A link refers to the connectivity between two devices. It includes the type of cables and protocols used in order for one device to be able to communicate with the other.
 
-
-
 **2\) What are the layers of the OSI reference model?**
 
 There are 7 OSI layers: Physical Layer, Data Link Layer, Network Layer, Transport Layer, Session Layer, Presentation Layer and Application Layer.
+
+## The 7 Layers of the OSI
+
+In the OSI model, control is passed from one layer to the next, starting at the application layer \(Layer 7\) in one station, and proceeding to the bottom layer, over the channel to the next station and back up the hierarchy. The OSI model takes the task of inter-networking and divides that up into what is referred to as a_vertical stack_that consists of the following 7 layers.
+
+_**Note:**Click each hyperlink in the list below to read detailed information and examples of each layer or continue scrolling to read the full article:_
+
+* [Layer 7 - Application](https://www.webopedia.com/quick_ref/OSI_Layers.asp#OSI-7)
+* [Layer 6 - Presentation](https://www.webopedia.com/quick_ref/OSI_Layers.asp#OSI-6)
+* [Layer 5 - Session](https://www.webopedia.com/quick_ref/OSI_Layers.asp#OSI-5)
+* [Layer 4 - Transport](https://www.webopedia.com/quick_ref/OSI_Layers.asp#OSI-4)
+* [Layer 3 - Network](https://www.webopedia.com/quick_ref/OSI_Layers.asp#OSI-3)
+* [Layer 2 - Data Link](https://www.webopedia.com/quick_ref/OSI_Layers.asp#OSI-2)
+* [Layer 1 - Physical](https://www.webopedia.com/quick_ref/OSI_Layers.asp#OSI-1)
+
+![](https://www.webopedia.com/imagesvr_ce/8023/7-layers-of-osi-icon.jpg "7 Layers of the OSI Diagram")
+
+_**Did You Know...?**Most of the functionality in the OSI model exists in all communications systems, although two or three OSI layers may be incorporated into one. OSI is also referred to as the OSI Reference Model or just the OSI Model._
+
+## Application \(Layer 7\)
+
+OSI Model, Layer 7, supports[application](https://www.webopedia.com/TERM/A/application.html)and end-user processes. Communication partners are identified, quality of service is identified, user authentication and privacy are considered, and any constraints on data[syntax](https://www.webopedia.com/TERM/S/syntax.html)are identified. Everything at this layer is application-specific. This layer provides application services for file transfers,[e-mail](https://www.webopedia.com/TERM/E/e_mail.html), and other[network](https://www.webopedia.com/TERM/N/network.html)[software](https://www.webopedia.com/TERM/S/software.html)services.[Telnet](https://www.webopedia.com/TERM/T/Telnet.html)and[FTP](https://www.webopedia.com/TERM/F/ftp.html)are applications that exist entirely in the application level. Tiered application architectures are part of this layer.
+
+_Layer 7 Applicatin examples include WWW browsers, NFS, SNMP, Telnet, HTTP, FTP  
+_
+
+## Presentation \(Layer 6\)
+
+This layer provides independence from differences in data representation \(e.g.,[encryption](https://www.webopedia.com/TERM/E/encryption.html)\) by translating from application to network format, and vice versa. The presentation layer works to transform data into the form that the application layer can accept. This layer formats and encrypts data to be sent across a[network](https://www.webopedia.com/TERM/N/network.html), providing freedom from compatibility problems. It is sometimes called the syntax layer.
+
+_Layer 6 Presentation examples include encryption, ASCII, EBCDIC, TIFF, GIF, PICT, JPEG, MPEG, MIDI._
+
+## Session \(Layer 5\)
+
+This layer establishes, manages and terminates connections between[applications](https://www.webopedia.com/TERM/A/application.html). The session layer sets up, coordinates, and terminates conversations, exchanges, and dialogues between the applications at each end. It deals with session and connection coordination.
+
+_Layer 5 Session examples include NFS, NetBios names, RPC, SQL._
+
+## Transport \(Layer 4\)
+
+OSI Model, Layer 4, provides transparent transfer of data between end systems, or[hosts](https://www.webopedia.com/TERM/H/host.html), and is responsible for end-to-end error recovery and[flow control](https://www.webopedia.com/TERM/F/flow_control.html). It ensures complete data transfer.
+
+_Layer 4 Transport examples include SPX, TCP, UDP._
+
+## Network \(Layer 3\)
+
+Layer 3 provides[switching](https://www.webopedia.com/TERM/P/packet_switching.html)and[routing](https://www.webopedia.com/TERM/R/routing.html)technologies, creating logical paths, known as[virtual circuits](https://www.webopedia.com/TERM/V/virtual_circuit.html), for transmitting data from[node](https://www.webopedia.com/TERM/N/node.html)to node. Routing and forwarding are functions of this layer, as well as[addressing](https://www.webopedia.com/DidYouKnow/Internet/IPaddressing.asp),[internetworking](https://www.webopedia.com/TERM/I/internetworking.html), error handling,[congestion](https://www.webopedia.com/TERM/C/congestion.html)control and packet sequencing.
+
+_Layer 3 Network examples include AppleTalk DDP, IP, IPX._
+
+## Data Link \(Layer 2\)
+
+At OSI Model, Layer 2, data packets are[encoded](https://www.webopedia.com/TERM/E/encoding.html)and decoded into bits. It furnishes[transmission protocol](https://www.webopedia.com/TERM/T/TCP_IP.html)knowledge and management and handles errors in the physical layer, flow control and frame synchronization. The data link layer is divided into two sub layers: The Media Access Control \([MAC](https://www.webopedia.com/TERM/M/MAC_address.html)\) layer and the[Logical Link Control](https://www.webopedia.com/TERM/L/Logical_Link_Control_layer.html)\(LLC\) layer. The MAC sub layer controls how a computer on the network gains access to the data and permission to transmit it. The LLC layer controls frame[synchronization](https://www.webopedia.com/TERM/D/data_synchronization.html), flow control and error checking.
+
+_Layer 2 Data Link examples include PPP, FDDI, ATM, IEEE 802.5/ 802.2, IEEE 802.3/802.2, HDLC, Frame Relay.  
+_
+
+## Physical \(Layer 1\)
+
+OSI Model, Layer 1 conveys the bit stream - electrical impulse, light or radio signal—through the[network](https://www.webopedia.com/TERM/N/network.html)at the electrical and mechanical level. It provides the[hardware](https://www.webopedia.com/TERM/H/hardware.html)means of sending and receiving data on a carrier, including defining cables, cards and physical aspects.[Fast Ethernet](https://www.webopedia.com/TERM/F/Fast_Ethernet.html),[RS232](https://www.webopedia.com/TERM/R/RS_232C.html), and[ATM](https://www.webopedia.com/TERM/A/ATM.html)are[protocols](https://www.webopedia.com/TERM/P/protocol.html)with physical layer components.
+
+_Layer 1 Physical examples include Ethernet, FDDI, B8ZS, V.35, V.24, RJ45._
+
+
+
+
 
 **3\) What is backbone network?**
 
@@ -20,16 +84,11 @@ LAN is short for Local Area Network. It refers to the connection between compute
 
 [![](https://cdn.career.guru99.com/wp-content/uploads/2014/07/networking.png)](https://cdn.career.guru99.com/wp-content/uploads/2014/07/networking.png)
 
-
-
 A node refers to a point or joint where a connection takes place. It can be computer or device that is part of a network. Two or more nodes are needed in order to form a network connection.
 
 **6\) What are routers?**
 
 Routers can connect two or more network segments. These are intelligent network devices that store information in its routing table such as paths, hops and bottlenecks. With this info, they are able to determine the best path for data transfer. Routers operate at the OSI Network Layer.
-
-  
-
 
 **7\) What is point to point link?**
 
@@ -101,7 +160,7 @@ Proxy servers primarily prevent external users who identifying the IP addresses 
 
 **24\) What is the function of the OSI Session Layer?**
 
-This layer provides the protocols and means for two devices on the network to communicate with each other by holding a session.  This includes setting up the session, managing information exchange during the session, and tear-down process upon termination of the session.
+This layer provides the protocols and means for two devices on the network to communicate with each other by holding a session.  This includes setting up the session, managing information exchange during the session, and tear-down process upon termination of the session.
 
 **25\) What is the importance of implementing a Fault Tolerance System? Are there limitations?**
 
@@ -132,9 +191,6 @@ OSI \(Open Systems Interconnect\) serves as a reference model for data communica
 The main purpose of this is to prevent crosstalk. Crosstalks are electromagnetic interferences or noise that can affect data being transmitted across cables.
 
 **32\) What is the advantage of address sharing?**
-
-  
-
 
 By using address translation instead of routing, address sharing provides an inherent security benefit. That’s because host PCs on the Internet can only see the public IP address of the external interface on the computer that provides address translation and not the private IP addresses on the internal network.
 
@@ -402,7 +458,7 @@ Rights refer to the authorized permission to perform specific actions on the net
 
 **96\) What is one basic requirement for establishing VLANs?**
 
-A VLAN is required because at switch level there is only one broadcast domain, it means whenever new user is connected to switch this information is spread throughout the network. VLAN on switch helps to create separate broadcast domain at  switch level. It is used for security purpose.
+A VLAN is required because at switch level there is only one broadcast domain, it means whenever new user is connected to switch this information is spread throughout the network. VLAN on switch helps to create separate broadcast domain at  switch level. It is used for security purpose.
 
 **97\) What is IPv6?**
 
