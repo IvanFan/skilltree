@@ -8,7 +8,7 @@ There are 7 OSI layers: Physical Layer, Data Link Layer, Network Layer, Transpor
 
 ## The 7 Layers of the OSI
 
-In the OSI model, control is passed from one layer to the next, starting at the application layer \(Layer 7\) in one station, and proceeding to the bottom layer, over the channel to the next station and back up the hierarchy. The OSI model takes the task of inter-networking and divides that up into what is referred to as a_vertical stack_that consists of the following 7 layers.
+In the OSI model, control is passed from one layer to the next, starting at the application layer \(Layer 7\) in one station, and proceeding to the bottom layer, over the channel to the next station and back up the hierarchy. The OSI model takes the task of inter-networking and divides that up into what is referred to as a\_vertical stack\_that consists of the following 7 layers.
 
 _**Note:**Click each hyperlink in the list below to read detailed information and examples of each layer or continue scrolling to read the full article:_
 
@@ -24,11 +24,15 @@ _**Note:**Click each hyperlink in the list below to read detailed information an
 
 _**Did You Know...?**Most of the functionality in the OSI model exists in all communications systems, although two or three OSI layers may be incorporated into one. OSI is also referred to as the OSI Reference Model or just the OSI Model._
 
+
+
+
+
 ## Application \(Layer 7\)
 
 OSI Model, Layer 7, supports[application](https://www.webopedia.com/TERM/A/application.html)and end-user processes. Communication partners are identified, quality of service is identified, user authentication and privacy are considered, and any constraints on data[syntax](https://www.webopedia.com/TERM/S/syntax.html)are identified. Everything at this layer is application-specific. This layer provides application services for file transfers,[e-mail](https://www.webopedia.com/TERM/E/e_mail.html), and other[network](https://www.webopedia.com/TERM/N/network.html)[software](https://www.webopedia.com/TERM/S/software.html)services.[Telnet](https://www.webopedia.com/TERM/T/Telnet.html)and[FTP](https://www.webopedia.com/TERM/F/ftp.html)are applications that exist entirely in the application level. Tiered application architectures are part of this layer.
 
-_Layer 7 Applicatin examples include WWW browsers, NFS, SNMP, Telnet, HTTP, FTP  
+_Layer 7 Applicatin examples include WWW browsers, NFS, SNMP, Telnet, HTTP, FTP    
 _
 
 ## Presentation \(Layer 6\)
@@ -59,7 +63,7 @@ _Layer 3 Network examples include AppleTalk DDP, IP, IPX._
 
 At OSI Model, Layer 2, data packets are[encoded](https://www.webopedia.com/TERM/E/encoding.html)and decoded into bits. It furnishes[transmission protocol](https://www.webopedia.com/TERM/T/TCP_IP.html)knowledge and management and handles errors in the physical layer, flow control and frame synchronization. The data link layer is divided into two sub layers: The Media Access Control \([MAC](https://www.webopedia.com/TERM/M/MAC_address.html)\) layer and the[Logical Link Control](https://www.webopedia.com/TERM/L/Logical_Link_Control_layer.html)\(LLC\) layer. The MAC sub layer controls how a computer on the network gains access to the data and permission to transmit it. The LLC layer controls frame[synchronization](https://www.webopedia.com/TERM/D/data_synchronization.html), flow control and error checking.
 
-_Layer 2 Data Link examples include PPP, FDDI, ATM, IEEE 802.5/ 802.2, IEEE 802.3/802.2, HDLC, Frame Relay.  
+_Layer 2 Data Link examples include PPP, FDDI, ATM, IEEE 802.5/ 802.2, IEEE 802.3/802.2, HDLC, Frame Relay.    
 _
 
 ## Physical \(Layer 1\)
@@ -67,10 +71,6 @@ _
 OSI Model, Layer 1 conveys the bit stream - electrical impulse, light or radio signal—through the[network](https://www.webopedia.com/TERM/N/network.html)at the electrical and mechanical level. It provides the[hardware](https://www.webopedia.com/TERM/H/hardware.html)means of sending and receiving data on a carrier, including defining cables, cards and physical aspects.[Fast Ethernet](https://www.webopedia.com/TERM/F/Fast_Ethernet.html),[RS232](https://www.webopedia.com/TERM/R/RS_232C.html), and[ATM](https://www.webopedia.com/TERM/A/ATM.html)are[protocols](https://www.webopedia.com/TERM/P/protocol.html)with physical layer components.
 
 _Layer 1 Physical examples include Ethernet, FDDI, B8ZS, V.35, V.24, RJ45._
-
-
-
-
 
 **3\) What is backbone network?**
 
