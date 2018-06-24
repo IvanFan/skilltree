@@ -10,14 +10,14 @@ For each stream, there are 4 levels:
 
 Security Framework
 
-| Security Policy and standards | Risk management | ISMS | GRC |
-| :--- | :--- | :--- | :--- |
-| level 1 | level 2 | level 3 | level 4 |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+|  | Security policy and standard | Risk management | ISMS | GRC |
+| :--- | :--- | :--- | :--- | :--- |
+|  | level 1 | level 2 | level 3 | level 4 |
+| Defensive Network |  |  |  |  |
+| Endpoint & application compliance |  |  |  |  |
+| auth and access control |  |  |  |  |
+| event management |  |  |  |  |
+| data protection |  |  |  |  |
 
 
 
