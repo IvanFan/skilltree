@@ -71,17 +71,17 @@ SIEM to check all logs in real time
 
 backup
 
-
-
 **Explain:**
 
-content security controls for outbound web \(http/https\) e.g. email content 
+content security controls for outbound web \(http/https\) e.g. email content
 
 network sandbox\(0-day malware protection\) to protect 0-day malware attack
 
 WAF for inbound web \(http/https\) data flows
 
+----
 
+Security devops: secure software development process e.g. security review during the development
 
-
+formal application security testing
 
