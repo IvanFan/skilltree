@@ -24,15 +24,11 @@ _**Note:**Click each hyperlink in the list below to read detailed information an
 
 _**Did You Know...?**Most of the functionality in the OSI model exists in all communications systems, although two or three OSI layers may be incorporated into one. OSI is also referred to as the OSI Reference Model or just the OSI Model._
 
-
-
-
-
 ## Application \(Layer 7\)
 
 OSI Model, Layer 7, supports[application](https://www.webopedia.com/TERM/A/application.html)and end-user processes. Communication partners are identified, quality of service is identified, user authentication and privacy are considered, and any constraints on data[syntax](https://www.webopedia.com/TERM/S/syntax.html)are identified. Everything at this layer is application-specific. This layer provides application services for file transfers,[e-mail](https://www.webopedia.com/TERM/E/e_mail.html), and other[network](https://www.webopedia.com/TERM/N/network.html)[software](https://www.webopedia.com/TERM/S/software.html)services.[Telnet](https://www.webopedia.com/TERM/T/Telnet.html)and[FTP](https://www.webopedia.com/TERM/F/ftp.html)are applications that exist entirely in the application level. Tiered application architectures are part of this layer.
 
-_Layer 7 Applicatin examples include WWW browsers, NFS, SNMP, Telnet, HTTP, FTP    
+_Layer 7 Applicatin examples include WWW browsers, NFS, SNMP, Telnet, HTTP, FTP      
 _
 
 ## Presentation \(Layer 6\)
@@ -63,7 +59,7 @@ _Layer 3 Network examples include AppleTalk DDP, IP, IPX._
 
 At OSI Model, Layer 2, data packets are[encoded](https://www.webopedia.com/TERM/E/encoding.html)and decoded into bits. It furnishes[transmission protocol](https://www.webopedia.com/TERM/T/TCP_IP.html)knowledge and management and handles errors in the physical layer, flow control and frame synchronization. The data link layer is divided into two sub layers: The Media Access Control \([MAC](https://www.webopedia.com/TERM/M/MAC_address.html)\) layer and the[Logical Link Control](https://www.webopedia.com/TERM/L/Logical_Link_Control_layer.html)\(LLC\) layer. The MAC sub layer controls how a computer on the network gains access to the data and permission to transmit it. The LLC layer controls frame[synchronization](https://www.webopedia.com/TERM/D/data_synchronization.html), flow control and error checking.
 
-_Layer 2 Data Link examples include PPP, FDDI, ATM, IEEE 802.5/ 802.2, IEEE 802.3/802.2, HDLC, Frame Relay.    
+_Layer 2 Data Link examples include PPP, FDDI, ATM, IEEE 802.5/ 802.2, IEEE 802.3/802.2, HDLC, Frame Relay.      
 _
 
 ## Physical \(Layer 1\)
@@ -153,6 +149,12 @@ The physical layer does the conversion from data bits to electrical signal, and 
 **22\) How many layers are there under TCP/IP?**
 
 There are four layers: the Network Layer, Internet Layer, Transport Layer and Application Layer.
+
+It seems like a combination of circumstances here has led to some confusion. Just so everyone is clear, The TCP/IP Model has a[slightly different set of layers](http://en.wikipedia.org/wiki/Internet_protocol_suite#OSI_and_TCP.2FIP_layering_differences)when compared to the OSI Model.
+
+To be clear, the OSI Model's top three layers - that is: Application, Presentation, and Session - are essentially collapsed into the Application layer in TCP/IP. Additionally, the bottom two layers - Physical and Data Link - are combined into the Network Access layer for TCP/IP.
+
+Therefore,**there are 4 layers in the TCP/IP Model**. Specifically, they are the Network Access Layer, Internet Layer, Transport Layer, and Application Layer.
 
 **23\) What are proxy servers and how do they protect computer networks?**
 
