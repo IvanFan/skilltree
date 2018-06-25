@@ -87,6 +87,7 @@
   * [Redis](redis.md)
   * [SQL](sql.md)
   * [NoSQL](nosql.md)
+  * [red  black tree](red-black-tree.md)
 * [Multi-thread](multi-thread.md)
 * Linux
   * [Shell scripts](shell-scripts.md)
