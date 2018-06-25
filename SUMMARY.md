@@ -86,7 +86,7 @@
   * [Slow select query optimisation](slow-select-query-optimisation.md)
   * [Redis](redis.md)
   * [SQL](sql.md)
-  * NoSQL
+  * [NoSQL](nosql.md)
 * [Multi-thread](multi-thread.md)
 * Linux
   * [Shell scripts](shell-scripts.md)
