@@ -460,8 +460,7 @@ Output:
 
 Explanation:
  Your function can return either index number 1 where the peak element is 2, 
-             or index number 5 where the peak element is 6.
-
+             or index number 5 where the peak element is 6.
 ```
 
 ```
@@ -479,15 +478,17 @@ class Solution:
                 start = mid
             elif nums[mid] > nums[mid+1]:
                 end = mid
-        
+
 
         if nums[start] > nums[end]:
             return start
         else:
             return end
-       
-
 ```
+
+---
+
+Rotated  Array
 
 
 
