@@ -722,7 +722,6 @@ Input:
 
 Output:
  true
-
 ```
 
 **Example 2:**
@@ -739,7 +738,7 @@ Output:
 
 **Follow up:**
 
-* This is a follow up problem to 
+* This is a follow up problem to 
   [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
   , where
   `nums`
@@ -759,11 +758,15 @@ class Solution:
             return True
         except:
             return False
-                    
-
 ```
 
-
-
 duplicated number cannot be detected properly. only full loop works
+
+---
+
+
+
+## Sorted Array
+
+
 
