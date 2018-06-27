@@ -685,7 +685,7 @@ class Solution:
                     start = mid
                 else:
                     end = mid
-                
+
         print(nums[start])
         print(nums[end])
         if target == nums[start]:
@@ -694,13 +694,11 @@ class Solution:
             return end
         else:
             return -1
-        
-            
-            
-                
-        
-        
 ```
 
+First check the position of mid
 
+second check the target position, if the mid is on the above line and if the target is in the between of start and mid, the end = mid 
+
+same to the under line
 
