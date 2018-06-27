@@ -513,16 +513,13 @@ If the array is just an increasing array, the start may not exist. but the end i
                 start = mid
             else:
                 end = mid
-
 ```
 
 # Find Minimum in Rotated Sorted Array
 
-
-
 Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
 
-\(i.e.,  `[0,1,2,4,5,6,7]` might become  `[4,5,6,7,0,1,2]`\).
+\(i.e.,  `[0,1,2,4,5,6,7]` might become  `[4,5,6,7,0,1,2]`\).
 
 Find the minimum element.
 
@@ -536,7 +533,6 @@ Input:
 
 Output:
  1
-
 ```
 
 **Example 2:**
@@ -547,7 +543,6 @@ Input:
 
 Output:
  0
-
 ```
 
 ```
@@ -556,7 +551,7 @@ class Solution:
         """
         :type nums: List[int]
         :rtype: int
-        
+
         """
         start = 0
         end = len(nums) - 1
@@ -566,10 +561,9 @@ class Solution:
                 start = mid
             else:
                 end = mid
-        
+
         return min(nums[start],nums[end])
-        
 ```
 
-
+If the array has duplicated number
 
