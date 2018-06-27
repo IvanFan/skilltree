@@ -632,7 +632,7 @@ You are given a target value to search. If found in the array return its index, 
 
 You may assume no duplicate exists in the array.
 
-Your algorithm's runtime complexity must be in the order of _O_\(log _n_\).
+Your algorithm's runtime complexity must be in the order of _O_\(log _n_\).
 
 **Example 1:**
 
@@ -644,7 +644,6 @@ Input:
 
 Output:
  4
-
 ```
 
 **Example 2:**
@@ -677,9 +676,15 @@ class Solution:
             if nums[mid] == target:
                 return mid
             elif nums[mid] >= nums[end]:
-                start = mid
+                if nums[start] <=target < nums[mid]:
+                    end = mid
+                else:
+                    start = mid
             else:
-                end = mid
+                if nums[mid] < target <= nums[end]:
+                    start = mid
+                else:
+                    end = mid
                 
         print(nums[start])
         print(nums[end])
@@ -689,7 +694,11 @@ class Solution:
             return end
         else:
             return -1
-
+        
+            
+            
+                
+        
         
 ```
 
