@@ -567,21 +567,17 @@ class Solution:
 
 **If the array has duplicated number**
 
-
-
 **black box test**
 
 **If the duplicated number exist, following the previous example, if we have an array with all value to be 1 and only one value is 0**
 
 **so we have to look all element to check the value. The time complex must be N**
 
-
-
 ## Find Minimum in Rotated Sorted Array II
 
 Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
 
-\(i.e.,  `[0,1,2,4,5,6,7]` might become  `[4,5,6,7,0,1,2]`\).
+\(i.e.,  `[0,1,2,4,5,6,7]` might become  `[4,5,6,7,0,1,2]`\).
 
 Find the minimum element.
 
@@ -609,7 +605,7 @@ Output:
 
 **Note:**
 
-* This is a follow up problem to 
+* This is a follow up problem to 
   [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/)
   .
 * Would allow duplicates affect the run-time complexity? How and why?
@@ -622,6 +618,78 @@ class Solution:
         :rtype: int
         """
         return min(nums)
+```
+
+---
+
+## Search in Rotated Sorted Array
+
+Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+
+\(i.e.,`[0,1,2,4,5,6,7]`might become`[4,5,6,7,0,1,2]`\).
+
+You are given a target value to search. If found in the array return its index, otherwise return`-1`.
+
+You may assume no duplicate exists in the array.
+
+Your algorithm's runtime complexity must be in the order of _O_\(log _n_\).
+
+**Example 1:**
+
+```
+Input:
+ nums = [
+4,5,6,7,0,1,2]
+, target = 0
+
+Output:
+ 4
+
+```
+
+**Example 2:**
+
+```
+Input:
+ nums = [
+4,5,6,7,0,1,2]
+, target = 3
+
+Output:
+ -1
+```
+
+```
+class Solution:
+
+    def search(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        """
+        if len(nums) == 0:
+            return -1
+        start = 0
+        end = len(nums) -1
+        while start + 1 < end:
+            mid = start + (end - start)//2
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] >= nums[end]:
+                start = mid
+            else:
+                end = mid
+                
+        print(nums[start])
+        print(nums[end])
+        if target == nums[start]:
+            return start
+        elif target == nums[end]:
+            return end
+        else:
+            return -1
+
         
 ```
 
