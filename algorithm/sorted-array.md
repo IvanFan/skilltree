@@ -68,7 +68,7 @@ we need to think reversely
 
 ---
 
-## Median of Two Sorted Arrays
+## Median of Two Sorted Arrays \(HARD\)
 
 There are two sorted arrays**nums1**and**nums2**of size m and n respectively.
 
@@ -106,8 +106,6 @@ So we can convert O\(k\) =&gt; O\(k/2\) in O\(1\) operation
 
 so it become a recurse operation: every time we compare the k//2 of a and b then remove k//2 of one array
 
-
-
 ```
 import sys
 
@@ -122,21 +120,21 @@ class Solution:
         if k == 1:
             return min(A[start_A], B[start_B])
         # if b is long and a is small and k/2 not exist in a, then we need to remove k/2 from b
-        
+
         A_key = A[start_A + k//2 -1] if start_A + k//2 -1 < len(A) else sys.maxsize
         B_key = B[start_B + k//2 -1] if start_B + k//2 -1 < len(B) else sys.maxsize
         if A_key < B_key:
             return self.findKth(A, start_A + k//2, B, start_B, k - k//2)
         else:
             return self.findKth(A, start_A, B, start_B + k//2, k - k//2)
-        
+
     def findMedianSortedArrays(self, nums1, nums2):
         """
         :type nums1: List[int]
         :type nums2: List[int]
         :rtype: float
         """
-        
+
         total_len = len(nums1) + len(nums2)
         if total_len % 2 == 0:
             res1= self.findKth(nums1, 0, nums2, 0, total_len//2)
@@ -146,7 +144,6 @@ class Solution:
             return float((res1+res2)/2)
         else:
             return float(self.findKth(nums1, 0, nums2, 0, total_len//2 + 1))
-        
 ```
 
 
