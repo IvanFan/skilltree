@@ -114,5 +114,17 @@ If the data item is already locked, a new node will be added at the end of its l
 5.Sometimes transaction Ti may have to be aborted. In such a case all the waiting request made by Ti will be deleted from the linked lists present in lock table. Once abortion is complete, locks held by Ti will also be released.
 ```
 
+## serial schedules
+
+serial schedules have less resource utilization and low throughput. To improve it, two are more transactions are run concurrently. But concurrency of transactions may lead to inconsistency in database. To avoid this, we need to check whether these concurrent schedules are serializable or not.
+
+**onflict Serializable:**A schedule is called conflict serializable if it can be transformed into a serial schedule by swapping non-conflicting operations.
+
+**Conflicting operations:**Two operations are said to be conflicting if all conditions satisfy:
+
+* They belong to different transaction
+* They operation on same data item
+* At Least one of them is a write operation
+
 
 
