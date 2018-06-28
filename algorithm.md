@@ -6,9 +6,11 @@
 
    b. find target
 
-c. why o\(n\) with duplicated?
+3. why o\(n\) with duplicated?
 
-3. Find median in two sorted array find kth
+4. Find median in two sorted array find kth
 
-4. Reverse in 3 step
+5. Reverse in 3 step
+
+
 
