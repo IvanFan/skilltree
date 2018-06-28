@@ -1,7 +1,5 @@
 RDB - Relational Database
 
-
-
 This part has more material compared with nosql database
 
 Basic
@@ -28,7 +26,7 @@ MySQL
 
 PostgreSQL
 
-Cluster, Sharing and Partition
+Cluster, Sharing and Partition, concurrecny
 
 Distributed System DB
 
