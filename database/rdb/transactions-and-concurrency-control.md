@@ -135,5 +135,33 @@ On the other hand, (R1(A), W2(B)) pair is non-conflicting because they operate o
 Similarly, ((W1(A), W2(B)) pair is non-conflicting.
 ```
 
+**Conflict Equivalent:**
 
+Two schedules are said to be conflict equivalent when one can be transformed to another by swapping non-conflicting operations. In the example discussed above, S11 is conflict equivalent to S1 \(S1 can be converted to S11 by swapping non-conflicting operations\). Similarly, S11 is conflict equivalent to S12 and so on.
+
+
+
+## Recoverability of Schedules
+
+As discussed, a transaction may not execute completely due to hardware failure, system crash or software issues. In that case, we have to rollback the failed transaction. But some other transaction may also have used values produced by failed transaction. So we have to rollback those transactions as well.
+
+[![](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/scheduleDBMS.png "Recoverabilityofschedules")](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/scheduleDBMS.png)  
+Above table shows a schedule with two transactions, T1 reads and writes A and that value is read and written by T2. T2 commits. But later on, T1 fails. So we have to rollback T1. Since T2 has read the value written by T1, it should also be rollbacked. But we have already committed that. So this schedule is irrecoverable schedule.
+
+**Irrecoverable Schedule:**When Tj is reading the value updated by Ti and Tj is committed before commit of Ti, the schedule will be irrecoverable.
+
+[![](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/schedule5.png "Recoverabilityofschedules2")](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/schedule5.png)
+
+Table 2 shows a schedule with two transactions, T1 reads and writes A and that value is read and written by T2. But later on, T1 fails. So we have to rollback T1. Since T2 has read the value written by T1, it should also be rollbacked. As it has not committed, we can rollback T2 as well. So it is recoverable with **cascading rollback.**  
+**Recoverable with cascading rollback**: If Tj is reading value updated by Ti and commit of Tj is delayed till commit of Ti , the schedule is called recoverable with cascading rollback.
+
+[![](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/schedult3.png "Recoverability3")](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/schedult3.png)
+
+Table 3 shows a schedule with two transactions, T1 reads and writes A and commits and that value is read by T2. But if T1 fails before commit, no other transaction has read its value, so there is no need to rollback other transaction. So this is a **cascadeless recoverable schedule.**
+
+
+
+**Cascadeless Recoverable:**
+
+If Tj reads value updated by Ti only after Ti is commited, the schedule will be cascadeless recoverable.
 
