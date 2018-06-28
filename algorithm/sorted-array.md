@@ -10,6 +10,10 @@ create a new array
 
 check the top of each array and get the smallest element
 
+If one array is really huge and another one is small
+
+a better way to do it is to loop the small array and use binary search to find the insert position, then we can copy a entire block of the large array into the new array
+
 ## Merge Sorted Array \|\|
 
 ```
