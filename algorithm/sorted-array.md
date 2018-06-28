@@ -146,5 +146,5 @@ class Solution:
             return float(self.findKth(nums1, 0, nums2, 0, total_len//2 + 1))
 ```
 
-
+Time complexity O\(logK\)
 
