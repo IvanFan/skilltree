@@ -158,5 +158,11 @@ Time complexity O\(logK\)
 
 4 5 1 2 3 -&gt;  1 2 3 4 5
 
-![](/assets/Screen Shot 2018-06-29 at 12.12.34 am.png)
+![](/assets/Screen Shot 2018-06-29 at 12.12.34 am.png)三步反转法
+
+4 5 , 1 2 3
+
+5 4 , 3 2 1 
+
+1 2 3 4 5 
 
