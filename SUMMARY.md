@@ -106,9 +106,6 @@
   * [Thread safe hashtable](system-design/thread-safe-hashtable.md)
   * [Top 10 IPs within 1 hour](system-design/top-10-ips-within-1-hour.md)
   * [Basic](system-design/basic.md)
-* [Algorithm](algorithm.md)
-  * [Data flow - lossy counting](algorithm/data-flow-lossy-counting.md)
-  * [Binary Search & sorted array](algorithm/binary-search-and-sorted-array.md)
 
 ## Database
 
@@ -133,6 +130,11 @@
 ## Cache
 
 ## Algorithm
+
+* [Algorithm](algorithm.md)
+  * [Data flow - lossy counting](algorithm/data-flow-lossy-counting.md)
+  * [Binary Search](algorithm/binary-search-and-sorted-array.md)
+  * [Sorted Array](algorithm/sorted-array.md)
 
 ## Security
 

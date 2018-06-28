@@ -764,9 +764,7 @@ duplicated number cannot be detected properly. only full loop works
 
 ---
 
-
-
-## Sorted Array
+## 
 
 
 
