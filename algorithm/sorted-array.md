@@ -10,10 +10,6 @@ create a new array
 
 check the top of each array and get the smallest element
 
-
-
-
-
 ## Merge Sorted Array \|\|
 
 ```
@@ -38,5 +34,41 @@ Output:
  [1,2,2,3,5,6]
 ```
 
+```
+class Solution:
+    def merge(self, nums1, m, nums2, n):
+        """
+        :type nums1: List[int]
+        :type m: int
+        :type nums2: List[int]
+        :type n: int
+        :rtype: void Do not return anything, modify nums1 in-place instead.
+        """
+        s1 = m -1
+        s2 = n -1
+        for i in range(len(nums1)-1,-1, -1):
+            if s1 >= 0 and s2 >=0:
+                if nums1[s1] >= nums2[s2]:
+                    nums1[i] = nums1[s1]
+                    s1 -=1
+                else:
+                    nums1[i] = nums2[s2]
+                    s2 -=1
+            elif s1 >= 0:
+                nums1[i] = nums1[s1] 
+                s1 -=1
+            elif s2 >= 0:
+                nums1[i] = nums2[s2]
+                s2 -=1
+                    
+            
+                
+                
+            
+        
+```
 
+The tips is to compared the numbers from the very end
+
+we need to think reversely
 
