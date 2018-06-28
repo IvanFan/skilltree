@@ -146,12 +146,6 @@ An entity is specialized type/class of other entity. For example, Technician is 
 
 ![](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/Enhanced-ER-Model-Diagram.png "Enhanced-ER-Model-Diagram")
 
-  
-
-
-  
-
-
 * An entity belonging to a sub-class is related with some super-class entity. For instance emp no 1001 is a secretary, and his typing speed is 68. Emp no 1009 is engineer \(sub-class\) and her trade is “Electrical”, so forth.
 * Sub-class entity “inherits” all attributes of super-class; for example employee 1001 will have attributes eno, name, salary, and typing speed.
 
@@ -194,6 +188,22 @@ In specialization, an entity is divided into sub-entities based on their charact
 An ER diagram is not capable of representing relationship between an entity and a relationship which may be required in some scenarios. In those cases, a relationship with its corresponding entities is aggregated into a higher level entity. For Example, Employee working for a project may require some machinery. So, REQUIRE relationship is needed between relationship WORKS\_FOR and entity MACHINERY. Using aggregation, WORKS\_FOR relationship with its entities EMPLOYEE and PROJECT is aggregated into single entity and relationship REQUIRE is created between aggregated entity and MACHINERY.  
 [![](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/aggregation.png "img3")](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/aggregation.png)
 
-  
 
+
+**Relational Model:**Relational model represents data in the form of relations or tables.
+
+**Relational Schema:**Schema represents structure of a relation. e.g.; Relational Schema of STUDENT relation can be represented as:  
+STUDENT \(STUD\_NO, STUD\_NAME, STUD\_PHONE, STUD\_STATE, STUD\_COUNTRY, STUD\_AGE\)
+
+**Relational Instance:**The set of values present in a relation at a particular instance of time is known as relational instance as shown in Table 1 and Table 2.
+
+**Attribute:**Each relation is defined in terms of some properties, each of which is known as attribute. For Example, STUD\_NO, STUD\_NAME etc. are attributes of relation STUDENT.
+
+**Domain of an attribute:**The possible values an attribute can take in a relation is called its domain. For Example, domain of STUD\_AGE can be from 18 to 40.  
+**Tuple:**Each row of a relation is known as tuple. e.g.; STUDENT relation given above has 4 tuples.
+
+**NULL values:**Values of some attribute for some tuples may be unknown, missing or undefined which are represented by NULL. Two NULL values in a relation are considered different from each other.  
+Table 1 and Table 2 represent relational model having two relations STUDENT and STUDENT\_COURSE.
+
+[![](http://cdncontribute.geeksforgeeks.org/wp-content/uploads/image7.png "image")](http://cdncontribute.geeksforgeeks.org/wp-content/uploads/image7.png)
 
