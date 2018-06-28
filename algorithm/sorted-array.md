@@ -104,5 +104,50 @@ so now k - k/2 will be the number we need to find
 
 So we can convert O\(k\) =&gt; O\(k/2\) in O\(1\) operation
 
+so it become a recurse operation: every time we compare the k//2 of a and b then remove k//2 of one array
+
+
+
+```
+import sys
+
+class Solution:
+    def findKth(self, A, start_A, B, start_B, k):
+        # if one array is empty return the kth within another array
+        if start_A>= len(A):
+            return B[start_B + k -1]
+        if start_B>= len(B):
+            return A[start_A + k -1] 
+        # if k == 1 we only compared the first element
+        if k == 1:
+            return min(A[start_A], B[start_B])
+        # if b is long and a is small and k/2 not exist in a, then we need to remove k/2 from b
+        
+        A_key = A[start_A + k//2 -1] if start_A + k//2 -1 < len(A) else sys.maxsize
+        B_key = B[start_B + k//2 -1] if start_B + k//2 -1 < len(B) else sys.maxsize
+        if A_key < B_key:
+            return self.findKth(A, start_A + k//2, B, start_B, k - k//2)
+        else:
+            return self.findKth(A, start_A, B, start_B + k//2, k - k//2)
+        
+    def findMedianSortedArrays(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: float
+        """
+        
+        total_len = len(nums1) + len(nums2)
+        if total_len % 2 == 0:
+            res1= self.findKth(nums1, 0, nums2, 0, total_len//2)
+            res2= self.findKth(nums1, 0, nums2, 0, (total_len//2) + 1)
+            # print(res1)
+            # print(res2)
+            return float((res1+res2)/2)
+        else:
+            return float(self.findKth(nums1, 0, nums2, 0, total_len//2 + 1))
+        
+```
+
 
 
