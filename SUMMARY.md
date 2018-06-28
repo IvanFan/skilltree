@@ -117,5 +117,6 @@
   * [ER Model](database/rdb/er-model.md)
   * [Join](database/rdb/join.md)
   * [Overview](database/rdb/overview.md)
+  * [Transactions and Concurrency Control ](database/rdb/transactions-and-concurrency-control.md)
 * NOSQL
 
