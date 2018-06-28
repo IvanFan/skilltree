@@ -69,8 +69,6 @@ Hence, we require a mechanism to manage the locking requests made by transaction
 
 . It relies on the process of message passing where transactions and lock manager exchange messages to handle the locking and unlocking of data items.
 
-
-
 **Data structure used in Lock Manager –**  
 The data structure required for implementation of locking is called as**Lock table**.
 
@@ -80,5 +78,9 @@ The data structure required for implementation of locking is called as**Lock tab
 4. Every new lock request for the data item will be added in the end of linked list as a new node.
 5. Collisions in hash table are handled by technique of separate chaining.
 
+Consider the following example of lock table:
 
+![](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/Slide1-4.jpg)
+
+**Explanation:**In the above figure, the locked data items present in lock table are 5, 47, 167 and 15.
 
