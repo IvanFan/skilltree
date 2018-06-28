@@ -161,14 +161,43 @@ Table 3 shows a schedule with two transactions, T1 reads and writes A and commit
 
 If Tj reads value updated by Ti only after Ti is commited, the schedule will be cascadeless recoverable.
 
-
-
 Now, we all know the four properties a transaction must follow. Yes, you got that right, I mean the[**ACID**properties](https://www.geeksforgeeks.org/acid-properties-in-dbms/). Concurrency control techniques are used to ensure that the_Isolation_\(or non-interference\) property of concurrently executing transactions is maintained.
 
 _A trivial question I would like to pose in front of you, \(I know you must know this but still\) why do you think that we should have interleaving execution of transactions if it may lead to problems such as Irrecoverable Schedule, Inconsistency and many more threats.  
 Why not just let it be Serial schedules and we may live peacefully, no complications at all._
 
-**Yes, the performance effects the efficiency too much which is not acceptable.  
+**Yes, the performance effects the efficiency too much which is not acceptable.    
 **Hence a Database may provide a mechanism that ensures that the schedules are either conflict or view serializable and recoverable \(also preferably cascadeless\). Testing for a schedule for Serializability after it has executed is obviously_too late!_  
 So we need Concurrency Control Protocols that ensures Serializability .
+
+
+
+**Concurrency-control protocols :**
+
+allow concurrent schedules, but ensure that the schedules are conflict/view serializable, and are recoverable and maybe even cascadeless.
+
+**Lock Based Protocols –**  
+A lock is a variable associated with a data item that describes a status of data item with respect to possible operation that can be applied to it. They synchronize the access by concurrent transactions to the database items. It is required in this protocol that all the data items must be accessed in a mutually exclusive manner. Let me introduce you to two common locks which are used and some terminology followed in this protocol.
+
+1. **Shared Lock \(S\):**
+   also known as Read-only lock. As the name suggests it can be shared between transactions because while holding this lock the transaction does not have the permission to update data on the data item. S-lock is requested using lock-S instruction.
+2. **Exclusive Lock \(X\):**
+   Data item can be both read as well as written.This is Exclusive and cannot be held simultaneously on the same data item. X-lock is requested using lock-X instruction.
+
+A transaction may be granted a lock on an item if the requested lock is compatible with locks already held on the item by other transactions.
+
+* Any number of transactions can hold shared locks on an item, but if any transaction holds an exclusive\(X\) on the item no other transaction may hold any lock on the item.
+* If a lock cannot be granted, the requesting transaction is made to wait till all incompatible locks held by other transactions have been released. Then the lock is granted. 
+
+```
+Upgrade / Downgrade locks : A transaction that holds a lock on an item A is allowed under certain condition to change the lock state from one state to another.
+Upgrade: A S(A) can be upgraded to X(A) if Ti is the only transaction holding the S-lock on element A.
+Downgrade: We may downgrade X(A) to S(A) when we feel that we no longer want to write on data-item A. As we were holding X-lock on A, we need not check any conditions.
+```
+
+```
+Deadlock – consider the above execution phase. Now, T1 holds an Exclusive lock over B, and T2 holds a Shared lock over A. Consider Statement 7, T1 requests for lock on B, while in Statement 8 T2 requests lock on A. This as you may notice imposes a Deadlock as none can proceed with their execution.
+```
+
+
 
