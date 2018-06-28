@@ -115,5 +115,7 @@
 * [RDB](database/rdb.md)
   * [Basic](database/rdb/basic.md)
   * [ER Model](database/rdb/er-model.md)
+  * [Join](database/rdb/join.md)
+  * [Overview](database/rdb/overview.md)
 * NOSQL
 
