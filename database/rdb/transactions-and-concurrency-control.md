@@ -16,8 +16,6 @@ But it may also be possible that transaction may fail after executing some of it
 
 ## **Properties of a transaction**
 
-
-
 **Atomicity:**As a transaction is set of logically related operations,**either all of them should be executed or none**. A debit transaction discussed above should either execute all three operations or none.If debit transaction fails after executing operation 1 and 2 then its new value 4000 will not be updated in the database which leads to inconsistency.
 
 **Consistency:**If operations of debit and credit transactions on same account are executed concurrently, it may leave database in an inconsistent state.
@@ -59,13 +57,28 @@ A schedule is series of operations from one or more transactions. A schedule can
 * **Concurrent Schedule:**
   When operations of a transaction are interleaved with operations of other transactions of a schedule, the schedule is called Concurrent schedule. e.g.; Schedule of debit and credit transaction shown in Table 1 is concurrent in nature. But concurrency can lead to inconsistency in database.  The above example of concurrent schedule is also inconsistent.
 
-
-
 ## Implementation of Locking in DBMS
 
 ## 
 
 Locking protocols are used in database management systems as a means of concurrency control. Multiple transactions may request a lock on a data item simultaneously.
+
+Hence, we require a mechanism to manage the locking requests made by transactions. Such a mechanism is called as
+
+**Lock Manager**
+
+. It relies on the process of message passing where transactions and lock manager exchange messages to handle the locking and unlocking of data items.
+
+
+
+**Data structure used in Lock Manager –**  
+The data structure required for implementation of locking is called as**Lock table**.
+
+1. It is a hash table where name of data items are used as hashing index.
+2. Each locked data item has a linked list associated with it.
+3. Every node in the linked list represents the transaction which requested for lock, mode of lock requested \(mutual/exclusive\) and current status of the request \(granted/waiting\).
+4. Every new lock request for the data item will be added in the end of linked list as a new node.
+5. Collisions in hash table are handled by technique of separate chaining.
 
 
 
