@@ -158,5 +158,5 @@ Time complexity O\(logK\)
 
 4 5 1 2 3 -&gt;  1 2 3 4 5
 
-
+![](/assets/Screen Shot 2018-06-29 at 12.12.34 am.png)
 
