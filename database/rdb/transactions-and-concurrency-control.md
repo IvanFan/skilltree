@@ -84,3 +84,35 @@ Consider the following example of lock table:
 
 **Explanation:**In the above figure, the locked data items present in lock table are 5, 47, 167 and 15.
 
+The transactions which have requested for lock have been represented by a linked list shown below them using a downward arrow.
+
+Each node in linked list has the name of transaction which has requested the data item like T33, T1, T27 etc.
+
+The colour of node represents the status i.e. whether lock has been granted or waiting.
+
+Note that a collision has occurred for data item 5 and 47. It has been resolved by separate chaining where each data item belongs to a linked list. The data item is acting as header for linked list containing the locking request.
+
+**Working of Lock Manager**
+
+1. Initially the lock table is table empty as no data item is locked.
+2. Whenever lock manger receives a lock request from a transaction Ti on a particular data item Qi following cases may arise
+
+```
+If Qi is not already locked, a linked list will be created and lock will be granted to the requesting transaction Ti.
+If the data item is already locked, a new node will be added at the end of its linked list containing the information about erquest made by Ti.
+```
+
+```
+3.  If the lock mode requested by Ti is compatible with lock mode of transaction currently having the lock, Ti will acquire the lock too and status will be changed to ‘granted’. Else, status of Ti’s lock will be ‘waiting’
+```
+
+```
+4. If a transaction Ti wants to unlock the data item it is currently holding, it will send an unlock request to the lock manager. The lock manger will delete Ti’s node from this linked list. Lock will be granted to the next transaction in the list.
+```
+
+```
+5.Sometimes transaction Ti may have to be aborted. In such a case all the waiting request made by Ti will be deleted from the linked lists present in lock table. Once abortion is complete, locks held by Ti will also be released.
+```
+
+
+
