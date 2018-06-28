@@ -94,11 +94,15 @@ The median is (2 + 3)/2 = 2.5
 
 tips:
 
-
-
 find kth in the sorted array
 
 median  = find\(\(a +b\) / 2\)
 
-![](/assets/Screen Shot 2018-06-28 at 11.13.53 pm.png)
+![](/assets/Screen Shot 2018-06-28 at 11.13.53 pm.png)so we can remove the first k/2 from a
+
+so now k - k/2 will be the number we need to find
+
+So we can convert O\(k\) =&gt; O\(k/2\) in O\(1\) operation
+
+
 
