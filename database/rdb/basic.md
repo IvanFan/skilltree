@@ -30,9 +30,6 @@ Suppose we need to store the details of an employee. Blocks of storage and the a
 
 At conceptual level, data is represented in the form of various database tables. For Example, STUDENT database may contain STUDENT and COURSE tables which will be visible to users but users are unaware about their storage. This level comprises of the information that is actually stored in the database in the form of tables. It also stores the relationship among the data entities in relatively simple structures. At this level, the information available to the user at the view level is unknown.
 
-  
-
-
 We can store the various attributes of an employee and relationships, e.g. with the manager can also be stored.
 
 **External Level:** An external level specifies a view of the data in terms of conceptual level tables.  Each external level view is used to cater the needs of a particular category of users. For Example, FACULTY of a university is interested in looking course details of students, STUDENTS are interested in looking all details related to academics, accounts, courses and hostel details as well. So, different views can be generated for different users.
@@ -50,8 +47,6 @@ Data independence means change of data at one level should not affect another le
 **Conceptual Data Independence:**
 
 The data at conceptual level schema and external level schema must be independent. This means, change in conceptual schema should not affect external schema. e.g.; Adding or deleting attributes of a table should not affect the user’s view of table. But this type of independence is difficult to achieve as compared to physical data independence because the changes in conceptual schema are reflected in user’s view.It refers characteristic of being able to modify the logical schema without affecting the external schema or application program. The user view of the data would not be affected by any changes to the conceptual view of the data. These changes may include insertion or deletion of attributes, altering table structures entities or relationships to the logical schema etc.
-
-
 
 **Phases of database design**
 
@@ -82,6 +77,96 @@ DBMS helps in efficient organization of data in database which has following adv
 
 * **Backup and Recovery mechanism:**  
   DBMS backup and recovery mechanism helps to avoid data loss and data inconsistency in case of catastrophic failures.
+
+## Database Objects
+
+A**database object**is any defined object in a database that is used to store or reference data.Anything which we make from**create command**is known as Database Object.It can be used to hold and manipulate the data.Some of the examples of database objects are : view, sequence, indexes, etc.
+
+* **Table –**
+  Basic unit of storage; composed rows and columns
+* **View –**
+  Logically represents subsets of data from one or more tables
+* **Sequence –**
+  Generates primary key values
+* **Index –**
+  Improves the performance of some queries
+* **Synonym –**
+  Alternative name for an objec
+
+**Table –**
+
+This database object is used to create a table in database.
+
+**Syntax :**
+
+```
+CREATE TABLE [schema.]table
+               (column datatype [DEFAULT expr][, ...]);
+```
+
+**Example :**
+
+```
+CREATE TABLE dept
+           (deptno NUMBER(2),
+            dname VARCHAR2(14),
+            loc VARCHAR2(13));
+```
+
+**Output :**DESCRIBE dept;
+
+![](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/table-output.png "table output")
+
+1. **View –**
+   This database object is used to create a view in database.A view is a logical table based on a table or another view. A view contains no data of its own but is like a window through which data from tables can be viewed or changed. The tables on which a view is based are called base tables. The view is stored as a SELECT statement in the data dictionary.
+   **Syntax :**
+
+   ```
+   CREATE [OR REPLACE] [FORCE|NOFORCE] VIEW view
+                          [(alias[, alias]...)]
+                          AS subquery
+                          [WITH CHECK OPTION [CONSTRAINT constraint]]
+                          [WITH READ ONLY [CONSTRAINT constraint]];
+   ```
+
+   **Example :**
+
+   ```
+   CREATE VIEW salvu50
+                  AS SELECT employee_id ID_NUMBER, last_name NAME,
+                  salary*12 ANN_SALARY
+                  FROM employees
+                  WHERE department_id = 50;
+   ```
+
+   **Output :**
+
+   ```
+   SELECT *
+   FROM salvu50;
+   ```
+
+   ![](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/view-output.png "view output")
+
+**Index –**
+
+This database object is used to create a indexes in database.An Oracle server index is a schema object that can speed up the retrieval of rows by using a pointer.Indexes can be created explicitly or automatically. If you do not have an index on the column, then a full table scan occurs.
+
+An index provides direct and fast access to rows in a table. Its purpose is to reduce the necessity of disk I/O by using an indexed path to locate data quickly. The index is used and maintained automatically by the Oracle server. Once an index is created, no direct activity is required by the user.Indexes are logically and physically independent of the table they index. This means that they can be created or dropped at any time and have no effect on the base tables or other indexes.
+
+**Syntax :**
+
+```
+CREATE INDEX index
+            ON table (column[, column]...);
+```
+
+**Example :**
+
+```
+CREATE INDEX emp_last_name_idx
+                ON  employees(last_name);
+```
 
 
 
