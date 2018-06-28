@@ -156,7 +156,7 @@ Time complexity O\(logK\)
 
 ## Recover Rotated Sorted Array
 
-
+4 5 1 2 3 -&gt;  1 2 3 4 5
 
 
 
