@@ -139,8 +139,6 @@ Similarly, ((W1(A), W2(B)) pair is non-conflicting.
 
 Two schedules are said to be conflict equivalent when one can be transformed to another by swapping non-conflicting operations. In the example discussed above, S11 is conflict equivalent to S1 \(S1 can be converted to S11 by swapping non-conflicting operations\). Similarly, S11 is conflict equivalent to S12 and so on.
 
-
-
 ## Recoverability of Schedules
 
 As discussed, a transaction may not execute completely due to hardware failure, system crash or software issues. In that case, we have to rollback the failed transaction. But some other transaction may also have used values produced by failed transaction. So we have to rollback those transactions as well.
@@ -159,9 +157,18 @@ Table 2 shows a schedule with two transactions, T1 reads and writes A and that v
 
 Table 3 shows a schedule with two transactions, T1 reads and writes A and commits and that value is read by T2. But if T1 fails before commit, no other transaction has read its value, so there is no need to rollback other transaction. So this is a **cascadeless recoverable schedule.**
 
-
-
 **Cascadeless Recoverable:**
 
 If Tj reads value updated by Ti only after Ti is commited, the schedule will be cascadeless recoverable.
+
+
+
+Now, we all know the four properties a transaction must follow. Yes, you got that right, I mean the[**ACID**properties](https://www.geeksforgeeks.org/acid-properties-in-dbms/). Concurrency control techniques are used to ensure that the_Isolation_\(or non-interference\) property of concurrently executing transactions is maintained.
+
+_A trivial question I would like to pose in front of you, \(I know you must know this but still\) why do you think that we should have interleaving execution of transactions if it may lead to problems such as Irrecoverable Schedule, Inconsistency and many more threats.  
+Why not just let it be Serial schedules and we may live peacefully, no complications at all._
+
+**Yes, the performance effects the efficiency too much which is not acceptable.  
+**Hence a Database may provide a mechanism that ensures that the schedules are either conflict or view serializable and recoverable \(also preferably cascadeless\). Testing for a schedule for Serializability after it has executed is obviously_too late!_  
+So we need Concurrency Control Protocols that ensures Serializability .
 
