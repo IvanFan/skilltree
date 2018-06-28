@@ -118,6 +118,7 @@
   * [Join](database/rdb/join.md)
   * [Overview](database/rdb/overview.md)
   * [Transactions and Concurrency Control ](database/rdb/transactions-and-concurrency-control.md)
+  * [Indexing, B and B+ trees ](database/rdb/indexing-b-and-b+-trees.md)
 * NOSQL
 
 ## System Design
