@@ -4,6 +4,16 @@
 
 ![](/assets/Screen Shot 2018-06-28 at 10.07.25 pm.png)
 
+Tips:
+
+create a new array
+
+check the top of each array and get the smallest element
+
+
+
+
+
 ## Merge Sorted Array \|\|
 
 ```
