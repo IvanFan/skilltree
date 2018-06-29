@@ -1,4 +1,8 @@
 C++ Java
 
-单例模式
+singleton
+
+factory
+
+
 
