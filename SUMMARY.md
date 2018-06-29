@@ -119,6 +119,7 @@
   * [MySQL V PostgreSQL](database/rdb/mysql-v-postgresql.md)
   * [MySQL](database/rdb/mysql.md)
     * [Transaction Isolation level](database/rdb/mysql/transaction-isolation-level.md)
+    * [Search engines](database/rdb/mysql/search-engines.md)
   * Postgre
 * NOSQL
 
