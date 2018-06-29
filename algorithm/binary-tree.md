@@ -46,5 +46,15 @@ def preorder_traversal(root):
      return result
 ```
 
+## Divide Conquer Algorithm
+
+* merge sort
+
+* quick sort
+
+* most of the binary Tree problem
+
+
+
 
 
