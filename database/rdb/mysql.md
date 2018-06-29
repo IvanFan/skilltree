@@ -27,3 +27,5 @@ The following list describes how MySQL supports the different transaction levels
 
 
 
+![](/assets/Screen Shot 2018-06-29 at 3.25.25 pm.png)
+
