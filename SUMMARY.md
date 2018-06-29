@@ -117,6 +117,8 @@
   * [Transactions and Concurrency Control ](database/rdb/transactions-and-concurrency-control.md)
   * [Indexing, B and B+ trees ](database/rdb/indexing-b-and-b+-trees.md)
   * [MySQL V PostgreSQL](database/rdb/mysql-v-postgresql.md)
+  * [MySQL](database/rdb/mysql.md)
+  * Postgre
 * NOSQL
 
 ## System Design
