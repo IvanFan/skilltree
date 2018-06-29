@@ -18,18 +18,17 @@ Binary Search Tree
 
 **No recursion**
 
-
-
 **Traversal**
 
 ```
 root
 traversal(root.left, result)
 traversal(root.right, result)
-
 ```
 
 **Divide & Conquer**
+
+tips: traversal need to pass result during the recursion but divide and conquer use return value
 
 ```
 def preorder_traversal(root):
