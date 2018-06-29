@@ -14,17 +14,38 @@ Binary Search Tree
 
 * validate, insert, delete
 
-
-
-
-
 ## Preorder Traversal
 
-## 
-
-No recursion 
+**No recursion**
 
 
+
+**Traversal**
+
+```
+root
+traversal(root.left, result)
+traversal(root.right, result)
+
+```
+
+**Divide & Conquer**
+
+```
+def preorder_traversal(root):
+     result = []
+     # none or leaf
+     if not root:
+        return None
+     # Divide
+     left = preorder_traversal(root.left)
+     right = preorder_traversal(root.right)
+     # conquer
+     result.add(root.val)
+     result.left = left
+     result.right = right
+     return result
+```
 
 
 
