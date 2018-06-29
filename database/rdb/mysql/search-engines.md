@@ -70,8 +70,6 @@ MyISAM：不支持
 InnoDB：支持  
 通过上述的分析，基本上可以考虑使用InnoDB来替代MyISAM引擎了，原因是InnoDB自身很多良好的特点，比如事务支持、存储 过程、视图、行级锁定等等，在并发很多的情况下，相信InnoDB的表现肯定要比MyISAM强很多。另外，任何一种表都不是万能的，只用恰当的针对业务类型来选择合适的表类型，才能最大的发挥MySQL的性能优势。如果不是很复杂的Web应用，非关键应用，还是可以继续考虑MyISAM的，这个具体情况可以自己斟酌。
 
-
-
 ### MySQL存储引擎MyISAM与InnoDB如何选择
 
 MySQL有多种存储引擎，每种存储引擎有各自的优缺点，可以择优选择使用：`MyISAM、InnoDB、MERGE、MEMORY(HEAP)、BDB(BerkeleyDB)、EXAMPLE、FEDERATED、ARCHIVE、CSV、BLACKHOLE`。
@@ -138,6 +136,33 @@ MEMORY默认使用哈希索引。速度比使用B型树索引快。当然如果�
 
 注意，**MEMORY用到的很少，因为它是把数据存到内存中，如果内存出现异常就会影响数据。如果重启或者关机，所有数据都会消失**。因此，基于**MEMORY的表的生命周期很短，一般是一次性的**。
 
-  
+
+
+# MySQL的MyISAM与InnoDB两种存储引擎在，事务、锁级别，各自的适用场景？
+
+**事务处理上方面**
+
+* **MyISAM**
+  ：
+  **强调的是性能**
+  ，每次查询具有原子性,其执行数度比InnoDB类型更快，但是
+  **不提供事务支持**
+  。
+* **InnoDB**
+  ：
+  **提供事务支持事务，外部键等高级数据库功能**
+  。 具有事务\(commit\)、回滚\(rollback\)和崩溃修复能力\(crash recovery capabilities\)的事务安全\(transaction-safe \(ACID compliant\)\)型表。
+
+**锁级别**
+
+* **MyISAM**
+  ：
+  **只支持表级锁**
+  ，用户在操作MyISAM表时，select，update，delete，insert语句都会给表自动加锁，如果加锁以后的表满足insert并发的情况下，可以在表的尾部插入新的数据。
+* **InnoDB**
+  ：支持事务和行级锁，是innodb的最大特色。行锁大幅度提高了多用户并发操作的新能。但是InnoDB的行锁，只是在WHERE的主键是有效的，非主键的WHERE都会锁全表的。
+
+
+
 
 
