@@ -125,6 +125,7 @@
     * [Lock optimistic lock and pessimistic lock](database/rdb/mysql/lock-optimistic-lock-and-pessimistic-lock.md)
     * [read/write apart, master-slave replication](database/rdb/mysql/readwrite-apart-master-slave-replication.md)
     * [Mysql Lock level Dead lock](database/rdb/mysql/mysql-lock-level-dead-lock.md)
+    * [Recover mysql](database/rdb/mysql/recover-mysql.md)
   * Postgre
 * NOSQL
 
