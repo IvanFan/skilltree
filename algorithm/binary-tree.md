@@ -54,6 +54,8 @@ def preorder_traversal(root):
 
 * most of the binary Tree problem
 
+**Merge Sort**
+
 
 
 
