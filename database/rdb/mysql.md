@@ -29,3 +29,9 @@ The following list describes how MySQL supports the different transaction levels
 
 [`SELECT`](https://dev.mysql.com/doc/refman/8.0/en/select.html)statements are performed in a nonlocking fashion, but a possible earlier version of a row might be used. Thus, using this isolation level, such reads are not consistent. This is also called a [dirty read](https://dev.mysql.com/doc/refman/8.0/en/glossary.html#glos_dirty_read). Otherwise, this isolation level works like[`READ COMMITTED`](https://dev.mysql.com/doc/refman/8.0/en/innodb-transaction-isolation-levels.html#isolevel_read-committed).
 
+
+
+### SERIALIZABLE
+
+![](/assets/Screen Shot 2018-06-29 at 3.27.56 pm.png)
+
