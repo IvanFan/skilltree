@@ -126,6 +126,7 @@
     * [read/write apart, master-slave replication](database/rdb/mysql/readwrite-apart-master-slave-replication.md)
     * [Mysql Lock level Dead lock](database/rdb/mysql/mysql-lock-level-dead-lock.md)
     * [Recover mysql](database/rdb/mysql/recover-mysql.md)
+    * [Join](database/rdb/mysql/join.md)
   * Postgre
 * NOSQL
 

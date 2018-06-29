@@ -117,8 +117,8 @@ CREATE TABLE dept
 
 ![](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/table-output.png "table output")
 
-1. **View –**
-   This database object is used to create a view in database.A view is a logical table based on a table or another view. A view contains no data of its own but is like a window through which data from tables can be viewed or changed. The tables on which a view is based are called base tables. The view is stored as a SELECT statement in the data dictionary.
+1. **View –**  
+   This database object is used to create a view in database.A view is a logical table based on a table or another view. A view contains no data of its own but is like a window through which data from tables can be viewed or changed. The tables on which a view is based are called base tables. The view is stored as a SELECT statement in the data dictionary.  
    **Syntax :**
 
    ```
