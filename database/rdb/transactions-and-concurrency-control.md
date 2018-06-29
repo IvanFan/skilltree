@@ -57,6 +57,86 @@ A schedule is series of operations from one or more transactions. A schedule can
 * **Concurrent Schedule:**
   When operations of a transaction are interleaved with operations of other transactions of a schedule, the schedule is called Concurrent schedule. e.g.; Schedule of debit and credit transaction shown in Table 1 is concurrent in nature. But concurrency can lead to inconsistency in database.  The above example of concurrent schedule is also inconsistent.
 
+## 
+
+### Why is concurrency control needed?\[[edit](https://en.wikipedia.org/w/index.php?title=Concurrency_control&action=edit&section=3)\]
+
+If transactions are executedserially, i.e., sequentially with no overlap in time, no transaction concurrency exists. However, if concurrent transactions with interleaving operations are allowed in an uncontrolled manner, some unexpected, undesirable results may occur, such as:
+
+1. **The lost update problem**: A second transaction writes a second value of a data-item \(datum\) on top of a first value written by a first concurrent transaction, and the first value is lost to other transactions running concurrently which need, by their precedence, to read the first value. The transactions that have read the wrong value end with incorrect results.
+2. **The dirty read problem**: Transactions read a value written by a transaction that has been later aborted. This value disappears from the database upon abort, and should not have been read by any transaction \("dirty read"\). The reading transactions end with incorrect results.
+3. **The incorrect summary problem**: While one transaction takes a summary over the values of all the instances of a repeated data-item, a second transaction updates some instances of that data-item. The resulting summary does not reflect a correct result for any \(usually needed for correctness\) precedence order between the two transactions \(if one is executed before the other\), but rather some random result, depending on the timing of the updates, and whether certain update results have been included in the summary or not.
+
+Most high-performance transactional systems need to run transactions concurrently to meet their performance requirements. Thus, without concurrency control such systems can neither provide correct results nor maintain their databases consistently.
+
+### Concurrency control mechanisms\[[edit](https://en.wikipedia.org/w/index.php?title=Concurrency_control&action=edit&section=4)\]
+
+#### Categories\[[edit](https://en.wikipedia.org/w/index.php?title=Concurrency_control&action=edit&section=5)\]
+
+The main categories of concurrency control mechanisms are:
+
+* [**Optimistic**](https://en.wikipedia.org/wiki/Optimistic_concurrency_control)
+  - Delay the checking of whether a transaction meets the isolation and other integrity rules \(e.g.,
+  [serializability](https://en.wikipedia.org/wiki/Serializability)
+  and
+  [recoverability](https://en.wikipedia.org/wiki/Serializability#Correctness_-_recoverability)
+  \) until its end, without blocking any of its \(read, write\) operations \("...and be optimistic about the rules being met..."\), and then abort a transaction to prevent the violation, if the desired rules are to be violated upon its commit. An aborted transaction is immediately restarted and re-executed, which incurs an obvious overhead \(versus executing it to the end only once\). If not too many transactions are aborted, then being optimistic is usually a good strategy.
+* **Pessimistic**
+  - Block an operation of a transaction, if it may cause violation of the rules, until the possibility of violation disappears. Blocking operations is typically involved with performance reduction.
+* **Semi-optimistic**
+  - Block operations in some situations, if they may cause violation of some rules, and do not block in other situations while delaying rules checking \(if needed\) to transaction's end, as done with optimistic.
+
+Different categories provide different performance, i.e., different average transaction completion rates \(throughput\), depending on transaction types mix, computing level of parallelism, and other factors. If selection and knowledge about trade-offs are available, then category and method should be chosen to provide the highest performance.
+
+The mutual blocking between two transactions \(where each one blocks the other\) or more results in a[deadlock](https://en.wikipedia.org/wiki/Deadlock), where the transactions involved are stalled and cannot reach completion. Most non-optimistic mechanisms \(with blocking\) are prone to deadlocks which are resolved by an intentional abort of a stalled transaction \(which releases the other transactions in that deadlock\), and its immediate restart and re-execution. The likelihood of a deadlock is typically low.
+
+Blocking, deadlocks, and aborts all result in performance reduction, and hence the trade-offs between the categories.
+
+#### Methods\[[edit](https://en.wikipedia.org/w/index.php?title=Concurrency_control&action=edit&section=6)\]
+
+Many methods for concurrency control exist. Most of them can be implemented within either main category above. The major methods,[\[1\]](https://en.wikipedia.org/wiki/Concurrency_control#cite_note-Bern2009-1)which have each many variants, and in some cases may overlap or be combined, are:
+
+1. Locking \(e.g.,
+   [**Two-phase locking**](https://en.wikipedia.org/wiki/Two-phase_locking)
+   - 2PL\) - Controlling access to data by
+   [locks](https://en.wikipedia.org/wiki/Lock_%28computer_science%29)
+   assigned to the data. Access of a transaction to a data item \(database object\) locked by another transaction may be blocked \(depending on lock type and access operation type\) until lock release.
+2. **Serialization**
+   [**graph checking**](https://en.wikipedia.org/wiki/Serializability#Testing_conflict_serializability)
+   \(also called Serializability, or Conflict, or Precedence graph checking\) - Checking for
+   [cycles](https://en.wikipedia.org/wiki/Cycle_%28graph_theory%29)
+   in the schedule's
+   [graph](https://en.wikipedia.org/wiki/Directed_graph)
+   and breaking them by aborts.
+3. [**Timestamp ordering**](https://en.wikipedia.org/wiki/Timestamp-based_concurrency_control)
+   \(TO\) - Assigning timestamps to transactions, and controlling or checking access to data by timestamp order.
+4. [**Commitment ordering**](https://en.wikipedia.org/wiki/Commitment_ordering)
+   \(or Commit ordering; CO\) - Controlling or checking transactions' chronological order of commit events to be compatible with their respective
+   [precedence order](https://en.wikipedia.org/wiki/Serializability#Testing_conflict_serializability)
+   .
+
+Other major concurrency control types that are utilized in conjunction with the methods above include:
+
+* [**Multiversion concurrency control**](https://en.wikipedia.org/wiki/Multiversion_concurrency_control)
+  \(MVCC\) - Increasing concurrency and performance by generating a new version of a database object each time the object is written, and allowing transactions' read operations of several last relevant versions \(of each object\) depending on scheduling method.
+* [**Index concurrency control**](https://en.wikipedia.org/wiki/Index_locking)
+  - Synchronizing access operations to
+  [indexes](https://en.wikipedia.org/wiki/Index_%28database%29)
+  , rather than to user data. Specialized methods provide substantial performance gains.
+* **Private workspace model**
+  \(
+  **Deferred update**
+  \) - Each transaction maintains a private workspace for its accessed data, and its changed data become visible outside the transaction only upon its commit \(e.g.,
+  [Weikum and Vossen 2001](https://en.wikipedia.org/wiki/Concurrency_control#Weikum01)
+  \). This model provides a different concurrency control behavior with benefits in many cases.
+
+The most common mechanism type in database systems since their early days in the 1970s has been[Strong strict Two-phase locking](https://en.wikipedia.org/wiki/Two-phase_locking)\(SS2PL; also calledRigorous schedulingorRigorous 2PL\) which is a special case \(variant\) of both[Two-phase locking](https://en.wikipedia.org/wiki/Two-phase_locking)\(2PL\) and[Commitment ordering](https://en.wikipedia.org/wiki/Commitment_ordering)\(CO\). It is pessimistic. In spite of its long name \(for historical reasons\) the idea of the**SS2PL**mechanism is simple: "Release all locks applied by a transaction only after the transaction has ended." SS2PL \(or Rigorousness\) is also the name of the set of all schedules that can be generated by this mechanism, i.e., these are SS2PL \(or Rigorous\) schedules, have the SS2PL \(or Rigorousness\) property.
+
+  
+
+
+## 
+
 ## Implementation of Locking in DBMS
 
 ## 
@@ -166,11 +246,9 @@ Now, we all know the four properties a transaction must follow. Yes, you got tha
 _A trivial question I would like to pose in front of you, \(I know you must know this but still\) why do you think that we should have interleaving execution of transactions if it may lead to problems such as Irrecoverable Schedule, Inconsistency and many more threats.  
 Why not just let it be Serial schedules and we may live peacefully, no complications at all._
 
-**Yes, the performance effects the efficiency too much which is not acceptable.    
+**Yes, the performance effects the efficiency too much which is not acceptable.      
 **Hence a Database may provide a mechanism that ensures that the schedules are either conflict or view serializable and recoverable \(also preferably cascadeless\). Testing for a schedule for Serializability after it has executed is obviously_too late!_  
 So we need Concurrency Control Protocols that ensures Serializability .
-
-
 
 **Concurrency-control protocols :**
 
