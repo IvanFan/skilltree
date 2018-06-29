@@ -16,3 +16,15 @@ Binary Search Tree
 
 
 
+
+
+## Preorder Traversal
+
+## 
+
+No recursion 
+
+
+
+
+
