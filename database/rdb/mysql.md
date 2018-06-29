@@ -10,5 +10,12 @@ REPEATABLE READ,
 and SERIALIZABLE. The default isolation level for InnoDB is REPEATABLE READ.
 ```
 
+```
+A user can change the isolation level for a single session or for all subsequent connections with the
+ SET TRANSACTION statement. 
+ To set the server's default isolation level for all connections, 
+ use the --transaction-isolation option on the command line or in an option file. 
+```
+
 
 
