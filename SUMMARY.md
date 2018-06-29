@@ -122,6 +122,7 @@
     * [Search engines](database/rdb/mysql/search-engines.md)
     * [keywords executed order](database/rdb/mysql/keywords-executed-order.md)
     * [Mysql B+tree index and hash index](database/rdb/mysql/mysql-b+tree-index-and-hash-index.md)
+    * [Lock optimistic lock and pessimistic lock](database/rdb/mysql/lock-optimistic-lock-and-pessimistic-lock.md)
   * Postgre
 * NOSQL
 
