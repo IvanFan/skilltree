@@ -121,6 +121,7 @@
     * [Transaction Isolation level](database/rdb/mysql/transaction-isolation-level.md)
     * [Search engines](database/rdb/mysql/search-engines.md)
     * [keywords executed order](database/rdb/mysql/keywords-executed-order.md)
+    * [Mysql B+tree index and hash index](database/rdb/mysql/mysql-b+tree-index-and-hash-index.md)
   * Postgre
 * NOSQL
 
