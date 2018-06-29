@@ -1,6 +1,6 @@
 # MySQL都有什么锁，死锁判定原理和具体场景，死锁怎么解决？
 
-### MySQL都有什么锁
+### MySQL都有什么锁 
 
 MySQL有三种锁的级别：**页级、表级、行级**。
 
@@ -37,7 +37,6 @@ SELECT
  trx_MySQL_thread_id 
 FROM
  information_schema.INNODB_TRX;
-
 ```
 
 * 设置锁的超时时间
@@ -53,28 +52,15 @@ set
  innodb_lock_wait_timeout=
 1000
 ; —设置当前会话 Innodb 行锁等待超时时间，单位秒。
-
 ```
 
 # 
 
-  
-
-
 作者：关注公众号每天更新文章
 
-  
-
-
-链接：https://juejin.im/post/5ab50d9b6fb9a028c812cc78
-
-  
-
+链接：[https://juejin.im/post/5ab50d9b6fb9a028c812cc78](https://juejin.im/post/5ab50d9b6fb9a028c812cc78)
 
 来源：掘金
-
-  
-
 
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
