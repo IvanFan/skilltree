@@ -145,6 +145,10 @@
   * [Data flow - lossy counting](algorithm/data-flow-lossy-counting.md)
   * [Binary Search](algorithm/binary-search-and-sorted-array.md)
   * [Sorted Array](algorithm/sorted-array.md)
+  * [Binary Tree](algorithm/binary-tree.md)
+  * Divide Conquer
+  * DFS
+  * BFS
 
 ## Security
 
