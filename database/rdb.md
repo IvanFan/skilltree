@@ -30,3 +30,11 @@ Cluster, Sharing and Partition, concurrecny
 
 Distributed System DB
 
+
+
+
+
+
+
+和file system的区别
+
