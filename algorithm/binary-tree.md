@@ -40,7 +40,7 @@ def preorder_traversal(root):
      left = preorder_traversal(root.left)
      right = preorder_traversal(root.right)
      # conquer
-     result += (root.val)
+     result += root.val
      result += left
      result += right
      return result
