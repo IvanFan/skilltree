@@ -48,15 +48,11 @@ def preorder_traversal(root):
 
 ## Divide Conquer Algorithm
 
-* merge sort
+* merge sort O\(nlogn\)
 
-* quick sort
+* quick sort O\(nlogn\)
 
 * most of the binary Tree problem
 
 **Merge Sort**
-
-
-
-
 
