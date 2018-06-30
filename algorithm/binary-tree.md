@@ -64,11 +64,9 @@ def preorder_traversal(root):
 
 然后吧新数组copy 和覆盖回原来的数组
 
-merge sort 会耗费额外空间
+merge sort 会耗费额外空间 先局部有序然后整体有序
 
 Quick  sort has no need for extra space
-
-
 
 **Quick sort**
 
