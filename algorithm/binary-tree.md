@@ -66,13 +66,5 @@ def preorder_traversal(root):
 
 merge sort 会耗费额外空间
 
-
-
-
-
-
-
-
-
-
+Quick  sort has no need for extra space
 
