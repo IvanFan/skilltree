@@ -56,3 +56,5 @@ def preorder_traversal(root):
 
 **Merge Sort**
 
+![](/assets/Screen Shot 2018-06-30 at 3.12.51 pm.png)无论如何我在中间
+
