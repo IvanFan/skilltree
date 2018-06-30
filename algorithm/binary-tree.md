@@ -73,6 +73,13 @@ Quick  sort has no need for extra space
 1. randomly pickup one number in the array and get the value X
 2. then partition the array in place to two arrays 
 3. so we will try to sort the left part to be &lt;= x and right part to be &gt; x
+4. then we sort left and right
+
+so we first make the entire array ordered and then make partition sorted
+
+Quick nlogn O\(1\) 
+
+Merge nlogn O\(n\)
 
 
 
