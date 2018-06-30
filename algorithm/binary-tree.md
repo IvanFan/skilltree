@@ -60,5 +60,10 @@ def preorder_traversal(root):
 
 无论如何我在中间切一刀，然后吧左边进行merge sort，右边进行merge sort
 
+然后吧左右两边的sorted array 合并到一个新的数组
+
+然后吧新数组copy 和覆盖回原来的数组
+
+  
 
 
