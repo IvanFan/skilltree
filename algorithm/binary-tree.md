@@ -77,9 +77,7 @@ Quick  sort has no need for extra space
 
 so we first make the entire array ordered and then make partition sorted
 
-Quick nlogn O\(1\) 
+Quick nlogn O\(1\) 如果key一样的时候排序完成顺序会变掉
 
-Merge nlogn O\(n\)
-
-
+Merge nlogn O\(n\) if key is the same, the original order will not be changed
 
