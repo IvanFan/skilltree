@@ -101,5 +101,9 @@ right = findMax(root.right)
 return max(left, right) +1
 ```
 
+## Balanced Binary Tree
+
+
+
 
 
