@@ -193,5 +193,7 @@ tips:
 
 max left max right max left-root-right
 
+normally, when root is none we exit the recursion
+
 
 
