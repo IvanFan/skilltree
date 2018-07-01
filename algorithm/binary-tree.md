@@ -111,8 +111,6 @@ binary search for this one: O\(N\) because each operation is O\(1\) and we only 
 
 ## Binary Tree Maximum Path Sum
 
-
-
 Given a**non-empty**binary tree, find the maximum path sum.
 
 For this problem, a path is defined as any sequence of nodes from some starting node to any node in the tree along the parent-child connections. The path must contain**at least one node**and does not need to go through the root.
@@ -123,14 +121,13 @@ For this problem, a path is defined as any sequence of nodes from some starting 
 Input:
  [1,2,3]
 
-       
+
 1
 / \
 2
 3
 Output:
  6
-
 ```
 
 **Example 2:**
@@ -139,12 +136,12 @@ Output:
 Input:
  [-10,9,20,null,null,15,7]
 
-   -10
-   / \
-  9  
+   -10
+   / \
+  9  
 20
-/  \
-15   7
+/  \
+15   7
 Output:
  42
 ```
@@ -158,7 +155,7 @@ Output:
 #         self.right = None
 import sys
 class Solution:
-    
+
     def findMaxPath(self, root):
         if root and not root.left and not root.right:
             self.max_val = max(self.max_val, root.val)
@@ -181,7 +178,7 @@ class Solution:
             right_tem = right + root.val
             self.max_val = max(self.max_val, max([right_tem, root.val]))
             return max([right_tem, root.val])
-        
+
     def maxPathSum(self, root):
         """
         :type root: TreeNode
@@ -190,10 +187,11 @@ class Solution:
         self.max_val = root.val
         self.findMaxPath(root)
         return self.max_val
-        
-        
-        
 ```
+
+tips:
+
+max left max right max left-root-right
 
 
 
