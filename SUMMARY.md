@@ -128,7 +128,7 @@
     * [Recover mysql](database/rdb/mysql/recover-mysql.md)
     * [Join](database/rdb/mysql/join.md)
   * Postgre
-* NOSQL
+* [NOSQL](database/nosql.md)
 
 ## Python
 
