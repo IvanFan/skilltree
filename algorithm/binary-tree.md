@@ -104,7 +104,7 @@ return max(left, right) +1
 ## Balanced Binary Tree
 
 ```
-python 可以return tuple
+python 可以return tuple or return -1
 ```
 
 
