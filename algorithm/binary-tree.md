@@ -83,7 +83,13 @@ Merge nlogn O\(n\) if key is the same, the original order will not be changed
 
 Analysis the time complexity
 
-Merge Sort:![](/assets/Screen Shot 2018-07-01 at asdfasdf pm.png)
+Merge Sort:![](/assets/Screen Shot 2018-07-01 at asdfasdf pm.png)Quick sort
+
+the randomly selected x may not be the mid of the array
+
+the worst case is O\(n^2\)
+
+the normal case is: O\(nlogn\)
 
 
 
