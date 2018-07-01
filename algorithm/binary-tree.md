@@ -83,7 +83,7 @@ Merge nlogn O\(n\) if key is the same, the original order will not be changed
 
 Analysis the time complexity
 
-Merge Sort:
+Merge Sort:![](/assets/Screen Shot 2018-07-01 at asdfasdf pm.png)
 
 
 
