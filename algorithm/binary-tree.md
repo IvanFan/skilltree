@@ -91,11 +91,15 @@ the worst case is O\(n^2\)
 
 the normal case is: O\(nlogn\)
 
-
-
 ## Maximum depth of binary tree
 
-## 
+```
+if not root:
+  return 0
+left =  findMax(root.left)
+right = findMax(root.right)
+return max(left, right) +1
+```
 
 
 
