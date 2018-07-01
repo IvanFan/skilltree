@@ -81,11 +81,9 @@ Quick nlogn O\(1\) 如果key一样的时候排序完成顺序会变掉
 
 Merge nlogn O\(n\) if key is the same, the original order will not be changed
 
-
-
 Analysis the time complexity
 
-Merge Sort
+Merge Sort:
 
 
 
