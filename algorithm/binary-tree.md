@@ -107,5 +107,7 @@ return max(left, right) +1
 python 可以return tuple or return -1
 ```
 
+binary search for this one: O\(N\) because each operation is O\(1\) and we only go through n node
+
 
 
