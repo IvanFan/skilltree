@@ -109,5 +109,91 @@ python 可以return tuple or return -1
 
 binary search for this one: O\(N\) because each operation is O\(1\) and we only go through n node
 
+## Binary Tree Maximum Path Sum
+
+
+
+Given a**non-empty**binary tree, find the maximum path sum.
+
+For this problem, a path is defined as any sequence of nodes from some starting node to any node in the tree along the parent-child connections. The path must contain**at least one node**and does not need to go through the root.
+
+**Example 1:**
+
+```
+Input:
+ [1,2,3]
+
+       
+1
+/ \
+2
+3
+Output:
+ 6
+
+```
+
+**Example 2:**
+
+```
+Input:
+ [-10,9,20,null,null,15,7]
+
+   -10
+   / \
+  9  
+20
+/  \
+15   7
+Output:
+ 42
+```
+
+```
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+import sys
+class Solution:
+    
+    def findMaxPath(self, root):
+        if root and not root.left and not root.right:
+            self.max_val = max(self.max_val, root.val)
+            return root.val
+        elif root and root.left and root.right:
+            left = self.findMaxPath(root.left)
+            right = self.findMaxPath(root.right)
+            left_tem = left + root.val
+            right_tem = right + root.val
+            merged_tem = right + root.val + left
+            self.max_val = max(self.max_val, max([left_tem, right_tem, merged_tem, root.val]))
+            return max([left_tem, right_tem, root.val])
+        elif root and root.left and not root.right:
+            left = self.findMaxPath(root.left)
+            left_tem = left + root.val
+            self.max_val = max(self.max_val, max([left_tem, root.val]))
+            return max([left_tem, root.val])
+        elif root and not root.left and root.right:
+            right = self.findMaxPath(root.right)
+            right_tem = right + root.val
+            self.max_val = max(self.max_val, max([right_tem, root.val]))
+            return max([right_tem, root.val])
+        
+    def maxPathSum(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+        self.max_val = root.val
+        self.findMaxPath(root)
+        return self.max_val
+        
+        
+        
+```
+
 
 
