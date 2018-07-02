@@ -46,3 +46,5 @@ concurrent user = user per day /5 = 200,000
 
 peak user = concurrent user \* 3 = 600,000
 
+Max peak user in 3 months = peak user \* 10 = 6,000,000
+
