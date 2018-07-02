@@ -142,6 +142,7 @@
 ## System Design
 
 * Brief
+* [Design data with class inheirture](system-design/design-data-with-class-inheirture.md)
 
 ## Network
 

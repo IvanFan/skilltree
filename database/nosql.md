@@ -20,15 +20,13 @@ Simplicity
 * no more;no less
 * understandable
 
-Please design the system
+## Please design the system
 
-Please evaluate query per second
+## Please evaluate query per second
 
-Please scale your system
+## Please scale your system
 
-
-
-Please design Netflix/Youtube/Spotify
+## Please design Netflix/Youtube/Spotify
 
 
 
