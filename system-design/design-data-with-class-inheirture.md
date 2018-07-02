@@ -6,9 +6,13 @@ daily active usr = 1,000,000
 
 daily active user in 3 month = 1,000,000 \* 10
 
-register percentage = 1%
+register percentage = 1% \(will changed\)
 
-new registered user = 10,000,000 \* 1%
+daily new registered user = 10,000,000 \* 1%
+
+login percentage = 15%
+
+average login time = 1.2
 
 
 
