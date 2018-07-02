@@ -241,13 +241,21 @@ rough categorization
 3. 分区的混合（Mixed Hybridization）：采用多种推荐机制，并将不同的推荐结果分不同的区显示给用户。其实，Amazon，当当网等很多电子商务网站都是采用这样的方式，用户可以得到很全面的推荐，也更容易找到他们想要的东西。
 4. 分层的混合（Meta-Level Hybridization）: 采用多种推荐机制，并将一个推荐机制的结果作为另一个的输入，从而综合各个推荐机制的优缺点，得到更加准确的推荐。
 
-Performance  & Scalability & Availability:
+## Performance  & Scalability & Availability:
 
-Performance:
+## Performance:
 
-Inverted index: 
+improve the performance with Inverted index:
 
-inverted index: 传统的正排索引指的是doc-&gt;word的映射，然而在实际工作中，仅仅只有正排索引是远远不够的，比如我想知道某个word出现在那些doc当中，就需要遍历所有的doc，这在实时性要求比较严的系统中是不能接受的。因此，就出现了倒排索引（inverted index ）https://zh.wikipedia.org/wiki/%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95
+inverted index: 传统的正排索引指的是doc-&gt;word的映射，然而在实际工作中，仅仅只有正排索引是远远不够的，比如我想知道某个word出现在那些doc当中，就需要遍历所有的doc，这在实时性要求比较严的系统中是不能接受的。因此，就出现了倒排索引（inverted index ）[https://zh.wikipedia.org/wiki/倒排索引](https://zh.wikipedia.org/wiki/倒排索引)
+
+
+
+![](/assets/Screen Shot 2018-07-02 at 5.49.14 pm.png)
+
+
+
+
 
 ## Please evaluate query per second
 
