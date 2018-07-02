@@ -283,11 +283,7 @@ database cluster
 
 ## 
 
-## Please evaluate query per second
-
-## Please scale your system
-
-## Please design Netflix/Youtube/Spotify
+## Design Netfix/Facebooks 
 
 
 
