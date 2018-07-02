@@ -167,6 +167,12 @@ Max capability = 5 qps
 
 
 
+n^3 的算法估算是秒
+
+n^2 百十毫秒
+
+n 十几毫秒
+
 Extension:
 
 [https://www.ibm.com/developerworks/cn/web/1103\_zhaoct\_recommstudy1/](https://www.ibm.com/developerworks/cn/web/1103_zhaoct_recommstudy1/)
