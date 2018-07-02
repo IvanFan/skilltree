@@ -124,11 +124,23 @@ Scalability
 
 Robustness/availability
 
+## Let's  do a micro design :
+
+Question: please implement user recommendation module:
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Please evaluate query per second
-
-
-
-
 
 ## Please scale your system
 
