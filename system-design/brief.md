@@ -118,5 +118,7 @@ With:
 
 Better: constrain
 
-Broader: new cases 
+Broader: new cases
+
+Deeper: more details
 
