@@ -22,13 +22,13 @@ Simplicity
 
 Please design the system
 
-
-
 Please evaluate query per second
 
-
-
 Please scale your system
+
+
+
+Please design Netflix/Youtube/Spotify
 
 
 
