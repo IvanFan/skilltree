@@ -6,5 +6,11 @@ Logical Design
 
 Physical Design
 
+From top to down
+
+
+
+## What's a good design
+
 
 
