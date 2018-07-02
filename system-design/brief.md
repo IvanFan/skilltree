@@ -32,5 +32,9 @@ Top1:play music
 * select a channel
 * play the music
 
+## necessary: constrain/hypothesis
+
+step1: Ask
+
 
 
