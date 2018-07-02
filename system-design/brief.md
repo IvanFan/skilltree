@@ -275,7 +275,7 @@ manger  copy a new dataset
 
 database cluster
 
-## 
+## ![](/assets/Screen Shot 2018-07-02 at 9.16.42 pm.png)
 
 ## Please evaluate query per second
 
