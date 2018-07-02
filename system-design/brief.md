@@ -277,6 +277,12 @@ database cluster
 
 ## ![](/assets/Screen Shot 2018-07-02 at 9.16.42 pm.png)
 
+## 
+
+## ![](/assets/Screen Shot 2018-07-02 at 9.18.52 pm.png)
+
+## 
+
 ## Please evaluate query per second
 
 ## Please scale your system
