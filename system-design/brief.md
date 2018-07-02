@@ -22,8 +22,6 @@ Simplicity
 
 ## Please design the system
 
-
-
 Example: media player
 
 Crack the design in 5 steps:
@@ -126,9 +124,11 @@ Scalability
 
 Robustness/availability
 
-
-
 ## Please evaluate query per second
+
+
+
+
 
 ## Please scale your system
 
