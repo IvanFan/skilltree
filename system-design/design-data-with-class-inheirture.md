@@ -89,9 +89,9 @@ B+Tree
 
 Space: O\(n\)
 
-Time of operation:O\(1\)
+Time of operation:O\(1\) time of range query O\(logbN+k\)
 
-disk friendly with continuous reading
+disk friendly with continuous reading  在硬盘上是顺序的存
 
 
 
