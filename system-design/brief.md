@@ -161,7 +161,7 @@ Predict:
 
 Peak QPS \(Query per second\): peak user \*  Participation rate/ 10 min /60 sec = 500/s
 
-performance query = 0.2s/query
+performance query = 2s/query
 
 Max capability = 5 qps
 
@@ -258,6 +258,14 @@ Max capability = 5 qps
 ![](/assets/Screen Shot 2018-07-02 at 5.51.02 pm.png)'
 
 new version
+
+## 
+
+## 
+
+## 
+
+## 
 
 ## Please evaluate query per second
 
