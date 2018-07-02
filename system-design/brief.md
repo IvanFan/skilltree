@@ -259,7 +259,7 @@ Max capability = 5 qps
 
 new version
 
-improve the availability 
+improve the availability
 
 ![](/assets/Screen Shot 2018-07-02 at 6.01.29 pm.png)
 
@@ -267,9 +267,13 @@ how many machine you need?
 
 multi thread: 8 cores CPU
 
+## System Design with more machines
 
+在一台机器上挂着一个manager，manger搞定anything
 
-## 
+manger  copy a new dataset
+
+database cluster
 
 ## 
 
