@@ -77,11 +77,23 @@ different devices different sessions
 
 Session with sessionID userID timeOut device Code \(also we can use it for token\)
 
-Session should be removed from user table 
-
-
+Session should be removed from user table
 
 ## ![](/assets/Screen Shot 2018-07-02 at 10.32.55 pm.png)
+
+## Challenge of lookup
+
+## index \(hashtable\) -&gt; clustered index unclustered index
+
+B+Tree
+
+Space: O\(n\)
+
+Time of operation:O\(1\)
+
+disk friendly with continuous reading
+
+
 
 
 
