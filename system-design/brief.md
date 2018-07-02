@@ -138,7 +138,21 @@ Similarity\(u1, u2\) = 3
 
 For a user, find his top1 similar user:
 
-https://www.ibm.com/developerworks/cn/web/1103\_zhaoct\_recommstudy1/
+[https://www.ibm.com/developerworks/cn/web/1103\_zhaoct\_recommstudy1/](https://www.ibm.com/developerworks/cn/web/1103_zhaoct_recommstudy1/)
+
+Demographic-based Recommendation: based on user profile
+
+Pros: 
+
+no need for history data so new user has not cold start problem
+
+it doesn't depend on the item so it can be used between different fields
+
+Cons:
+
+rough categorization
+
+
 
 ## Please evaluate query per second
 
