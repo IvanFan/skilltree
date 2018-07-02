@@ -46,5 +46,3 @@ concurrent user = user per day /5 = 200,000
 
 
 
-
-
