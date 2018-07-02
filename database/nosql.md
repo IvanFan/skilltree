@@ -17,3 +17,8 @@ Healthiness
 
 Simplicity
 
+* no more;no less
+* understandable
+
+
+
