@@ -1,6 +1,6 @@
 write a crawler
 
+what is GFS, big table, map reduce
 
-
-what is GFS, big table, mapreduce
+find the top10 frequent keywords /mean number with map reduce
 
