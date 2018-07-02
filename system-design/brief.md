@@ -40,7 +40,7 @@ the number of daily users: 1,000,000
 
 **step 2: Predict**
 
-User:
+**User:**
 
 concurrent user = user per day /5 = 200,000
 
@@ -48,7 +48,7 @@ peak user = concurrent user \* 3 = 600,000
 
 Max peak user in 3 months = peak user \* 10 = 6,000,000
 
-Traffic:
+**Traffic:**
 
 request of new music per user: 1 message /min
 
@@ -56,5 +56,9 @@ music size = 3 mb
 
 max peak traffic = Max peak user in 3 months \* music size /60 = 300GB/s
 
+**Memory:**
 
+memory per user = 10kb
+
+max daily memory = the number of daily users \* memory per user \* 10 = 100GB
 
