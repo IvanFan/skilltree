@@ -130,6 +130,7 @@
   * Postgre
 * [NOSQL](database/nosql.md)
   * [MongoDB VS RDB](database/nosql/mongodb-vs-rdb.md)
+* [RAID](database/raid.md)
 
 ## Python
 
