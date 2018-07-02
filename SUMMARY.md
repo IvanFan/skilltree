@@ -147,6 +147,7 @@
 * [write a crawler](system-design/write-a-crawler.md)
 * [design what's app](system-design/design-whats-app.md)
 * [log analysis](system-design/log-analysis.md)
+* [generate tiny url & OOP](system-design/generate-tiny-url-and-oop.md)
 
 ## Network
 
