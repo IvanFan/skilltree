@@ -15,5 +15,5 @@ Healthiness
 * execution
 * communication
 
-
+Simplicity
 
