@@ -112,13 +112,21 @@ user data less write sensitive high requirement MYSQL
 
 ## Evolve
 
-Step1: Analysis
+**Step1: Analysis**
 
-With:
+**With:**
 
 Better: constrain
 
 Broader: new cases
 
 Deeper: more details
+
+**From the view of:**
+
+Performance
+
+Scalability  
+
+Robustness/availability
 
