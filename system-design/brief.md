@@ -1,3 +1,9 @@
+Example: media player
+
+
+
+
+
 Crack the design in 5 steps:
 
 **input**
@@ -13,6 +19,20 @@ Crack the design in 5 steps:
 **extra**
 
 1. evolve
+
+
+
+### scenario: case/interface
+
+step 1 : enumerate  枚举
+
+* register/login
+* play music
+* music recommendation
+
+step 2: sort 把最重要的功能找出来
+
+
 
 
 
