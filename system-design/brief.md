@@ -128,17 +128,15 @@ Robustness/availability
 
 Question: please implement user recommendation module:
 
+each user like a set of music:
 
+u1 = { m1m2m3m4m5m6 }
 
+u2 = {m3 m5m6 }
 
+Similarity\(u1, u2\) = 3
 
-
-
-
-
-
-
-
+For a user, find his top1 similar user:
 
 ## Please evaluate query per second
 
