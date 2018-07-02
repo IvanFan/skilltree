@@ -255,6 +255,10 @@ performance query = 0.2s/query
 
 Max capability = 5 qps
 
+![](/assets/Screen Shot 2018-07-02 at 5.51.02 pm.png)'
+
+new version
+
 ## Please evaluate query per second
 
 ## Please scale your system
