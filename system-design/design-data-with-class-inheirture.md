@@ -93,11 +93,7 @@ Time of operation:O\(1\) time of range query O\(logbN+k\)
 
 disk friendly with continuous reading  在硬盘上是顺序的存
 
+transaction log
 
 
-
-
-Please design a user system
-
-Please design a payment system
 
