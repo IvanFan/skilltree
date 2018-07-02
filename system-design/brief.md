@@ -36,5 +36,15 @@ Top1:play music
 
 step1: Ask
 
-the number of daily users
+the number of daily users: 1,000,000
+
+step 2: Predict
+
+user:
+
+concurrent user = user per day /5 = 200,000
+
+
+
+
 
