@@ -138,6 +138,17 @@ Similarity\(u1, u2\) = 3
 
 For a user, find his top1 similar user:
 
+```
+class Recommander:
+    findTopOneSimilar(user)
+```
+
+
+
+
+
+Extension:
+
 [https://www.ibm.com/developerworks/cn/web/1103\_zhaoct\_recommstudy1/](https://www.ibm.com/developerworks/cn/web/1103_zhaoct_recommstudy1/)
 
 **基于人口统计学的推荐机制Demographic-based Recommendation: based on user profile**
