@@ -159,7 +159,13 @@ Calculation Frequency = 1/10 min/user \(10 mins calculate once\)
 
 Predict:
 
-Peak QPS \(Query per second\): peak user \*  Participation rate 
+Peak QPS \(Query per second\): peak user \*  Participation rate/ 10 min /60 sec = 500/s
+
+
+
+
+
+
 
 Extension:
 
