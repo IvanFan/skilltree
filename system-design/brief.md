@@ -249,13 +249,11 @@ improve the performance with Inverted index:
 
 inverted index: 传统的正排索引指的是doc-&gt;word的映射，然而在实际工作中，仅仅只有正排索引是远远不够的，比如我想知道某个word出现在那些doc当中，就需要遍历所有的doc，这在实时性要求比较严的系统中是不能接受的。因此，就出现了倒排索引（inverted index ）[https://zh.wikipedia.org/wiki/倒排索引](https://zh.wikipedia.org/wiki/倒排索引)
 
-
-
 ![](/assets/Screen Shot 2018-07-02 at 5.49.14 pm.png)
 
+performance query = 0.2s/query
 
-
-
+Max capability = 5 qps
 
 ## Please evaluate query per second
 
