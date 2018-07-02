@@ -143,6 +143,18 @@ class Recommander:
     findTopOneSimilar(user)
 ```
 
+Necessary: 
+
+ASK: 
+
+total user per day = 100,000,000
+
+total music = 1,000,000,000
+
+peak user = 6,000,000
+
+Participation rate = 1-30% we pick 5%
+
 
 
 
