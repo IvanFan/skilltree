@@ -18,13 +18,13 @@ Crack the design in 5 steps:
 
 ### scenario: case/interface
 
-step 1 : enumerate  枚举
+**step 1 : enumerate  枚举**
 
 * register/login
 * play music
 * music recommendation
 
-step 2: sort 把最重要的功能找出来
+**step 2: sort 把最重要的功能找出来**
 
 Top1:play music
 
@@ -34,17 +34,25 @@ Top1:play music
 
 ## necessary: constrain/hypothesis
 
-step1: Ask
+**step1: Ask**
 
 the number of daily users: 1,000,000
 
-step 2: Predict
+**step 2: Predict**
 
-user:
+User:
 
 concurrent user = user per day /5 = 200,000
 
 peak user = concurrent user \* 3 = 600,000
 
 Max peak user in 3 months = peak user \* 10 = 6,000,000
+
+Traffic:
+
+request of new music per user: 1 message /min
+
+music size = 3 mb
+
+
 
