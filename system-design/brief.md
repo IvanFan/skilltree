@@ -44,5 +44,5 @@ user:
 
 concurrent user = user per day /5 = 200,000
 
-
+peak user = concurrent user \* 3 = 600,000
 
