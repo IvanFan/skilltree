@@ -14,7 +14,7 @@ login percentage = 15%
 
 average login time = 1.2
 
-daily login time = 10,000,000 \* 15% \* 1.2 = 1,800,000
+daily login time = 10,000,000 \* 15% \* 1.2 = 1,800,000 \(a little bit large\)
 
 
 
