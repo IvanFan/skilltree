@@ -62,17 +62,21 @@ memory per user = 10kb
 
 max daily memory = the number of daily users \* memory per user \* 10 = 100GB
 
-
-
-
-
 ## application: service/algorithms
 
 Step1: replay the case, add a service for each request
 
 Step2: merge the service
 
-![](/assets/Screen Shot 2018-07-02 at 3.10.25 pm.png) 
+![](/assets/Screen Shot 2018-07-02 at 3.10.25 pm.png)
+
+
+
+## kilobit:data
+
+user data less write sensitive high requirement MYSQL
+
+
 
 
 
