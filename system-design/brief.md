@@ -243,13 +243,7 @@ rough categorization
 
 
 
-
-
-
-
-
-
-
+Performance  & Scalability & Availability
 
 ## Please evaluate query per second
 
