@@ -22,11 +22,7 @@ Simplicity
 
 ## Please design the system
 
-## Please evaluate query per second
 
-## Please scale your system
-
-## Please design Netflix/Youtube/Spotify
 
 Example: media player
 
@@ -126,7 +122,17 @@ Deeper: more details
 
 Performance
 
-Scalability  
+Scalability
 
 Robustness/availability
+
+
+
+## Please evaluate query per second
+
+## Please scale your system
+
+## Please design Netflix/Youtube/Spotify
+
+
 
