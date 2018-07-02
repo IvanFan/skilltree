@@ -138,6 +138,8 @@ Similarity\(u1, u2\) = 3
 
 For a user, find his top1 similar user:
 
+https://www.ibm.com/developerworks/cn/web/1103\_zhaoct\_recommstudy1/
+
 ## Please evaluate query per second
 
 ## Please scale your system
