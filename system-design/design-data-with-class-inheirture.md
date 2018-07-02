@@ -71,17 +71,17 @@ Session lifecycle graph\(v1\)
 
 login -&gt; PC-online -&gt; timeout
 
-iphone-online ipad-online 
+iphone-online ipad-online
 
 different devices different sessions
 
 Session with sessionID userID timeOut device Code \(also we can use it for token\)
 
+Session should be removed from user table 
 
 
 
-
-
+## ![](/assets/Screen Shot 2018-07-02 at 10.32.55 pm.png)
 
 
 
