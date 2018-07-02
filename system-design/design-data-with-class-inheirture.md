@@ -95,5 +95,27 @@ disk friendly with continuous reading  在硬盘上是顺序的存
 
 transaction log
 
+write log 
+
+read log
+
+lock
+
+
+
+## DataBase Duplication:
+
+linear 传行多级备份 A=&gt;A1=&gt;A2=&gt;...
+
+daily checkpoints with daily log easy to recover
+
+Disk data consistency can use check sum to make sure the consistency
+
+read/write apart =&gt; no consistency because of the time delay
+
+check sum should stored separately. Some of it should be put into memory or into log
+
+
+
 
 
