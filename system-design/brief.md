@@ -70,13 +70,13 @@ Step2: merge the service
 
 ![](/assets/Screen Shot 2018-07-02 at 3.10.25 pm.png)
 
-
-
 ## kilobit:data
 
+Step1: append data set for each request under the service
+
+Step2: choose the storage type
+
 user data less write sensitive high requirement MYSQL
-
-
 
 
 
