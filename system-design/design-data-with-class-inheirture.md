@@ -95,13 +95,13 @@ disk friendly with continuous reading  在硬盘上是顺序的存
 
 transaction log
 
-write log 
+write log
 
 read log
 
 lock
 
-
+Mysql has a checker when changing the data
 
 ## DataBase Duplication:
 
@@ -114,8 +114,4 @@ Disk data consistency can use check sum to make sure the consistency
 read/write apart =&gt; no consistency because of the time delay
 
 check sum should stored separately. Some of it should be put into memory or into log
-
-
-
-
 
