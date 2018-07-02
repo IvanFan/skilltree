@@ -20,5 +20,15 @@ Simplicity
 * no more;no less
 * understandable
 
+Please design the system
+
+
+
+Please evaluate query per second
+
+
+
+Please scale your system
+
 
 
