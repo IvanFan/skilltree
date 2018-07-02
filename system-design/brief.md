@@ -28,10 +28,6 @@ Simplicity
 
 ## Please design Netflix/Youtube/Spotify
 
-
-
-
-
 Example: media player
 
 Crack the design in 5 steps:
@@ -113,4 +109,12 @@ Step2: choose the storage type
 user data less write sensitive high requirement MYSQL
 
 ![](/assets/Screen Shot 2018-07-02 at 3.14.04 pm.png)
+
+
+
+## Evolve
+
+
+
+
 

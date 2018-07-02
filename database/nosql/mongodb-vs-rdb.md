@@ -12,11 +12,7 @@ eventually consistent
 
 Support Transactions in MongoDB 4.0
 
-
-
-If required for strong consistency, choose RDB 
-
-
+If required for strong consistency, choose RDB
 
 ## Terminology and Concepts
 
@@ -31,9 +27,6 @@ Many concepts in MySQL have close analogs in MongoDB. The table below outlines t
 | Secondary Index | Secondary Index |
 | JOINs | Embedded documents, $lookup & $graphLookup |
 | GROUP\_BY | Aggregation Pipeline |
-
-  
-
 
 
 
