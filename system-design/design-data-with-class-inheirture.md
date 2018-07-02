@@ -22,10 +22,6 @@ user register
 
 **peak login frequency = 42 \* 3 = 126/s**
 
-
-
-
-
 Data - user \(v1\)
 
 ```
@@ -42,7 +38,6 @@ class UserTable:
       def __init__(self):
              self.users = []
       CURD
-
 ```
 
 Can you support advanced account management functions such as verification and ban?
@@ -63,15 +58,28 @@ class User:
     string password // fix the size of password
 ```
 
-Data user table\(v1\)
+Data user table\(v2\)
 
 ```
 class UserTable:
       def __init__(self):
              self.users = []
       CURD
-
 ```
+
+Session lifecycle graph\(v1\)
+
+login -&gt; PC-online -&gt; timeout
+
+iphone-online ipad-online 
+
+different devices different sessions
+
+Session with sessionID userID timeOut device Code \(also we can use it for token\)
+
+
+
+
 
 
 
