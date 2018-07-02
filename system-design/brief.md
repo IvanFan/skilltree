@@ -165,8 +165,6 @@ performance query = 0.2s/query
 
 Max capability = 5 qps
 
-
-
 n^3 的算法估算是秒
 
 n^2 百十毫秒
@@ -242,6 +240,16 @@ rough categorization
 2. 切换的混合（Switching Hybridization）：前面也讲到，其实对于不同的情况（数据量，系统运行状况，用户和物品的数目等），推荐策略可能有很大的不同，那么切换的混合方式，就是允许在不同的情况下，选择最为合适的推荐机制计算推荐。
 3. 分区的混合（Mixed Hybridization）：采用多种推荐机制，并将不同的推荐结果分不同的区显示给用户。其实，Amazon，当当网等很多电子商务网站都是采用这样的方式，用户可以得到很全面的推荐，也更容易找到他们想要的东西。
 4. 分层的混合（Meta-Level Hybridization）: 采用多种推荐机制，并将一个推荐机制的结果作为另一个的输入，从而综合各个推荐机制的优缺点，得到更加准确的推荐。
+
+
+
+
+
+
+
+
+
+
 
 ## Please evaluate query per second
 
