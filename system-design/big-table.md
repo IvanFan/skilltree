@@ -20,7 +20,9 @@ a tablet = a list of sorted key value
 
 ![](/assets/Screen Shot 2018-07-03 at 11.32.15 pm.png)key point: write into memtable\(within memory\)
 
+### ![](/assets/Screen Shot 2018-07-03 at 11.35.10 pm.png)How to avoid system failure
+
+### ![](/assets/Screen Shot 2018-07-03 at 11.37.21 pm.png)how to read data
 
 
-![](/assets/Screen Shot 2018-07-03 at 11.35.10 pm.png)
 
