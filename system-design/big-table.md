@@ -30,11 +30,15 @@ indices are pre-loaded into memory
 
 read fast by: user indices to identify the place in disk
 
-
-
 ### How to read data faster?
 
 ### ![](/assets/Screen Shot 2018-07-03 at 11.44.10 pm.png)
 
 check the existence of the element with bloomfilters
+
+### How to build bloom filter?
+
+bit map
+
+![](/assets/Screen Shot 2018-07-03 at 11.46.29 pm.png)![](/assets/Screen Shot 2018-07-03 at 11.47.00 pm.png)![](/assets/Screen Shot 2018-07-03 at 11.47.16 pm.png)
 
