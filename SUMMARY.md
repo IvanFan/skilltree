@@ -145,7 +145,7 @@
 
 * [Brief](system-design/brief.md)
 * [Database System](system-design/design-data-with-class-inheirture.md)
-* [what happens when you visit google.com in your browser](system-design/what-happens-when-you-visit-googlecom-in-your-browser.md)
+* [web application](system-design/what-happens-when-you-visit-googlecom-in-your-browser.md)
 * [write a crawler](system-design/write-a-crawler.md)
 * [design what's app](system-design/design-whats-app.md)
 * [log analysis](system-design/log-analysis.md)
