@@ -60,6 +60,8 @@ solution3: lazy load \(load when required\)
 
 ![](/assets/Screen Shot 2018-07-03 at 11.16.38 am.png)
 
+server side render =&gt; for SEO and first page speed
+
 what happened when your visit google.com in browser
 
 how to increase the speed to visit a webpage
