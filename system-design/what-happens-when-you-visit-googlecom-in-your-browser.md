@@ -14,8 +14,6 @@ Improve
 
 Control
 
-
-
 Problem Definition
 
 when defining the problem we also need to select the closed relevant measure
@@ -28,8 +26,6 @@ percentage of user who cannot use the service properly
 
 Mission:reduce the failure rate
 
-
-
 How to identity the total of users?
 
 session cookie
@@ -37,8 +33,6 @@ session cookie
 how to identity the user behavior?
 
 log trace user activities
-
-
 
 ![](/assets/Screen Shot 2018-07-03 at 10.42.37 am.png)
 
