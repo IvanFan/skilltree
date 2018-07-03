@@ -100,3 +100,29 @@ push into first level queue \(multiple machine\)
 
 from first level queue, push into second level queue with order \(only need one machine\)
 
+
+
+key points:
+
+reduce the traffic:
+
+static pages
+
+proxy /load balancer
+
+request limit by ip
+
+no db: script memory log
+
+no lock
+
+Async io
+
+
+
+deny request: 
+
+ip/ CAPTCHA
+
+
+
