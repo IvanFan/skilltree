@@ -1,4 +1,18 @@
-write a crawler
+## write a crawler
+
+```
+import requests
+
+r = requests.get('https://api.github.com/events')
+```
+
+
+
+## Explain the process of crawler
+
+## 
+
+
 
 what is GFS, big table, map reduce
 

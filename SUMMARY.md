@@ -146,14 +146,20 @@
 * [Brief](system-design/brief.md)
 * [Database System](system-design/design-data-with-class-inheirture.md)
 * [web application](system-design/what-happens-when-you-visit-googlecom-in-your-browser.md)
-* [write a crawler](system-design/write-a-crawler.md)
 * [design what's app](system-design/design-whats-app.md)
+* [crawler & search engine](system-design/write-a-crawler.md)
 * [log analysis](system-design/log-analysis.md)
 * [generate tiny url & OOP](system-design/generate-tiny-url-and-oop.md)
 
 ## Network
 
+* [HTTPS](network/https.md)
+* [HTTP2](network/http2.md)
+
 ## OS
+
+* [Linux command](os/linux-command.md)
+* [shell script](os/shell-script.md)
 
 ## GC
 
