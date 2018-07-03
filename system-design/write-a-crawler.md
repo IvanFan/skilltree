@@ -106,3 +106,5 @@ each block has a checksum
 
 The size of checksum of 1 T file = 1T/64kb\*32bit = 64mb
 
+It will compare its checksum when it read the block
+
