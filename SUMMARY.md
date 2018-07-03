@@ -164,6 +164,8 @@
 
 * [Linux command](os/linux-command.md)
 * [shell script](os/shell-script.md)
+* [server management](os/server-management.md)
+* [basic](os/basic.md)
 
 ## GC
 
