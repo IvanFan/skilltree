@@ -52,9 +52,9 @@ Analysis the web failure rate:
 
 analysis by time
 
-solution1: add more load balancer 
+solution1: add more load balancer
 
-solution2: reduce the size of web pages
+solution2: reduce the size of web pages \(CDN min js compress images merge image together\)
 
 what happened when your visit google.com in browser
 
