@@ -90,9 +90,19 @@ chunk itself is continuous
 
 Pros: reduce the size of metadata in master, reduce the traffic between master and chunk server
 
-
-
 ## How to identify whether a chunk on the disk is broken?
 
+For each block we will save a checksum in the metadata
 
+Key Point:
+
+1 chunk = a list of biocks
+
+1 block = 64kb
+
+each block has a checksum
+
+1 checksum = 32 bit
+
+The size of checksum of 1 T file = 1T/64kb\*32bit = 64mb
 
