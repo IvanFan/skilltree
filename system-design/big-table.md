@@ -57,7 +57,8 @@ bit map
 * appearances of words
 
 * inverted index
+
 * anagrams
 
- 
+
 

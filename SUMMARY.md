@@ -160,6 +160,7 @@
 * [log analysis](system-design/log-analysis.md)
 * [generate tiny url & OOP](system-design/generate-tiny-url-and-oop.md)
 * [big table ](system-design/big-table.md)
+* [map reduce](system-design/map-reduce.md)
 
 ## Network
 
