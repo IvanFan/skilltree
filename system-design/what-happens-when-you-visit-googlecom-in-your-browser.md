@@ -46,11 +46,13 @@ case1: hosts file has been changed by others
 
 case2: DNS analysis by ISP \(internet service provider\)
 
-
-
 why DNS cannot be 100%? some company may deny particular ip services
 
 
+
+Analysis the web failure rate:
+
+analysis by time
 
 what happened when your visit google.com in browser
 
