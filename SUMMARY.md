@@ -138,7 +138,7 @@
 
 ## Design Pattern
 
-* singleton
+* [singleton](design-pattern/singleton.md)
 * factory
 
 ## System Design
