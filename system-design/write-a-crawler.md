@@ -132,3 +132,11 @@ checksum is saved on the chunk server within the memory for quick read ops
 
 Key point: ask master for help
 
+master will record the broken and recover
+
+We check the checksum when we read the data
+
+we can also have a background process to check the old file correctness
+
+
+
