@@ -38,6 +38,18 @@ log trace user activities
 
 
 
+then we need to check the failure rate of each step during the request of service
+
+
+
+how to trace the DNS failure rate? use client side code
+
+![](/assets/Screen Shot 2018-07-03 at 10.48.44 am.png)
+
+
+
+
+
 
 
 what happened when your visit google.com in browser
