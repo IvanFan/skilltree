@@ -72,6 +72,18 @@ server side render =&gt; for SEO and first page speed
 
 16: file size  large timeout : compress files optimise CDN
 
+
+
+## CDN
+
+IP distance
+
+ISP location
+
+ping ISP nodes and optimise
+
+
+
 what happened when your visit google.com in browser
 
 how to increase the speed to visit a webpage
