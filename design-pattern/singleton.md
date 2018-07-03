@@ -10,16 +10,15 @@ class Singleton:
       else:
           instance = object.__new__(cls)
       return instance
-      
+
   @classmethod
   def enable_global(cls):
       Singleton.__use_global = True
-      
-      
+
+
   @classmethod
   def get_instance(cls):
       return cls.__instance
-      
 ```
 
 
