@@ -64,7 +64,7 @@ server side render =&gt; for SEO and first page speed
 
 ![](/assets/Screen Shot 2018-07-03 at 11.21.40 am.png)
 
-
+![](/assets/Screen Shot 2018-07-03 at 11.33.41 am.png)
 
 what happened when your visit google.com in browser
 
