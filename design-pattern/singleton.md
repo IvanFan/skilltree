@@ -1,4 +1,4 @@
-```
+```py
 class Singleton:
    __instance = None
    __use_global = False
