@@ -167,3 +167,13 @@ Key point:
 
 ![](/assets/Screen Shot 2018-07-03 at 11.10.37 pm.png)
 
+## How to write into a file?
+
+![](/assets/Screen Shot 2018-07-03 at 11.13.30 pm.png)
+
+
+
+
+
+
+
