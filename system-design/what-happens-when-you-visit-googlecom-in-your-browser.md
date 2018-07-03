@@ -56,6 +56,8 @@ solution1: add more load balancer
 
 solution2: reduce the size of web pages \(CDN min js compress images merge image together\)
 
+solution3: lazy load
+
 what happened when your visit google.com in browser
 
 how to increase the speed to visit a webpage
