@@ -36,25 +36,25 @@ log trace user activities
 
 ![](/assets/Screen Shot 2018-07-03 at 10.42.37 am.png)
 
-
-
 then we need to check the failure rate of each step during the request of service
-
-
 
 how to trace the DNS failure rate? use client side code
 
 ![](/assets/Screen Shot 2018-07-03 at 10.48.44 am.png)
 
+case1: hosts file has been changed by others
 
-
-
-
-
+case2: DNS analysis by ISP \(internet service provider\)
 
 what happened when your visit google.com in browser
 
 how to increase the speed to visit a webpage
+
+
+
+
+
+
 
 how to design '秒杀' system
 
