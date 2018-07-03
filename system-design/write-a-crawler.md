@@ -26,6 +26,8 @@ a better way is to design a scheduler and crawler will be passed into different 
 
 scheduler can also have priority status retry timeout task created time
 
+thread safe with lock
+
 what is GFS, big table, map reduce
 
 find the top10 frequent keywords /mean number with map reduce
