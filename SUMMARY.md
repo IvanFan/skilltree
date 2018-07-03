@@ -92,6 +92,7 @@
   * [red  black tree](red-black-tree.md)
 * [Multi-thread](multi-thread.md)
   * [pool](multi-thread/pool.md)
+  * [thread sync](multi-thread/thread-sync.md)
 * Linux
   * [Shell scripts](shell-scripts.md)
 * [Cache](cache.md)
