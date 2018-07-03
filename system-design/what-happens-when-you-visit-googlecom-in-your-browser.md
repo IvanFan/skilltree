@@ -80,19 +80,19 @@ ISP location
 
 ping ISP nodes and optimise
 
-
-
 how do you know you have fixed the problem?
+
+A/B test
+
+![](/assets/Screen Shot 2018-07-03 at 11.55.18 am.png)
+
+
+
+A/B test: team developer. business logic. tool =&gt; A/B test
 
 what happened when your visit google.com in browser
 
 how to increase the speed to visit a webpage
 
 how to design '秒杀' system
-
-
-
-
-
-
 
