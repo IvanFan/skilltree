@@ -62,3 +62,19 @@ Let's design from bottom to up
 
 ![](/assets/Screen Shot 2018-07-03 at 10.37.42 pm.png)
 
+1 block = 1024bit
+
+![](/assets/Screen Shot 2018-07-03 at 10.39.00 pm.png)
+
+how to save a large file save as chunk
+
+Pros: reduce the size of the metadata, reduce traffic
+
+Cons: waster disk space for small files
+
+How to save an extra-large file? \(cannot save within one disk\)
+
+![](/assets/Screen Shot 2018-07-03 at 10.41.46 pm.png)
+
+
+
