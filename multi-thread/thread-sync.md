@@ -286,3 +286,28 @@ void set\(T value\)
 
 在程序中一般都重写initialValue方法，以给定一个特定的初始值。
 
+
+
+
+
+
+
+# 再谈互斥锁与条件变量！（终于搞清楚了啊！！！！！）
+
+2017年06月29日 11:16:44
+
+阅读数：949
+
+pthread\_cond\_wait总和一个互斥锁结合使用。在调用pthread\_cond\_wait前要先获取锁。pthread\_cond\_wait函数执行时先自动释放指定的锁，然后等待条件变量的变化。在函数调用返回之前，自动将指定的互斥量重新锁住。
+
+int pthread\_cond\_signal\(pthread\_cond\_t \* cond\);
+
+pthread\_cond\_signal通过条件变量cond发送消息，若多个消息在等待，它只唤醒一个。pthread\_cond\_broadcast可以唤醒所有。调用pthread\_cond\_signal后要立刻释放互斥锁，因为pthread\_cond\_wait的最后一步是要将指定的互斥量重新锁住，如果pthread\_cond\_signal之后没有释放互斥锁，pthread\_cond\_wait仍然要阻塞。
+
+  
+
+
+无论哪种等待方式，都必须和一个互斥锁配合，以防止多个线程同时请求pthread\_cond\_wait\(\)（或pthread\_cond\_timedwait\(\)，下同）的竞争条件（Race   Condition）。mutex互斥锁必须是普通锁（PTHREAD\_MUTEX\_TIMED\_NP）或者适应锁 （PTHREAD\_MUTEX\_ADAPTIVE\_NP），且在调用pthread\_cond\_wait\(\)前必须由本线程加锁 （pthread\_mutex\_lock\(\)），而在更新条件等待队列以前，mutex保持锁定状态，并在线程挂起进入等待前解锁。在条件满足从而离开 pthread\_cond\_wait\(\)之前，mutex将被重新加锁，以与进入pthread\_cond\_wait\(\)前的加锁动作对应。    
+  
+  激发条件有两种形式，pthread\_cond\_signal\(\)激活一个等待该条件的线程，存在多个等待线程时按入队顺序激活其中一个；而pthread\_cond\_broadcast\(\)则激活所有等待线程。
+
