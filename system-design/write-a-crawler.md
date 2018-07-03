@@ -54,6 +54,8 @@ MapReduce, BigTable, GFS
 
 ## What's the layer of search engine?
 
+![](/assets/Screen Shot 2018-07-03 at 5.18.52 pm.png)
+
 **Applications =&gt; Algorithm \(MapReduce or others\) =&gt;  data model \(big table\) =&gt; file \(GFS\)**
 
 Let's design from bottom to up
@@ -149,4 +151,16 @@ first the master will check the lost data on the failed chunk server
 Then the master will start a repair procedure to make up the data to 3 copy
 
 Key point : repair priority is based on the number of replications
+
+### How to avoid hot spot?
+
+![](/assets/Screen Shot 2018-07-03 at 11.05.12 pm.png)
+
+the master will check the chunk stats and the server stats
+
+Key point: 
+
+* replicate a chunk into more replications when it's busy
+
+
 
