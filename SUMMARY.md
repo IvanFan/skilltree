@@ -91,6 +91,7 @@
   * [NoSQL](nosql.md)
   * [red  black tree](red-black-tree.md)
 * [Multi-thread](multi-thread.md)
+  * [pool](multi-thread/pool.md)
 * Linux
   * [Shell scripts](shell-scripts.md)
 * [Cache](cache.md)
