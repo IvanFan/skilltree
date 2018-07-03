@@ -88,3 +88,7 @@ the chunk server will save the offset
 
 chunk itself is continuous
 
+Pros: reduce the size of metadata in master, reduce the traffic between master and chunk server
+
+
+
