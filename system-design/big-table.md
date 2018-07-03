@@ -46,5 +46,7 @@ bit map
 
 ### What is the logical view of table
 
+![](/assets/Screen Shot 2018-07-03 at 11.52.27 fuypm.png)save different versions of pages at the same position
+
 
 
