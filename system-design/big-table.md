@@ -40,5 +40,11 @@ check the existence of the element with bloomfilters
 
 bit map
 
-![](/assets/Screen Shot 2018-07-03 at 11.46.29 pm.png)![](/assets/Screen Shot 2018-07-03 at 11.47.00 pm.png)![](/assets/Screen Shot 2018-07-03 at 11.47.16 pm.png)
+## ![](/assets/Screen Shot 2018-07-03 at 11.46.29 pm.png)![](/assets/Screen Shot 2018-07-03 at 11.47.00 pm.png)![](/assets/Screen Shot 2018-07-03 at 11.47.16 pm.png)How to save a table into GFS
+
+## ![](/assets/Screen Shot 2018-07-03 at 11.48.54 pm.png)
+
+### What is the logical view of table
+
+
 
