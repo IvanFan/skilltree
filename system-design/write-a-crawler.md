@@ -124,5 +124,11 @@ how to select chunk servers of a chunk?
 * limited number of 'recent' creation \(read too often\)
 * across racks/area 2+1
 
+checksum is saved on the chunk server within the memory for quick read ops
 
+### How to recover when a chunk is broken
+
+![](/assets/Screen Shot 2018-07-03 at 10.56.10 pm.png)
+
+Key point: ask master for help
 
