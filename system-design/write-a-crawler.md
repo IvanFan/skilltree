@@ -76,5 +76,13 @@ How to save an extra-large file? \(cannot save within one disk\)
 
 ![](/assets/Screen Shot 2018-07-03 at 10.41.46 pm.png)
 
+key: one master + many chunk servers
 
+Cons: any change of the disk offset of a chunk on the chunk server have to notify the master
+
+![](/assets/Screen Shot 2018-07-03 at 10.43.53 pm.png)
+
+master doesn't save the offset only record the server
+
+the chunk server will save the offset
 
