@@ -72,8 +72,6 @@ server side render =&gt; for SEO and first page speed
 
 16: file size  large timeout : compress files optimise CDN
 
-
-
 ## CDN
 
 IP distance
@@ -84,9 +82,17 @@ ping ISP nodes and optimise
 
 
 
+how do you know you have fixed the problem?
+
 what happened when your visit google.com in browser
 
 how to increase the speed to visit a webpage
 
 how to design '秒杀' system
+
+
+
+
+
+
 
