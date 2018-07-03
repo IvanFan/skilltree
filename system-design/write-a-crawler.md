@@ -24,7 +24,7 @@ data crawler
 
 a better way is to design a scheduler and crawler will be passed into different strategies
 
-scheduler can also have priority
+scheduler can also have priority status retry timeout task created time
 
 what is GFS, big table, map reduce
 
