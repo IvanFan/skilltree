@@ -171,9 +171,5 @@ Key point:
 
 ![](/assets/Screen Shot 2018-07-03 at 11.13.30 pm.png)
 
-
-
-
-
-
+chunk order: the closest server
 
