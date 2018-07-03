@@ -86,8 +86,6 @@ A/B test
 
 ![](/assets/Screen Shot 2018-07-03 at 11.55.18 am.png)
 
-
-
 A/B test: team developer. business logic. tool =&gt; A/B test
 
 what happened when your visit google.com in browser
@@ -95,4 +93,10 @@ what happened when your visit google.com in browser
 how to increase the speed to visit a webpage
 
 how to design '秒杀' system
+
+filter the request flow
+
+push into first level queue 
+
+from first level queue, push into second level queue with order
 
