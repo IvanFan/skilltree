@@ -140,6 +140,7 @@
 
 * [singleton](design-pattern/singleton.md)
 * factory
+* [strategy](design-pattern/strategy.md)
 
 ## System Design
 
