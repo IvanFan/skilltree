@@ -46,15 +46,15 @@ case1: hosts file has been changed by others
 
 case2: DNS analysis by ISP \(internet service provider\)
 
+
+
+why DNS cannot be 100%? some company may deny particular ip services
+
+
+
 what happened when your visit google.com in browser
 
 how to increase the speed to visit a webpage
-
-
-
-
-
-
 
 how to design '秒杀' system
 
