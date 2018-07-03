@@ -38,11 +38,27 @@ thread-safe consumer and producer
 
 implement google instant search or twitter typeahead
 
-
-
-
-
 ## conditional variable
+
+
+
+Design a search engine on news
+
+Cases:
+
+search keyword
+
+search news list
+
+add update delete news
+
+
+
+MapReduce, BigTable, GFS
+
+
+
+
 
 
 
