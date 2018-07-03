@@ -48,11 +48,13 @@ case2: DNS analysis by ISP \(internet service provider\)
 
 why DNS cannot be 100%? some company may deny particular ip services
 
-
-
 Analysis the web failure rate:
 
 analysis by time
+
+solution1: add more load balancer 
+
+solution2: reduce the size of web pages
 
 what happened when your visit google.com in browser
 
