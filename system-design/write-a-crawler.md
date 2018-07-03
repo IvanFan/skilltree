@@ -40,7 +40,7 @@ implement google instant search or twitter typeahead
 
 ## conditional variable
 
-Design a search engine on news
+## Design a search engine on news
 
 Cases:
 
@@ -52,11 +52,13 @@ add update delete news
 
 MapReduce, BigTable, GFS
 
-What's the layer of search engine?
+## What's the layer of search engine?
 
-Algorithm \(MapReduce or others\) =&gt;  data model \(big table\) =&gt; file \(GFS\)
+**Applications =&gt; Algorithm \(MapReduce or others\) =&gt;  data model \(big table\) =&gt; file \(GFS\)**
 
+Let's design from bottom to up
 
+## GFS
 
-
+![](/assets/Screen Shot 2018-07-03 at 10.37.42 pm.png)
 
