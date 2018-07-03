@@ -163,5 +163,7 @@ Key point:
 * replicate a chunk into more replications when it's busy
 * fill the replication into the chunkserver with more pace and more bandwidth
 
+## How to read from a file?
 
+![](/assets/Screen Shot 2018-07-03 at 11.10.37 pm.png)
 
