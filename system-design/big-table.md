@@ -22,7 +22,9 @@ a tablet = a list of sorted key value
 
 ### ![](/assets/Screen Shot 2018-07-03 at 11.35.10 pm.png)How to avoid system failure
 
-### ![](/assets/Screen Shot 2018-07-03 at 11.37.21 pm.png)how to read data
+### ![](/assets/Screen Shot 2018-07-03 at 11.37.21 pm.png)how to read data fast
+
+SStable inside is sorted![](/assets/Screen Shot 2018-07-03 at 11.40.00 pm.png)
 
 
 
