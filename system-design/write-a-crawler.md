@@ -158,9 +158,10 @@ Key point : repair priority is based on the number of replications
 
 the master will check the chunk stats and the server stats
 
-Key point: 
+Key point:
 
 * replicate a chunk into more replications when it's busy
+* fill the replication into the chunkserver with more pace and more bandwidth
 
 
 
