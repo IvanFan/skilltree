@@ -16,21 +16,15 @@ TCP 3 handshake
 
 Where is socket? between application, session, presentation layer and transport layer network layer, data link layer
 
-
-
 For the crawler:
 
 list crawler:  get latest data list
 
-data crawler 
+data crawler
 
-a better way is to design a scheduler and crawler will be passed into different config
+a better way is to design a scheduler and crawler will be passed into different strategies
 
-
-
-
-
-
+scheduler can also have priority
 
 what is GFS, big table, map reduce
 
