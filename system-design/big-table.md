@@ -52,5 +52,12 @@ bit map
 
 ### ![](/assets/Screen Shot 2018-07-03 at 11.54.50 pm.png)What's the architecture of Big table?
 
-![](/assets/Screen Shot 2018-07-03 at 11.58.39 pm.png)
+# ![](/assets/Screen Shot 2018-07-03 at 11.58.39 pm.png)For 1 TB Key value data, how to complete
+
+* appearances of words
+
+* inverted index
+* anagrams
+
+ 
 
