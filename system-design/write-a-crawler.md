@@ -62,7 +62,7 @@ Let's design from bottom to up
 
 ![](/assets/Screen Shot 2018-07-03 at 10.37.42 pm.png)
 
-1 block = 1024bit
+1 block = 64kb
 
 ![](/assets/Screen Shot 2018-07-03 at 10.39.00 pm.png)
 
@@ -89,6 +89,10 @@ the chunk server will save the offset
 chunk itself is continuous
 
 Pros: reduce the size of metadata in master, reduce the traffic between master and chunk server
+
+
+
+## How to identify whether a chunk on the disk is broken?
 
 
 
