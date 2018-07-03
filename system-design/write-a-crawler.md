@@ -108,3 +108,21 @@ The size of checksum of 1 T file = 1T/64kb\*32bit = 64mb
 
 It will compare its checksum when it read the block
 
+## 
+
+## How to avoid data loss when a chunk server is down/fail?
+
+Key point:
+
+Replicate the chunks
+
+how many replications? 3
+
+how to select chunk servers of a chunk?
+
+* server with below-average disk space utilization
+* limited number of 'recent' creation \(read too often\)
+* across racks/area 2+1
+
+
+
