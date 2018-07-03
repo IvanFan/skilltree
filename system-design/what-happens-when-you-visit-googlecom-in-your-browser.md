@@ -96,7 +96,7 @@ how to design '秒杀' system
 
 filter the request flow
 
-push into first level queue 
+push into first level queue \(multiple machine\)
 
-from first level queue, push into second level queue with order
+from first level queue, push into second level queue with order \(only need one machine\)
 
