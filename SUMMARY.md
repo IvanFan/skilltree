@@ -130,6 +130,7 @@
     * [Join](database/rdb/mysql/join.md)
   * Postgre
   * [sharding](database/rdb/sharding.md)
+  * [sharding type](database/rdb/sharding-type.md)
 * [NOSQL](database/nosql.md)
   * [MongoDB VS RDB](database/nosql/mongodb-vs-rdb.md)
 * [RAID](database/raid.md)
