@@ -155,6 +155,7 @@
 
 * [HTTPS](network/https.md)
 * [HTTP2](network/http2.md)
+* [Browser render](network/browser-render.md)
 
 ## OS
 

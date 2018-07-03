@@ -2,8 +2,6 @@
 
 The following sections explain the physical keyboard actions and the OS interrupts. When you press the key "g" the browser receives the event and the auto-complete functions kick in. Depending on your browser's algorithm and if you are in private/incognito mode or not various suggestions will be presented to you in the dropbox below the URL bar. Most of these algorithms sort and prioritize results based on search history, bookmarks, cookies, and popular searches from the internet as a whole. As you are typing "google.com" many blocks of code run and the suggestions will be refined with each key press. It may even suggest "google.com" before you finish typing it.
 
-
-
 ### The "enter" key bottoms out
 
 To pick a zero point, let's choose the Enter key on the keyboard hitting the bottom of its range. At this point, an electrical circuit specific to the enter key is closed \(either directly or capacitively\). This allows a small amount of current to flow into the logic circuitry of the keyboard, which scans the state of each key switch, debounces the electrical noise of the rapid intermittent closure of the switch, and converts it to a keycode integer, in this case 13. The keyboard controller then encodes the keycode for transport to the computer. This is now almost universally over a Universal Serial Bus \(USB\) or Bluetooth connection, but historically has been over PS/2 or ADB connections.
@@ -26,13 +24,9 @@ _In the case of Virtual Keyboard \(as in touch screen devices\):_
 * The virtual keyboard can now raise a software interrupt for sending a 'key pressed' message back to the OS.
 * This interrupt notifies the current focused application of a 'key pressed' event.
 
-
-
 ### Interrupt fires \[NOT for USB keyboards\]
 
 The keyboard sends signals on its interrupt request line \(IRQ\), which is mapped to an`interrupt vector`\(integer\) by the interrupt controller. The CPU uses the`Interrupt Descriptor Table`\(IDT\) to map the interrupt vectors to functions \(`interrupt handlers`\) which are supplied by the kernel. When an interrupt arrives, the CPU indexes the IDT with the interrupt vector and runs the appropriate handler. Thus, the kernel is entered.
-
-
 
 ### \(On Windows\) A`WM_KEYDOWN`message is sent to the app
 
@@ -44,19 +38,13 @@ The Windows`SendMessage`API is a straightforward function that adds the message 
 
 The window \(`hWnd`\) that is active is actually an edit control and the`WindowProc`in this case has a message handler for`WM_KEYDOWN`messages. This code looks within the 3rd parameter that was passed to`SendMessage`\(`wParam`\) and, because it is`VK_RETURN`knows the user has hit the ENTER key.
 
-
-
 ### \(On OS X\) A`KeyDown`NSEvent is sent to the app
 
 The interrupt signal triggers an interrupt event in the I/O Kit kext keyboard driver. The driver translates the signal into a key code which is passed to the OS X`WindowServer`process. Resultantly, the`WindowServer`dispatches an event to any appropriate \(e.g. active or listening\) applications through their Mach port where it is placed into an event queue. Events can then be read from this queue by threads with sufficient privileges calling the`mach_ipc_dispatch`function. This most commonly occurs through, and is handled by, an`NSApplication`main event loop, via an`NSEvent`of`NSEventTypeKeyDown`.
 
-
-
 ### \(On GNU/Linux\) the Xorg server listens for keycodes
 
 When a graphical`X server`is used,`X`will use the generic event driver`evdev`to acquire the keypress. A re-mapping of keycodes to scancodes is made with`X server`specific keymaps and rules. When the scancode mapping of the key pressed is complete, the`X server`sends the character to the`window manager`\(DWM, metacity, i3, etc\), so the`window manager`in turn sends the character to the focused window. The graphical API of the window that receives the character prints the appropriate font symbol in the appropriate focused field.
-
-
 
 ### Parse URL
 
@@ -69,13 +57,9 @@ When a graphical`X server`is used,`X`will use the generic event driver`evdev`to 
   >   "/"
   >   Retrieve main \(index\) page
 
-
-
 ### Is it a URL or a search term?
 
 When no protocol or valid domain name is given the browser proceeds to feed the text given in the address box to the browser's default web search engine. In many cases the URL has a special piece of text appended to it to tell the search engine that it came from a particular browser's URL bar.
-
-
 
 ### Convert non-ASCII Unicode characters in hostname
 
@@ -96,8 +80,6 @@ When no protocol or valid domain name is given the browser proceeds to feed the 
   [Punycode](https://en.wikipedia.org/wiki/Punycode)
   encoding to the hostname portion of the URL.
 
-
-
 ### Check HSTS list
 
 * The browser checks its "preloaded HSTS \(HTTP Strict Transport Security\)" list. This is a list of websites that have requested to be contacted via HTTPS only.
@@ -106,8 +88,6 @@ When no protocol or valid domain name is given the browser proceeds to feed the 
   being in the HSTS list. The first HTTP request to the website by a user will receive a response requesting that the user only send HTTPS requests. However, this single HTTP request could potentially leave the user vulnerable to a
   [downgrade attack](http://en.wikipedia.org/wiki/SSL_stripping)
   , which is why the HSTS list is included in modern web browsers.\)
-
-
 
 ### DNS lookup
 
@@ -133,8 +113,6 @@ When no protocol or valid domain name is given the browser proceeds to feed the 
   `ARP process`
   below for the default gateway IP.
 
-
-
 ### ARP process
 
 In order to send an ARP \(Address Resolution Protocol\) broadcast the network stack library needs the target IP address to look up. It also needs to know the MAC address of the interface it will use to send out the ARP broadcast.
@@ -156,7 +134,6 @@ Sender MAC: interface:mac:address:here
 Sender IP: interface.ip.goes.here
 Target MAC: FF:FF:FF:FF:FF:FF (Broadcast)
 Target IP: target.ip.goes.here
-
 ```
 
 Depending on what type of hardware is between the computer and the router:
@@ -188,15 +165,12 @@ Sender MAC: target:mac:address:here
 Sender IP: target.ip.goes.here
 Target MAC: interface:mac:address:here
 Target IP: interface.ip.goes.here
-
 ```
 
 Now that the network library has the IP address of either our DNS server or the default gateway it can resume its DNS process:
 
 * Port 53 is opened to send a UDP request to DNS server \(if the response size is too large, TCP will be used instead\).
 * If the local/ISP DNS server does not have it, then a recursive search is requested and that flows up the list of DNS servers until the SOA is reached, and if found an answer is returned.
-
-
 
 ### Opening of a socket
 
@@ -237,8 +211,6 @@ This send and receive happens multiple times following the TCP connection flow:
   * The other sides ACKs the FIN packet and sends its own FIN
   * The closer acknowledges the other side's FIN with an ACK
 
-
-
 ### TLS handshake
 
 * The client computer sends a
@@ -257,8 +229,6 @@ This send and receive happens multiple times following the TCP connection flow:
   message to the client, also encrypted with the symmetric key.
 * From now on the TLS session transmits the application \(HTTP\) data encrypted with the agreed symmetric key.
 
-
-
 ### HTTP protocol
 
 If the web browser used was written by Google, instead of sending an HTTP request to retrieve the page, it will send a request to try and negotiate with the server an "upgrade" from HTTP to the SPDY protocol.
@@ -270,7 +240,6 @@ GET / HTTP/1.1
 Host: google.com
 Connection: close
 [other headers]
-
 ```
 
 where`[other headers]`refers to a series of colon-separated key-value pairs formatted as per the HTTP specification and separated by single new lines. \(This assumes the web browser being used doesn't have any bugs violating the HTTP spec. This also assumes that the web browser is using`HTTP/1.1`, otherwise it may not include the`Host`header in the request and the version specified in the`GET`request will either be`HTTP/1.0`or`HTTP/0.9`.\)
@@ -288,7 +257,6 @@ The server responds with a response code denoting the status of the request and 
 ```
 200 OK
 [response headers]
-
 ```
 
 Followed by a single newline, and then sends a payload of the HTML content of`www.google.com`. The server may then either close the connection, or if headers sent by the client requested it, keep the connection open to be reused for further requests.
@@ -298,7 +266,6 @@ If the HTTP headers sent by the web browser included sufficient information for 
 ```
 304 Not Modified
 [response headers]
-
 ```
 
 and no payload, and the web browser instead retrieves the HTML from its cache.
@@ -306,8 +273,6 @@ and no payload, and the web browser instead retrieves the HTML from its cache.
 After parsing the HTML, the web browser \(and server\) repeats this process for every resource \(image, CSS, favicon.ico, etc\) referenced by the HTML page, except instead of`GET / HTTP/1.1`the request will be`GET /$(URL relative to www.google.com) HTTP/1.1`.
 
 If the HTML referenced a resource on a different domain than`www.google.com`, the web browser goes back to the steps involved in resolving the other domain, and follows all steps up to this point for that domain. The`Host`header in the request will be set to the appropriate server name instead of`google.com`.
-
-
 
 ### HTTP Server Request Handle
 
@@ -343,16 +308,12 @@ The HTTPD \(HTTP Daemon\) server is the one handling the requests/responses on t
 * The server goes to pull the content that corresponds with the request, in our case it will fall back to the index file, as "/" is the main file \(some cases can override this, but this is the most common method\).
 * The server parses the file according to the handler. If Google is running on PHP, the server uses PHP to interpret the index file, and streams the output to the client.
 
-
-
 ### Behind the scenes of the Browser
 
 Once the server supplies the resources \(HTML, CSS, JS, images, etc.\) to the browser it undergoes the below process:
 
 * Parsing - HTML, CSS, JS
 * Rendering - Construct DOM Tree → Render Tree → Layout of Render Tree → Painting the render tree
-
-
 
 ### Browser
 
@@ -387,15 +348,13 @@ The components of the browsers are:
 * **Data storage:**
   The data storage is a persistence layer. The browser may need to save all sorts of data locally, such as cookies. Browsers also support storage mechanisms such as localStorage, IndexedDB, WebSQL and FileSystem.
 
-
-
 ### HTML parsing
 
 The rendering engine starts getting the contents of the requested document from the networking layer. This will usually be done in 8kB chunks.
 
-The primary job of HTML parser to parse the HTML markup into a parse tree.
+**The primary job of HTML parser to parse the HTML markup into a parse tree.**
 
-The output tree \(the "parse tree"\) is a tree of DOM element and attribute nodes. DOM is short for Document Object Model. It is the object presentation of the HTML document and the interface of HTML elements to the outside world like JavaScript. The root of the tree is the "Document" object. Prior of any manipulation via scripting, the DOM has an almost one-to-one relation to the markup.
+**The output tree \(the "parse tree"\) is a tree of DOM element and attribute nodes. **DOM is short for Document Object Model. It is the object presentation of the HTML document and the interface of HTML elements to the outside world like JavaScript. The root of the tree is the "Document" object. Prior of any manipulation via scripting, the DOM has an almost one-to-one relation to the markup.
 
 **The parsing algorithm**
 
@@ -413,13 +372,11 @@ The algorithm consists of two stages: tokenization and tree construction.
 
 **Actions when the parsing is finished**
 
-The browser begins fetching external resources linked to the page \(CSS, images, JavaScript files, etc.\).
+**The browser begins fetching external resources linked to the page \(CSS, images, JavaScript files, etc.\).**
 
 At this stage the browser marks the document as interactive and starts parsing scripts that are in "deferred" mode: those that should be executed after the document is parsed. The document state is set to "complete" and a "load" event is fired.
 
 Note there is never an "Invalid Syntax" error on an HTML page. Browsers fix any invalid content and go on.
-
-
 
 ### CSS interpretation
 
@@ -435,8 +392,6 @@ Note there is never an "Invalid Syntax" error on an HTML page. Browsers fix any 
   `StyleSheet object`
   , where each object contains CSS rules with selectors and objects corresponding CSS grammar.
 * A CSS parser can be top-down or bottom-up when a specific parser generator is used.
-
-
 
 ### Page Rendering
 
@@ -463,8 +418,6 @@ Note there is never an "Invalid Syntax" error on an HTML page. Browsers fix any 
 * The page layers are sent to the compositing process where they are combined with layers for other visible content like the browser chrome, iframes and addon panels.
 * Final layer positions are computed and the composite commands are issued via Direct3D/OpenGL. The GPU command buffer\(s\) are flushed to the GPU for asynchronous rendering and the frame is sent to the window server.
 
-
-
 ### GPU Rendering
 
 * During the rendering process the graphical computing layers can use general purpose
@@ -478,11 +431,7 @@ Note there is never an "Invalid Syntax" error on an HTML page. Browsers fix any 
   `GPU`
   massive parallelism for float point calculations required for the rendering process.
 
-
-
 ### Window Server
-
-
 
 ### Post-rendering and user-induced execution
 
