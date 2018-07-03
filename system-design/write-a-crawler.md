@@ -138,5 +138,15 @@ We check the checksum when we read the data
 
 we can also have a background process to check the old file correctness
 
+## How to find whether the chunk server is down
 
+master will check the heart beat of the chunk server
+
+## How to recover the data if chunk server is down
+
+first the master will check the lost data on the failed chunk server
+
+Then the master will start a repair procedure to make up the data to 3 copy
+
+Key point : repair priority is based on the number of replications
 
