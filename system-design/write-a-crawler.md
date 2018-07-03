@@ -86,3 +86,5 @@ master doesn't save the offset only record the server
 
 the chunk server will save the offset
 
+chunk itself is continuous
+
