@@ -48,5 +48,7 @@ bit map
 
 ![](/assets/Screen Shot 2018-07-03 at 11.52.27 fuypm.png)save different versions of pages at the same position
 
+### How to transform logic view into physical storage?
 
+![](/assets/Screen Shot 2018-07-03 at 11.54.50 pm.png)
 
