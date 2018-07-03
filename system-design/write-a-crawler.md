@@ -28,8 +28,6 @@ scheduler can also have priority status retry timeout task created time
 
 thread safe with lock
 
-
-
 ![](/assets/Screen Shot 2018-07-03 at 3.02.50 pm.png)
 
 what is GFS, big table, map reduce
@@ -39,4 +37,12 @@ find the top10 frequent keywords /mean number with map reduce
 thread-safe consumer and producer
 
 implement google instant search or twitter typeahead
+
+
+
+
+
+## conditional variable
+
+
 
