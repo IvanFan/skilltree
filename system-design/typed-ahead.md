@@ -12,13 +12,13 @@ speed faster but bad space![](/assets/Screen Shot 2018-07-04 at 2.28.55 pm.png)
 
 back ground process update in every hour
 
+memory
 
-
-memory 
-
-cache 
+cache
 
 cache in local
 
+multiple  level cache
 
+local cache one part =&gt; remote cache more data
 
