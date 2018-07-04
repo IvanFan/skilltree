@@ -18,3 +18,17 @@ single machine socket connection ![](/assets/Screen Shot 2018-07-04 at 12.26.14 
 
 Package multiple message together. So reduce the header and footer
 
+disk byte
+
+network bit
+
+Write through
+
+Write bite
+
+compress function can be separate
+
+broadcaster performance add limit
+
+Offline user
+
