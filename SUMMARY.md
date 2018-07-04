@@ -74,7 +74,7 @@
     * [264 Ugly Number II](heap/264-ugly-number-ii.md)
     * [407 Trapping Rain Water II](heap/407-trapping-rain-water-ii.md)
     * [358 Rearrange String k Distance Apart](heap/358-rearrange-string-k-distance-apart.md)
-* OS
+* [OS](os.md)
   * [I/O Multiplexing（Event  driving）](general.md)
   * [Coroutine Event Drive & Non-block I/O](coroutine-event-drive-and-non-block-io.md)
   * [Scheduling algorithm & Dynamic Scheduling](scheduling-algorithm.md)
@@ -162,6 +162,7 @@
 * [big table ](system-design/big-table.md)
 * [map reduce](system-design/map-reduce.md)
 * OOD
+* [Typed ahead](system-design/typed-ahead.md)
 
 ## Network
 
