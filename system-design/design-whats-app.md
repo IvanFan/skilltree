@@ -56,11 +56,19 @@ To avoid shift issue:
 
 set max limit and min limit with 3 parts
 
-
-
 ### How to save the space on the disk:
 
 GFS desc with timestamp
+
+### Search text:
+
+setup index:
+
+sort user id then sort with timestamp
+
+how to make it faster: compress user id into index
+
+![](/assets/Screen Shot 2018-07-04 at 11.24.04 am.png)
 
 
 
