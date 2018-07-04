@@ -22,7 +22,5 @@ input -&gt; split -&gt; map -&gt; shuffle -&gt; Reduce -&gt; Finalize \(ordered\
 
 ### System Architecture
 
-
-
-
+![](/assets/Screen Shot 2018-07-04 at 10.19.04 am.png)
 
