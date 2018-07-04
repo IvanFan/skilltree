@@ -12,3 +12,7 @@ input -&gt; split -&gt; map -&gt; shuffle -&gt; Reduce -&gt; Finalize \(ordered\
 
 ![](/assets/Screen Shot 2018-07-04 at 10.03.54 am.png)
 
+## Inverted index
+
+![](/assets/Screen Shot 2018-07-04 at 10.05.38 am.png)
+
