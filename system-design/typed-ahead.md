@@ -4,5 +4,5 @@ auto complete
 
 ![](/assets/Screen Shot 2018-07-04 at 2.27.38 pm.png)
 
-speed faster but bad space
+speed faster but bad space![](/assets/Screen Shot 2018-07-04 at 2.28.55 pm.png)
 
