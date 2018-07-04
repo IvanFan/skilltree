@@ -161,7 +161,7 @@
 * [generate tiny url & OOP](system-design/generate-tiny-url-and-oop.md)
 * [big table ](system-design/big-table.md)
 * [map reduce](system-design/map-reduce.md)
-* OOD
+* [OOD](system-design/ood.md)
 * [Typed ahead](system-design/typed-ahead.md)
 
 ## Network
