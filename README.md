@@ -9,25 +9,22 @@ _**Hold what you really know and tell what you do not know - this will lead to k
 Completed sections:
 
 * ~~Python~~
+* System design
+* RDB
+* Network
+* Security
 
 Sections in progress:
 
 * OS
 
-* Database
-
-* Network
-
-* Leetcode
+* Algorithm
 
 Next step:
 
-* database
-* my own open-source project
-* Linux OS
-* system design
 * Devops
 * machine learning
+* data analysis
 * Java
 * Nodejs
 * PHP
