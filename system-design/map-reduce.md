@@ -24,3 +24,9 @@ input -&gt; split -&gt; map -&gt; shuffle -&gt; Reduce -&gt; Finalize \(ordered\
 
 ![](/assets/Screen Shot 2018-07-04 at 10.19.04 am.png)
 
+Map is disassemble
+
+Reduce is assemble
+
+
+
