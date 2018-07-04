@@ -44,3 +44,9 @@ if user login/logout often, delay change for 5 second
 
 heartbeat/socket connection still alive
 
+
+
+push \(web socket\) more connection
+
+pull\(polling less connection but more bandwidth\)
+
