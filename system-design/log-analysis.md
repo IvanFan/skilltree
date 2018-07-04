@@ -40,5 +40,5 @@ Notification:
 
 web socket, poll, long-polling
 
-if user login/logout often, async update
+if user login/logout often, async update 5 second
 
