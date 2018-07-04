@@ -22,3 +22,9 @@ Daily news = 400m
 
 
 
+**Write**
+
+get Fanout and social graph
+
+write to each timeline
+
