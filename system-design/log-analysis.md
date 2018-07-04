@@ -42,3 +42,5 @@ web socket, poll, long-polling
 
 if user login/logout often, delay change for 5 second
 
+heartbeat/socket connection still alive
+
