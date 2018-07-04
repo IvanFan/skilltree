@@ -38,7 +38,7 @@ Offline user
 
 Notification:
 
-web socket, poll, long-polling 
+web socket, poll, long-polling
 
-
+if user login/logout often, async update
 
