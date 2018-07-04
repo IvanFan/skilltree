@@ -34,7 +34,5 @@ Methodology:
 
 ![](/assets/Screen Shot 2018-07-04 at 10.25.57 am.png)
 
-
-
-
+![](/assets/Screen Shot 2018-07-04 at 10.26.46 am.png)
 
