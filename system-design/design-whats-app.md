@@ -36,7 +36,7 @@ write to it's own timeline
 
 ## Optimize:
 
-Save the timeline into the memory 
+Save the timeline into the memory
 
 Only save the active users
 
@@ -54,5 +54,13 @@ Get user list with time range or recent k news
 
 To avoid shift issue:
 
-set max limit and min limit with 3 parts 
+set max limit and min limit with 3 parts
+
+
+
+### How to save the space on the disk:
+
+GFS desc with timestamp
+
+
 
