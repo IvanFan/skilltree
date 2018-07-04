@@ -8,11 +8,17 @@ speed faster but bad space![](/assets/Screen Shot 2018-07-04 at 2.28.55 pm.png)
 
 ![](/assets/Screen Shot 2018-07-04 at 2.31.45 pm.png)
 
-
-
 ![](/assets/Screen Shot 2018-07-04 at 2.35.16 pm.png)
 
-
-
 back ground process update in every hour
+
+
+
+memory 
+
+cache 
+
+cache in local
+
+
 
