@@ -145,17 +145,17 @@ static
 
 public
 :
-    
+
 static
  MySingleton *getSharedInstance() {
-        
+
 if
  (!m_pInstance) {
             m_pInstance = 
 new
  MySingleton;
         }
-        
+
 return
  m_pInstance;
     }
@@ -165,7 +165,6 @@ return
 // in the source file
 
 MySingleton *MySingleton::m_pInstance = NULL;
-
 ```
 
 注意，本例中的实现方式针对非多线程的情况。如果有过个线程想要同时调用getSharedInstance函数，则需要用mutex保护下列代码：
@@ -184,7 +183,6 @@ new
 pthread_mutex_unlock(
 &
 mutex);
-
 ```
 
 #### 工厂模式 {#toc_6}
@@ -205,7 +203,7 @@ enum
 class
 ImageReader
  {
-    
+
 // implementation for image reader base class
 
 };
@@ -217,7 +215,7 @@ GIFReader
 public
 ImageReader
  {
-    
+
 // implementation for GIF reader derived class
 
 };
@@ -229,7 +227,7 @@ JPEGReader
 public
 ImageReader
  {
-    
+
 // implementation for JPEG reader derived class
 
 };
@@ -241,35 +239,34 @@ ImageReaderFactory
 
 public
 :
-    
+
 static
  ImageReader *imageReaderFactoryMethod(ImageType imageType) {
         ImageReader *product = NULL;
-        
+
 switch
  (imageType) {
-            
+
 case
  GIF:
                 product = 
 new
  GIFReader();
-            
+
 case
  JPEG:
                 product = 
 new
  JPEGReader();
-                
+
 //...
 
         }
-        
+
 return
  product;
     }
 };
-
 ```
 
 ### 结构型 {#toc_7}
@@ -444,7 +441,7 @@ public
 class
 Restaurant
 {
-    
+
 private
 static
  Restaurant 
@@ -452,38 +449,37 @@ _
 instance = 
 null
 ;
-    
+
 protected
 Restaurant
 ()
 {...}
-    
+
 public
 static
  Restaurant 
 getInstance
 ()
 {
-        
+
 if
  (
 _
 instance == 
 null
 ){
-            
+
 _
 instance = 
 new
  Restaurant();
         }
-        
+
 return
 _
 instance;
     }
 }
-
 ```
 
 ## Factory Method {#toc_30}
@@ -495,38 +491,37 @@ public
 class
 CardGame
 {
-    
+
 public
 static
  CardGame 
 createCardGame
 (GameType type)
 {
-        
+
 if
  (type == GameType.Poker) {
-            
+
 return
 new
  PokerGame();
         }
-        
+
 else
 if
 (type == GameType.BlackJack)
 {
-            
+
 return
 new
  BlackJackGame();
         }
-        
+
 return
 null
 ;
     }
 }
-
 ```
 
 ---
@@ -647,7 +642,7 @@ A MapReduce program is typically used to process large amounts of data.
   reduces
   them in some way, emitting a new key and value.
 
-MapReduce allows us to do a lot of processing in parallel, which makes processing huge amounts of data more scalable.
+MapReduce allows us to do a lot of processing in parallel, which makes processing huge amounts of data more scalable. 
 
 # Considerations {#toc_45}
 
