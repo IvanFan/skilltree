@@ -30,3 +30,17 @@ Many concepts in MySQL have close analogs in MongoDB. The table below outlines t
 
 
 
+
+
+SQL: relationship
+
+NOSQL:  data stored no write frequent
+
+e.g. user table: SQL write often
+
+
+
+
+
+
+
