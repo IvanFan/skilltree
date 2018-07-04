@@ -28,9 +28,13 @@ Map is disassemble
 
 Reduce is assemble
 
-
-
 ### Find top 100 ip in large data log
+
+Methodology:
+
+![](/assets/Screen Shot 2018-07-04 at 10.25.57 am.png)
+
+
 
 
 
