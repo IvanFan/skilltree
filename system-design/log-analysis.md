@@ -14,7 +14,7 @@ Add a memory database redis cache
 
 how to save the traffic and bandwidth?
 
-Package multiple message together. So reduce the header and footer 
+single machine socket connection ![](/assets/Screen Shot 2018-07-04 at 12.26.14 pm.png)10k 
 
-  
+Package multiple message together. So reduce the header and footer
 
