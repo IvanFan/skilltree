@@ -22,3 +22,9 @@ multiple  level cache
 
 local cache one part =&gt; remote cache more data
 
+we can also use inverted index to find data in different chunk. for each chunk we use bloomfilter to check if the string exist
+
+if exist, we search it on the chunk again because bloomfilter is not 100%
+
+
+
